@@ -2,3 +2,7 @@ E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\
 E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\src\Blank.Web.Common.Tests\bin\Debug\Blank.Web.Common.Tests.pdb
 E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\src\Blank.Web.Common.Tests\obj\Debug\Blank.Web.Common.Tests.dll
 E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\src\Blank.Web.Common.Tests\obj\Debug\Blank.Web.Common.Tests.pdb
+E:\OneDrive\Документы\GitHub\webApi\Sample\src\Blank.Web.Common.Tests\bin\Debug\Blank.Web.Common.Tests.dll
+E:\OneDrive\Документы\GitHub\webApi\Sample\src\Blank.Web.Common.Tests\bin\Debug\Blank.Web.Common.Tests.pdb
+E:\OneDrive\Документы\GitHub\webApi\Sample\src\Blank.Web.Common.Tests\obj\Debug\Blank.Web.Common.Tests.dll
+E:\OneDrive\Документы\GitHub\webApi\Sample\src\Blank.Web.Common.Tests\obj\Debug\Blank.Web.Common.Tests.pdb

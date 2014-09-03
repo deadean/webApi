@@ -15,3 +15,8 @@ C:\Users\acmyk\OneDrive\Документы\Books\Programming Language\C#\_On Rea
 C:\Users\acmyk\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\ViewModelLib\bin\Debug\ViewModelLib.pdb
 C:\Users\acmyk\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\ViewModelLib\obj\Debug\ViewModelLib.dll
 C:\Users\acmyk\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\ViewModelLib\obj\Debug\ViewModelLib.pdb
+E:\OneDrive\Документы\GitHub\webApi\Sample\src\ViewModelLib\bin\Debug\ViewModelLib.dll
+E:\OneDrive\Документы\GitHub\webApi\Sample\src\ViewModelLib\bin\Debug\ViewModelLib.pdb
+E:\OneDrive\Документы\GitHub\webApi\Sample\src\ViewModelLib\obj\Debug\ViewModelLib.csprojResolveAssemblyReference.cache
+E:\OneDrive\Документы\GitHub\webApi\Sample\src\ViewModelLib\obj\Debug\ViewModelLib.dll
+E:\OneDrive\Документы\GitHub\webApi\Sample\src\ViewModelLib\obj\Debug\ViewModelLib.pdb

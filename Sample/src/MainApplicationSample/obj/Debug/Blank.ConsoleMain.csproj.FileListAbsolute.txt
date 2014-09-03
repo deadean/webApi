@@ -14,3 +14,20 @@ E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\
 E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\src\MainApplicationSample\bin\Debug\EntityFramework.SqlServer.xml
 E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\src\MainApplicationSample\obj\Debug\Blank.ConsoleMain.exe
 E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\src\MainApplicationSample\obj\Debug\Blank.ConsoleMain.pdb
+E:\OneDrive\Документы\GitHub\webApi\Sample\src\MainApplicationSample\bin\Debug\dean.db3
+E:\OneDrive\Документы\GitHub\webApi\Sample\src\MainApplicationSample\bin\Debug\Blank.ConsoleMain.exe.config
+E:\OneDrive\Документы\GitHub\webApi\Sample\src\MainApplicationSample\bin\Debug\Blank.ConsoleMain.exe
+E:\OneDrive\Документы\GitHub\webApi\Sample\src\MainApplicationSample\bin\Debug\Blank.ConsoleMain.pdb
+E:\OneDrive\Документы\GitHub\webApi\Sample\src\MainApplicationSample\bin\Debug\EntityFramework.dll
+E:\OneDrive\Документы\GitHub\webApi\Sample\src\MainApplicationSample\bin\Debug\EntityFramework.SqlServer.dll
+E:\OneDrive\Документы\GitHub\webApi\Sample\src\MainApplicationSample\bin\Debug\Model.dll
+E:\OneDrive\Документы\GitHub\webApi\Sample\src\MainApplicationSample\bin\Debug\System.Data.SQLite.dll
+E:\OneDrive\Документы\GitHub\webApi\Sample\src\MainApplicationSample\bin\Debug\System.Data.SQLite.Linq.dll
+E:\OneDrive\Документы\GitHub\webApi\Sample\src\MainApplicationSample\bin\Debug\ViewModelLib.dll
+E:\OneDrive\Документы\GitHub\webApi\Sample\src\MainApplicationSample\bin\Debug\Model.pdb
+E:\OneDrive\Документы\GitHub\webApi\Sample\src\MainApplicationSample\bin\Debug\ViewModelLib.pdb
+E:\OneDrive\Документы\GitHub\webApi\Sample\src\MainApplicationSample\bin\Debug\EntityFramework.xml
+E:\OneDrive\Документы\GitHub\webApi\Sample\src\MainApplicationSample\bin\Debug\EntityFramework.SqlServer.xml
+E:\OneDrive\Документы\GitHub\webApi\Sample\src\MainApplicationSample\obj\Debug\Blank.ConsoleMain.csprojResolveAssemblyReference.cache
+E:\OneDrive\Документы\GitHub\webApi\Sample\src\MainApplicationSample\obj\Debug\Blank.ConsoleMain.exe
+E:\OneDrive\Документы\GitHub\webApi\Sample\src\MainApplicationSample\obj\Debug\Blank.ConsoleMain.pdb

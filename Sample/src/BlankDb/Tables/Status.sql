@@ -1,0 +1,7 @@
+﻿CREATE TABLE Status(
+	ID INT IDENTITY (1,1) NOT NULL PRIMARY KEY,
+	Name Text,
+	Ordinal INT NOT NULL,
+	ts DATETIME NOT NULL
+);
+	
