@@ -1,0 +1,144 @@
+C:\Users\acmyk\SkyDrive\Документы\Documents\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\obj\Debug\MainApplicationSample.csprojResolveAssemblyReference.cache
+C:\Users\acmyk\SkyDrive\Документы\Documents\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\dean.db3
+C:\Users\acmyk\SkyDrive\Документы\Documents\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\deanSS.s3db
+C:\Users\acmyk\SkyDrive\Документы\Documents\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\MainApplicationSample.exe.config
+C:\Users\acmyk\SkyDrive\Документы\Documents\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\MainApplicationSample.exe
+C:\Users\acmyk\SkyDrive\Документы\Documents\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\MainApplicationSample.pdb
+C:\Users\acmyk\SkyDrive\Документы\Documents\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\MainProject.exe
+C:\Users\acmyk\SkyDrive\Документы\Documents\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\ViewModelLib.dll
+C:\Users\acmyk\SkyDrive\Документы\Documents\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\Model.dll
+C:\Users\acmyk\SkyDrive\Документы\Documents\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\EntityFramework.dll
+C:\Users\acmyk\SkyDrive\Документы\Documents\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\System.Data.SQLite.dll
+C:\Users\acmyk\SkyDrive\Документы\Documents\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\MainProject.pdb
+C:\Users\acmyk\SkyDrive\Документы\Documents\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\ViewModelLib.pdb
+C:\Users\acmyk\SkyDrive\Документы\Documents\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\Model.pdb
+C:\Users\acmyk\SkyDrive\Документы\Documents\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\EntityFramework.xml
+C:\Users\acmyk\SkyDrive\Документы\Documents\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\obj\Debug\MainApplicationSample.exe
+C:\Users\acmyk\SkyDrive\Документы\Documents\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\obj\Debug\MainApplicationSample.pdb
+C:\Users\acmyk\SkyDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\dean.db3
+C:\Users\acmyk\SkyDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\deanSS.s3db
+C:\Users\acmyk\SkyDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\MainApplicationSample.exe.config
+C:\Users\acmyk\SkyDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\MainApplicationSample.exe
+C:\Users\acmyk\SkyDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\MainApplicationSample.pdb
+C:\Users\acmyk\SkyDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\MainProject.exe
+C:\Users\acmyk\SkyDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\ViewModelLib.dll
+C:\Users\acmyk\SkyDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\Model.dll
+C:\Users\acmyk\SkyDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\EntityFramework.dll
+C:\Users\acmyk\SkyDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\System.Data.SQLite.dll
+C:\Users\acmyk\SkyDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\MainProject.pdb
+C:\Users\acmyk\SkyDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\ViewModelLib.pdb
+C:\Users\acmyk\SkyDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\Model.pdb
+C:\Users\acmyk\SkyDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\EntityFramework.xml
+C:\Users\acmyk\SkyDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\obj\Debug\MainApplicationSample.csprojResolveAssemblyReference.cache
+C:\Users\acmyk\SkyDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\obj\Debug\MainApplicationSample.exe
+C:\Users\acmyk\SkyDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\obj\Debug\MainApplicationSample.pdb
+D:\dean\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\dean.db3
+D:\dean\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\deanSS.s3db
+D:\dean\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\MainApplicationSample.exe.config
+D:\dean\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\MainApplicationSample.exe
+D:\dean\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\MainApplicationSample.pdb
+D:\dean\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\MainProject.exe
+D:\dean\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\ViewModelLib.dll
+D:\dean\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\RibbonControlsLibrary.dll
+D:\dean\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\Model.dll
+D:\dean\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\Microsoft.Windows.Shell.dll
+D:\dean\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\EntityFramework.dll
+D:\dean\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\System.Data.SQLite.dll
+D:\dean\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\MainProject.pdb
+D:\dean\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\ViewModelLib.pdb
+D:\dean\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\RibbonControlsLibrary.pdb
+D:\dean\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\RibbonControlsLibrary.xml
+D:\dean\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\Model.pdb
+D:\dean\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\Microsoft.Windows.Shell.pdb
+D:\dean\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\Microsoft.Windows.Shell.xml
+D:\dean\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\EntityFramework.xml
+D:\dean\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\obj\Debug\MainApplicationSample.csprojResolveAssemblyReference.cache
+D:\dean\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\obj\Debug\MainApplicationSample.exe
+D:\dean\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\obj\Debug\MainApplicationSample.pdb
+C:\Users\acmyk\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\dean.db3
+C:\Users\acmyk\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\deanSS.s3db
+C:\Users\acmyk\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\MainApplicationSample.exe.config
+C:\Users\acmyk\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\MainApplicationSample.exe
+C:\Users\acmyk\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\MainApplicationSample.pdb
+C:\Users\acmyk\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\MainProject.exe
+C:\Users\acmyk\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\ViewModelLib.dll
+C:\Users\acmyk\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\RibbonControlsLibrary.dll
+C:\Users\acmyk\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\Model.dll
+C:\Users\acmyk\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\EntityFramework.dll
+C:\Users\acmyk\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\System.Data.SQLite.dll
+C:\Users\acmyk\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\MainProject.pdb
+C:\Users\acmyk\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\ViewModelLib.pdb
+C:\Users\acmyk\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\Model.pdb
+C:\Users\acmyk\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\EntityFramework.xml
+C:\Users\acmyk\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\obj\Debug\MainApplicationSample.csprojResolveAssemblyReference.cache
+C:\Users\acmyk\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\obj\Debug\MainApplicationSample.exe
+C:\Users\acmyk\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\obj\Debug\MainApplicationSample.pdb
+E:\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\dean.db3
+E:\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\deanSS.s3db
+E:\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\MainApplicationSample.exe.config
+E:\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\MainApplicationSample.exe
+E:\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\MainApplicationSample.pdb
+E:\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\MainProject.exe
+E:\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\ViewModelLib.dll
+E:\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\RibbonControlsLibrary.dll
+E:\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\Model.dll
+E:\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\EntityFramework.dll
+E:\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\System.Data.SQLite.dll
+E:\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\MainProject.pdb
+E:\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\ViewModelLib.pdb
+E:\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\Model.pdb
+E:\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\EntityFramework.xml
+E:\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\obj\Debug\MainApplicationSample.csprojResolveAssemblyReference.cache
+E:\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\obj\Debug\MainApplicationSample.exe
+E:\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\obj\Debug\MainApplicationSample.pdb
+C:\Users\acmyk\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\MainProject\MainApplicationSample\bin\Debug\dean.db3
+C:\Users\acmyk\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\MainProject\MainApplicationSample\bin\Debug\MainApplicationSample.exe.config
+C:\Users\acmyk\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\MainProject\MainApplicationSample\bin\Debug\MainApplicationSample.exe
+C:\Users\acmyk\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\MainProject\MainApplicationSample\bin\Debug\MainApplicationSample.pdb
+C:\Users\acmyk\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\MainProject\MainApplicationSample\bin\Debug\EntityFramework.dll
+C:\Users\acmyk\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\MainProject\MainApplicationSample\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\acmyk\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\MainProject\MainApplicationSample\bin\Debug\Model.dll
+C:\Users\acmyk\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\MainProject\MainApplicationSample\bin\Debug\System.Data.SQLite.dll
+C:\Users\acmyk\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\MainProject\MainApplicationSample\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\acmyk\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\MainProject\MainApplicationSample\bin\Debug\ViewModelLib.dll
+C:\Users\acmyk\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\MainProject\MainApplicationSample\bin\Debug\Model.pdb
+C:\Users\acmyk\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\MainProject\MainApplicationSample\bin\Debug\ViewModelLib.pdb
+C:\Users\acmyk\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\MainProject\MainApplicationSample\bin\Debug\EntityFramework.xml
+C:\Users\acmyk\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\MainProject\MainApplicationSample\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\acmyk\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\MainProject\MainApplicationSample\obj\Debug\MainApplicationSample.csprojResolveAssemblyReference.cache
+C:\Users\acmyk\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\MainProject\MainApplicationSample\obj\Debug\MainApplicationSample.exe
+C:\Users\acmyk\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\MainProject\MainApplicationSample\obj\Debug\MainApplicationSample.pdb
+E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\MainProject\MainApplicationSample\bin\Debug\dean.db3
+E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\MainProject\MainApplicationSample\bin\Debug\MainApplicationSample.exe.config
+E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\MainProject\MainApplicationSample\bin\Debug\MainApplicationSample.exe
+E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\MainProject\MainApplicationSample\bin\Debug\MainApplicationSample.pdb
+E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\MainProject\MainApplicationSample\bin\Debug\EntityFramework.dll
+E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\MainProject\MainApplicationSample\bin\Debug\EntityFramework.SqlServer.dll
+E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\MainProject\MainApplicationSample\bin\Debug\Model.dll
+E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\MainProject\MainApplicationSample\bin\Debug\System.Data.SQLite.dll
+E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\MainProject\MainApplicationSample\bin\Debug\System.Data.SQLite.Linq.dll
+E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\MainProject\MainApplicationSample\bin\Debug\ViewModelLib.dll
+E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\MainProject\MainApplicationSample\bin\Debug\Model.pdb
+E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\MainProject\MainApplicationSample\bin\Debug\ViewModelLib.pdb
+E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\MainProject\MainApplicationSample\bin\Debug\EntityFramework.xml
+E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\MainProject\MainApplicationSample\bin\Debug\EntityFramework.SqlServer.xml
+E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\MainProject\MainApplicationSample\obj\Debug\MainApplicationSample.csprojResolveAssemblyReference.cache
+E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\MainProject\MainApplicationSample\obj\Debug\MainApplicationSample.exe
+E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\MainProject\MainApplicationSample\obj\Debug\MainApplicationSample.pdb
+E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\src\MainApplicationSample\bin\Debug\dean.db3
+E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\src\MainApplicationSample\bin\Debug\MainApplicationSample.exe.config
+E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\src\MainApplicationSample\bin\Debug\MainApplicationSample.exe
+E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\src\MainApplicationSample\bin\Debug\MainApplicationSample.pdb
+E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\src\MainApplicationSample\bin\Debug\EntityFramework.dll
+E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\src\MainApplicationSample\bin\Debug\EntityFramework.SqlServer.dll
+E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\src\MainApplicationSample\bin\Debug\Model.dll
+E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\src\MainApplicationSample\bin\Debug\System.Data.SQLite.dll
+E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\src\MainApplicationSample\bin\Debug\System.Data.SQLite.Linq.dll
+E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\src\MainApplicationSample\bin\Debug\ViewModelLib.dll
+E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\src\MainApplicationSample\bin\Debug\Model.pdb
+E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\src\MainApplicationSample\bin\Debug\ViewModelLib.pdb
+E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\src\MainApplicationSample\bin\Debug\EntityFramework.xml
+E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\src\MainApplicationSample\bin\Debug\EntityFramework.SqlServer.xml
+E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\src\MainApplicationSample\obj\Debug\MainApplicationSample.csprojResolveAssemblyReference.cache
+E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\src\MainApplicationSample\obj\Debug\MainApplicationSample.exe
+E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\src\MainApplicationSample\obj\Debug\MainApplicationSample.pdb

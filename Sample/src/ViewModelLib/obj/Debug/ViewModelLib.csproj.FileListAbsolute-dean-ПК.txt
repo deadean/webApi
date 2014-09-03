@@ -1,0 +1,5 @@
+C:\Users\acmyk\SkyDrive\Документы\Documents\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\ViewModelLib\bin\Debug\ViewModelLib.dll
+C:\Users\acmyk\SkyDrive\Документы\Documents\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\ViewModelLib\bin\Debug\ViewModelLib.pdb
+C:\Users\acmyk\SkyDrive\Документы\Documents\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\ViewModelLib\obj\Debug\ViewModelLib.dll
+C:\Users\acmyk\SkyDrive\Документы\Documents\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\ViewModelLib\obj\Debug\ViewModelLib.pdb
+C:\Users\acmyk\SkyDrive\Документы\Documents\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\ViewModelLib\obj\Debug\ViewModelLib.csprojResolveAssemblyReference.cache

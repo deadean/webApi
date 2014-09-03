@@ -1,0 +1,4 @@
+E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\src\Blank.Web.Api.Tests\bin\Debug\Blank.Web.Api.Tests.dll
+E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\src\Blank.Web.Api.Tests\bin\Debug\Blank.Web.Api.Tests.pdb
+E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\src\Blank.Web.Api.Tests\obj\Debug\Blank.Web.Api.Tests.dll
+E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\src\Blank.Web.Api.Tests\obj\Debug\Blank.Web.Api.Tests.pdb

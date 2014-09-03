@@ -1,0 +1,2 @@
+E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\src\MainApplicationSample\obj\Debug\Blank.Console.csprojResolveAssemblyReference.cache
+E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\src\MainApplicationSample\bin\Debug\Blank.ConsoleMain.exe.config

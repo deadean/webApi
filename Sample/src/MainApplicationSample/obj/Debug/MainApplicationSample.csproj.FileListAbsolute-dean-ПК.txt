@@ -1,0 +1,10 @@
+C:\Users\acmyk\SkyDrive\Документы\Documents\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\obj\Debug\MainApplicationSample.csprojResolveAssemblyReference.cache
+C:\Users\acmyk\SkyDrive\Документы\Documents\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\MainApplicationSample.exe.config
+C:\Users\acmyk\SkyDrive\Документы\Documents\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\MainApplicationSample.exe
+C:\Users\acmyk\SkyDrive\Документы\Documents\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\MainApplicationSample.pdb
+C:\Users\acmyk\SkyDrive\Документы\Documents\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\MainProject.exe
+C:\Users\acmyk\SkyDrive\Документы\Documents\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\ViewModelLib.dll
+C:\Users\acmyk\SkyDrive\Документы\Documents\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\MainProject.pdb
+C:\Users\acmyk\SkyDrive\Документы\Documents\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\bin\Debug\ViewModelLib.pdb
+C:\Users\acmyk\SkyDrive\Документы\Documents\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\obj\Debug\MainApplicationSample.exe
+C:\Users\acmyk\SkyDrive\Документы\Documents\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\MainApplicationSample\obj\Debug\MainApplicationSample.pdb

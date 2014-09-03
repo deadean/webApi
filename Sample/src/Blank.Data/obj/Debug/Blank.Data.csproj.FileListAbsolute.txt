@@ -1,0 +1,4 @@
+E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\src\Blank.Data\bin\Debug\Blank.Data.dll
+E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\src\Blank.Data\bin\Debug\Blank.Data.pdb
+E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\src\Blank.Data\obj\Debug\Blank.Data.dll
+E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\src\Blank.Data\obj\Debug\Blank.Data.pdb

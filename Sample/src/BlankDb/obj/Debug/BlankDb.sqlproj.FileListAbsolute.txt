@@ -1,0 +1,5 @@
+E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\src\BlankDb\bin\Debug\BlankDb.dacpac
+E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\src\BlankDb\bin\Debug\BlankDb.dll
+E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\src\BlankDb\bin\Debug\BlankDb.pdb
+E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\src\BlankDb\obj\Debug\BlankDb.dll
+E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\src\BlankDb\obj\Debug\BlankDb.pdb

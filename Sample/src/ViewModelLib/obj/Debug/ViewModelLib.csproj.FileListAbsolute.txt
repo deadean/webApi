@@ -1,0 +1,17 @@
+C:\Users\acmyk\SkyDrive\Документы\Documents\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\ViewModelLib\bin\Debug\ViewModelLib.dll
+C:\Users\acmyk\SkyDrive\Документы\Documents\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\ViewModelLib\bin\Debug\ViewModelLib.pdb
+C:\Users\acmyk\SkyDrive\Документы\Documents\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\ViewModelLib\obj\Debug\ViewModelLib.dll
+C:\Users\acmyk\SkyDrive\Документы\Documents\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\ViewModelLib\obj\Debug\ViewModelLib.pdb
+C:\Users\acmyk\SkyDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\ViewModelLib\bin\Debug\ViewModelLib.dll
+C:\Users\acmyk\SkyDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\ViewModelLib\bin\Debug\ViewModelLib.pdb
+C:\Users\acmyk\SkyDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\ViewModelLib\obj\Debug\ViewModelLib.dll
+C:\Users\acmyk\SkyDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\ViewModelLib\obj\Debug\ViewModelLib.pdb
+D:\dean\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\ViewModelLib\bin\Debug\ViewModelLib.dll
+D:\dean\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\ViewModelLib\bin\Debug\ViewModelLib.pdb
+D:\dean\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\ViewModelLib\obj\Debug\ViewModelLib.csprojResolveAssemblyReference.cache
+D:\dean\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\ViewModelLib\obj\Debug\ViewModelLib.dll
+D:\dean\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\ViewModelLib\obj\Debug\ViewModelLib.pdb
+C:\Users\acmyk\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\ViewModelLib\bin\Debug\ViewModelLib.dll
+C:\Users\acmyk\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\ViewModelLib\bin\Debug\ViewModelLib.pdb
+C:\Users\acmyk\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\ViewModelLib\obj\Debug\ViewModelLib.dll
+C:\Users\acmyk\OneDrive\Документы\Books\Programming Language\C#\_On Reading\sampleProWpf\MainProject\ViewModelLib\obj\Debug\ViewModelLib.pdb
