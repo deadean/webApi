@@ -9,6 +9,8 @@ namespace Model.Entity
     public class User : IEntity
     {
         public int ID { get; set; }
-        public string Name { get; set; }
+        public string Firstname { get; set; }
+        public string Lastname { get; set; }
+        public string Username { get; set; }
     }
 }
