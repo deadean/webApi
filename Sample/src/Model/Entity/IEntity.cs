@@ -8,6 +8,6 @@ namespace Model.Entity
 {
     public interface IEntity
     {
-        int ID { get; set; }
+        int Id { get; set; }
     }
 }

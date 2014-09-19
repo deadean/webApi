@@ -74,8 +74,8 @@ namespace Model.ModelServices
                 { 
                     { typeof(Product),(x) => 
                         { 
-                            this.modDbContext.USER.Find(x.ID).With(y => modDbContext.Entry(y).CurrentValues.SetValues(x));
-                            if (this.modDbContext.USER.Find(x.ID) == null)
+                            this.modDbContext.USER.Find(x.Id).With(y => modDbContext.Entry(y).CurrentValues.SetValues(x));
+                            if (this.modDbContext.USER.Find(x.Id) == null)
                                 AddNewEntity(x);
                         }}
                 };
@@ -90,7 +90,7 @@ namespace Model.ModelServices
             {
                 Dictionary<Type, Action<IEntity>> dict = new Dictionary<Type, Action<IEntity>>() 
                 { 
-                    { typeof(Product),(x) => this.modDbContext.USER.Find(x.ID).With(y => modDbContext.USER.Remove((User)x))}
+                    { typeof(Product),(x) => this.modDbContext.USER.Find(x.Id).With(y => modDbContext.USER.Remove((User)x))}
                 };
                 entity.With(x => dict.If(y => y.ContainsKey(x.GetType()), y => y[x.GetType()].Invoke(x)));
                 this.modDbContext.SaveChanges();

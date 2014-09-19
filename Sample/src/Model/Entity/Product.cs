@@ -7,7 +7,7 @@ namespace Model.Entity
 {
     public partial class Product:IEntity,INotifyDataErrorInfo
     {
-        public int ID { get; set; }
+        public int Id { get; set; }
 
         private string mvString = string.Empty;
         public string Number { get { return mvString; } 

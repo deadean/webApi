@@ -1,5 +1,6 @@
 ﻿using System;
 using Model.ModelServices;
+using Model.Entity;
 
 namespace Blank.ConsoleMain
 {
@@ -14,6 +15,7 @@ namespace Blank.ConsoleMain
                 var companies = mc.GetAllUsers();
 
                 companies.ForEach(x => Console.WriteLine(x.Username));
+                mc.AddNewEntity(new User() { Firstname = "TEST", Lastname="TEST", Username = "TEST"});
             }
             catch (Exception ex)
             {
