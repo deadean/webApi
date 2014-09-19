@@ -60,4 +60,10 @@
     <Folder Include="Scripts" />
     <Folder Include="Tables" />
   </ItemGroup>
+  <ItemGroup>
+    <Build Include="Tables\Status.sql" />
+    <Build Include="Tables\Task.sql" />
+    <Build Include="Tables\TaskUser.sql" />
+    <Build Include="Tables\Users.sql" />
+  </ItemGroup>
 </Project>
