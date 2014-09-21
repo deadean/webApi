@@ -1,5 +1,6 @@
-﻿using EntitySqlite;
-using Model.Entity;
+﻿using Blank.Data.Implementations.Entities;
+using Blank.Data.Interfaces.Entities;
+using EntitySqlite;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -72,7 +73,7 @@ namespace Model.ModelServices
             {
                 Dictionary<Type, Action<IEntity>> dict = new Dictionary<Type, Action<IEntity>>() 
                 { 
-                    { typeof(Product),(x) => 
+                    { typeof(User),(x) => 
                         { 
                             this.modDbContext.USER.Find(x.Id).With(y => modDbContext.Entry(y).CurrentValues.SetValues(x));
                             if (this.modDbContext.USER.Find(x.Id) == null)
@@ -90,7 +91,7 @@ namespace Model.ModelServices
             {
                 Dictionary<Type, Action<IEntity>> dict = new Dictionary<Type, Action<IEntity>>() 
                 { 
-                    { typeof(Product),(x) => this.modDbContext.USER.Find(x.Id).With(y => modDbContext.USER.Remove((User)x))}
+                    { typeof(User),(x) => this.modDbContext.USER.Find(x.Id).With(y => modDbContext.USER.Remove((User)x))}
                 };
                 entity.With(x => dict.If(y => y.ContainsKey(x.GetType()), y => y[x.GetType()].Invoke(x)));
                 this.modDbContext.SaveChanges();

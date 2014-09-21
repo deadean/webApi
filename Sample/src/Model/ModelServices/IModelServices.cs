@@ -1,4 +1,5 @@
-﻿using Model.Entity;
+﻿using Blank.Data.Implementations.Entities;
+using Blank.Data.Interfaces.Entities;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;

@@ -1,6 +1,6 @@
 ﻿using System;
+using Blank.Data.Implementations.Entities;
 using Model.ModelServices;
-using Model.Entity;
 
 namespace Blank.ConsoleMain
 {

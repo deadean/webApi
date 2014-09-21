@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Blank.Data.Interfaces.Entities
 {
-    internal interface IEntity
+    public interface IEntity
     {
-        long ID { get; set; }
+        long Id { get; set; }
     }
 }

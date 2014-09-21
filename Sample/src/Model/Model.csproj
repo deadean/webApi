@@ -53,18 +53,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entity\Category.cs" />
-    <Compile Include="Entity\Company.cs" />
-    <Compile Include="Entity\Order.cs" />
-    <Compile Include="Entity\Product.cs" />
-    <Compile Include="Entity\User.cs" />
     <Compile Include="ModelContext.cs" />
-    <Compile Include="Entity\IEntity.cs" />
     <Compile Include="ModelServices\IModelServices.cs" />
     <Compile Include="ModelServices\ModelServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Blank.Data\Blank.Data.csproj">
+      <Project>{91ce9c41-4c3d-4d47-9883-ab1cc1ee9c15}</Project>
+      <Name>Blank.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ViewModelLib\ViewModelLib.csproj">
       <Project>{94e09330-43d3-4340-ae9d-46eba4b2d5ac}</Project>
       <Name>ViewModelLib</Name>

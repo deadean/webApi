@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Blank.Data.Implementations.Entities
 {
-    internal class User:IEntity
+    public class User:IEntity
     {
         #region Fields
 
@@ -17,13 +17,13 @@ namespace Blank.Data.Implementations.Entities
 
         #region Properties
 
-        public long ID { get; set; }
+        public long Id { get; set; }
 
-        public virtual long UserId { get; set; }
+        ///public virtual long UserId { get; set; }
         public virtual string Firstname { get; set; }
         public virtual string Lastname { get; set; }
         public virtual string Username { get; set; }
-        public virtual byte[] Version { get; set; }
+        //public virtual Dat[] ts { get; set; }
         public List<Link> Links
         {
             get { return _links ?? (_links = new List<Link>()); }

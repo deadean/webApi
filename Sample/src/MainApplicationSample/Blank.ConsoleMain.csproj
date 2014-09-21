@@ -72,8 +72,12 @@
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Blank.Data\Blank.Data.csproj">
+      <Project>{91ce9c41-4c3d-4d47-9883-ab1cc1ee9c15}</Project>
+      <Name>Blank.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Model\Model.csproj">
-      <Project>{daa64f3e-5dc7-421e-af0f-7a3b0796cb7e}</Project>
+      <Project>{DAA64F3E-5DC7-421E-AF0F-7A3B0796CB7E}</Project>
       <Name>Model</Name>
     </ProjectReference>
     <ProjectReference Include="..\ViewModelLib\ViewModelLib.csproj">

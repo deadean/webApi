@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Blank.Data.Implementations.Entities
 {
-    internal class Status : IEntity
+    public class Status : IEntity
     {
         #region Properties
 
-        public long ID
+        public long Id
         {
             get;
             set;

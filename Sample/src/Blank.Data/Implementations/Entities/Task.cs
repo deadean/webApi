@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Blank.Data.Implementations.Entities
 {
-    internal class Task: IEntity
+    public class Task: IEntity
     {
         #region Fields
 
@@ -18,7 +18,7 @@ namespace Blank.Data.Implementations.Entities
 
         #region Properties
 
-        public long ID { get; set; }
+        public long Id { get; set; }
         public long? TaskId { get; set; }
         public string Subject { get; set; }
         public DateTime? StartDate { get; set; }
