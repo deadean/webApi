@@ -10,6 +10,7 @@ namespace Blank.Web.Api.Controllers.V1
     public class TasksController : ApiController
     {
         [Route("{id:int}")]
+        [HttpGet]
         public string Get(int id)
         {
             return "In the Get(int id) overload, id=" + id;

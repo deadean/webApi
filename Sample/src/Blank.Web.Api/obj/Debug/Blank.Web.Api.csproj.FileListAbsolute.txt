@@ -21,4 +21,3 @@ E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\
 E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\src\Blank.Web.Api\obj\Debug\Blank.Web.Api.csprojResolveAssemblyReference.cache
 E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\src\Blank.Web.Api\obj\Debug\Blank.Web.Api.dll
 E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\src\Blank.Web.Api\obj\Debug\Blank.Web.Api.pdb
-E:\OneDrive\Documents\GitHub\webApi\Sample\src\Blank.Web.Api\bin\AutoMapper.dll

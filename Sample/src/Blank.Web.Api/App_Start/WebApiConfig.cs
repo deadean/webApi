@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Dispatcher;
+using System.Web.Http.Routing;
+using Blank.Web.Common;
+using Blank.Web.Common.Routing;
 
 namespace Blank.Web.Api
 {
@@ -9,13 +13,20 @@ namespace Blank.Web.Api
     {
         public static void Register(HttpConfiguration config)
         {
-			config.MapHttpAttributeRoutes();
+            //var constraintsResolver = new DefaultInlineConstraintResolver();
+            //constraintsResolver.ConstraintMap.Add("apiVersionConstraint", typeof
+            //(ApiVersionConstraint));
+            //config.MapHttpAttributeRoutes(constraintsResolver);
+            //config.Services.Replace(typeof(IHttpControllerSelector),
+            //new NamespaceHttpControllerSelector(config));
 
-            //config.Routes.MapHttpRoute(
-            //    name: "FindByTaskNumberRoute",
-            //    routeTemplate: "api/{controller}/{taskNum}",
-            //    defaults: new { taskNum = RouteParameter.Optional }
-            //);
+            config.MapHttpAttributeRoutes();
+
+            ////config.Routes.MapHttpRoute(
+            ////    name: "FindByTaskNumberRoute",
+            ////    routeTemplate: "api/{controller}/{taskNum}",
+            ////    defaults: new { taskNum = RouteParameter.Optional }
+            ////);
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
