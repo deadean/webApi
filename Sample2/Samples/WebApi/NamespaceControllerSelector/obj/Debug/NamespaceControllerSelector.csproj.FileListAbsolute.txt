@@ -1,0 +1,14 @@
+C:\Users\acmyk\Downloads\aspnet-dd207952fa86\Samples\WebApi\NamespaceControllerSelector\bin\Debug\NamespaceControllerSelector.exe.config
+C:\Users\acmyk\Downloads\aspnet-dd207952fa86\Samples\WebApi\NamespaceControllerSelector\bin\Debug\NamespaceControllerSelector.exe
+C:\Users\acmyk\Downloads\aspnet-dd207952fa86\Samples\WebApi\NamespaceControllerSelector\bin\Debug\NamespaceControllerSelector.pdb
+C:\Users\acmyk\Downloads\aspnet-dd207952fa86\Samples\WebApi\NamespaceControllerSelector\bin\Debug\Newtonsoft.Json.dll
+C:\Users\acmyk\Downloads\aspnet-dd207952fa86\Samples\WebApi\NamespaceControllerSelector\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\acmyk\Downloads\aspnet-dd207952fa86\Samples\WebApi\NamespaceControllerSelector\bin\Debug\System.Web.Http.dll
+C:\Users\acmyk\Downloads\aspnet-dd207952fa86\Samples\WebApi\NamespaceControllerSelector\bin\Debug\System.Web.Http.SelfHost.dll
+C:\Users\acmyk\Downloads\aspnet-dd207952fa86\Samples\WebApi\NamespaceControllerSelector\bin\Debug\Newtonsoft.Json.xml
+C:\Users\acmyk\Downloads\aspnet-dd207952fa86\Samples\WebApi\NamespaceControllerSelector\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\acmyk\Downloads\aspnet-dd207952fa86\Samples\WebApi\NamespaceControllerSelector\bin\Debug\System.Web.Http.xml
+C:\Users\acmyk\Downloads\aspnet-dd207952fa86\Samples\WebApi\NamespaceControllerSelector\bin\Debug\System.Web.Http.SelfHost.xml
+C:\Users\acmyk\Downloads\aspnet-dd207952fa86\Samples\WebApi\NamespaceControllerSelector\obj\Debug\NamespaceControllerSelector.csprojResolveAssemblyReference.cache
+C:\Users\acmyk\Downloads\aspnet-dd207952fa86\Samples\WebApi\NamespaceControllerSelector\obj\Debug\NamespaceControllerSelector.exe
+C:\Users\acmyk\Downloads\aspnet-dd207952fa86\Samples\WebApi\NamespaceControllerSelector\obj\Debug\NamespaceControllerSelector.pdb
