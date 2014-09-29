@@ -1,0 +1,9 @@
+C:\Users\acmyk\Downloads\aspnet-9b28e0bf8fe42b4d54a1cf0287061907f4f90961\Samples\WebApi\RoutingConstraintsSample\RoutingConstraints.Client\bin\Debug\RoutingConstraints.Client.exe.config
+C:\Users\acmyk\Downloads\aspnet-9b28e0bf8fe42b4d54a1cf0287061907f4f90961\Samples\WebApi\RoutingConstraintsSample\RoutingConstraints.Client\bin\Debug\RoutingConstraints.Client.exe
+C:\Users\acmyk\Downloads\aspnet-9b28e0bf8fe42b4d54a1cf0287061907f4f90961\Samples\WebApi\RoutingConstraintsSample\RoutingConstraints.Client\bin\Debug\RoutingConstraints.Client.pdb
+C:\Users\acmyk\Downloads\aspnet-9b28e0bf8fe42b4d54a1cf0287061907f4f90961\Samples\WebApi\RoutingConstraintsSample\RoutingConstraints.Client\bin\Debug\Newtonsoft.Json.dll
+C:\Users\acmyk\Downloads\aspnet-9b28e0bf8fe42b4d54a1cf0287061907f4f90961\Samples\WebApi\RoutingConstraintsSample\RoutingConstraints.Client\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\acmyk\Downloads\aspnet-9b28e0bf8fe42b4d54a1cf0287061907f4f90961\Samples\WebApi\RoutingConstraintsSample\RoutingConstraints.Client\bin\Debug\Newtonsoft.Json.xml
+C:\Users\acmyk\Downloads\aspnet-9b28e0bf8fe42b4d54a1cf0287061907f4f90961\Samples\WebApi\RoutingConstraintsSample\RoutingConstraints.Client\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\acmyk\Downloads\aspnet-9b28e0bf8fe42b4d54a1cf0287061907f4f90961\Samples\WebApi\RoutingConstraintsSample\RoutingConstraints.Client\obj\Debug\RoutingConstraints.Client.exe
+C:\Users\acmyk\Downloads\aspnet-9b28e0bf8fe42b4d54a1cf0287061907f4f90961\Samples\WebApi\RoutingConstraintsSample\RoutingConstraints.Client\obj\Debug\RoutingConstraints.Client.pdb
