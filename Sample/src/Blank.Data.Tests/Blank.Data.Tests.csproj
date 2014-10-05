@@ -58,13 +58,13 @@
     <Compile Include="TestData.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Blank.Data.SQLite\Blank.Data.SQLite.csproj">
+      <Project>{7D525AA4-3983-4185-BBD2-7E21897CC445}</Project>
+      <Name>Blank.Data.SQLite</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Blank.Data\Blank.Data.csproj">
       <Project>{91ce9c41-4c3d-4d47-9883-ab1cc1ee9c15}</Project>
       <Name>Blank.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Model\Model.csproj">
-      <Project>{daa64f3e-5dc7-421e-af0f-7a3b0796cb7e}</Project>
-      <Name>Model</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

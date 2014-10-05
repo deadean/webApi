@@ -1,11 +1,6 @@
 ﻿using Blank.Data.Implementations.Entities;
+using Blank.Data.SQLite.ModelServices;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Model.ModelServices;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Blank.Data.Tests
 {

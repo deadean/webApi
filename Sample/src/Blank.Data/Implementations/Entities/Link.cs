@@ -1,13 +1,8 @@
 ﻿using Blank.Data.Interfaces.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Blank.Data.Implementations.Entities
 {
-    public sealed class Link : IEntity
+    public sealed class Link : IEntity, IVersionedEntity
     {
         #region Properties
 
@@ -18,6 +13,7 @@ namespace Blank.Data.Implementations.Entities
         public string Method { get; set; }
         
         #endregion
-        
+
+        public string Version { get; set; }
     }
 }
