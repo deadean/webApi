@@ -39,9 +39,12 @@ namespace Blank.Data.SQLite.ModelServices
             return modInstance;
         }
 
-        public List<User> GetAllUsers()
+        public List<T> GettEntities<T>() where T : IEntity
         {
-            return modDbContext.USER.ToList();
+            if (typeof(T) == typeof(User)) return modDbContext.USER.OfType<T>().ToList();
+            if (typeof(T) == typeof(Status)) return modDbContext.STATUS.OfType<T>().ToList();
+
+            return null;
         }
 
         public void SaveChanges()
@@ -51,9 +54,10 @@ namespace Blank.Data.SQLite.ModelServices
 
         public void AddNewEntity(IEntity entity)
         {
-            Dictionary<Type, Action<IEntity>> dict = new Dictionary<Type, Action<IEntity>>() 
+            var dict = new Dictionary<Type, Action<IEntity>>() 
             { 
-                {typeof(User),(x)=> this.modDbContext.USER.Add(x as User)}
+                {typeof(User),(x)=> this.modDbContext.USER.Add(x as User)},
+                {typeof(Status),(x)=> this.modDbContext.STATUS.Add(x as Status)}
             };
             entity.With(x => dict.If(y => y.ContainsKey(x.GetType()), y => y[x.GetType()].Invoke(x)));
             this.modDbContext.SaveChanges();

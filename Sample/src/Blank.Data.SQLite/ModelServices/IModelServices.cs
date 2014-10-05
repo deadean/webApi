@@ -6,7 +6,7 @@ namespace Blank.Data.SQLite.ModelServices
 {
     public interface IModelServices
     {
-        List<User> GetAllUsers();
+        List<T> GettEntities<T>() where T : IEntity;
 
         void AddNewEntity(IEntity entity);
         void UpdateEntity(IEntity entity);

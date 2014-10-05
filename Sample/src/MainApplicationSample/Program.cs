@@ -11,13 +11,13 @@ namespace Blank.ConsoleMain
         {
             try
             {
-                var users = mvModel.GetAllUsers();
+                var users = mvModel.GettEntities<User>();
                 users.ForEach(x=>Console.WriteLine(x.Firstname));
                 var count = users.Count;
 
                 mvModel.AddNewEntity(new User() { Firstname = "TEST", Lastname = "TEST", Username = "TEST" });
 
-                users = mvModel.GetAllUsers();
+                users = mvModel.GettEntities<User>();
                 var count1 = users.Count;
             }
             catch (Exception ex)

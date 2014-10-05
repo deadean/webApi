@@ -6,6 +6,7 @@ namespace Blank.Data.SQLite
     class ModelContext : DbContext
     {
         public DbSet<User> USER { get; set; }
+        public DbSet<Status> STATUS { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -17,6 +18,7 @@ namespace Blank.Data.SQLite
             //modelBuilder.Entity<Category>().HasMany<Product>(s => s.Products)
             //.WithRequired(s => s.Category).HasForeignKey(s => s.idCategory);
             modelBuilder.Entity<User>();
+            modelBuilder.Entity<Status>();
         }
     }
 }
