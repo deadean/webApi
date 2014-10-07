@@ -14,7 +14,6 @@ namespace Blank.Web.Api
     {
         public static void Register(HttpConfiguration config)
         {
-            //config.HostNameComparisonMode = HostNameComparisonMode.Exact;
             config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(
@@ -24,25 +23,6 @@ namespace Blank.Web.Api
                 );
 
             config.Services.Replace(typeof(IHttpControllerSelector), new NamespaceHttpControllerSelector(config));
-
-            //var constraintsResolver = new DefaultInlineConstraintResolver();
-            //constraintsResolver.ConstraintMap.Add("apiVersionConstraint", typeof
-            //(ApiVersionConstraint));
-            //config.MapHttpAttributeRoutes(constraintsResolver);
-            //config.Services.Replace(typeof(IHttpControllerSelector),
-            //new NamespaceHttpControllerSelector(config));
-
-            ////config.Routes.MapHttpRoute(
-            ////    name: "FindByTaskNumberRoute",
-            ////    routeTemplate: "api/{controller}/{taskNum}",
-            ////    defaults: new { taskNum = RouteParameter.Optional }
-            ////);
-
-            //config.Routes.MapHttpRoute(
-            //    name: "DefaultApi",
-            //    routeTemplate: "api/v2/{controller}/{id}",
-            //    defaults: new { id = RouteParameter.Optional }
-            //);
         }
     }
 }

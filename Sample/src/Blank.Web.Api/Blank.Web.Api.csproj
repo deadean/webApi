@@ -112,6 +112,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\NinjectConfigurator.cs" />
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\DeanController.cs" />
@@ -136,6 +137,10 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Blank.Common\Blank.Common.csproj">
+      <Project>{71799e30-cc4d-4963-9027-847c87f87629}</Project>
+      <Name>Blank.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Blank.Data\Blank.Data.csproj">
       <Project>{91ce9c41-4c3d-4d47-9883-ab1cc1ee9c15}</Project>
       <Name>Blank.Data</Name>
