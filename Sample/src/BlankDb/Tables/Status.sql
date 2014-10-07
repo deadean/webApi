@@ -3,5 +3,5 @@
 --       Id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
 --       Name TEXT,
 --       Ordinal INTEGER NOT NULL,
---       ts DATETIME
+--       Version TEXT
 --)

@@ -1,13 +1,8 @@
 ﻿using Blank.Data.Interfaces.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Blank.Data.Implementations.Entities
 {
-    public class Status : IEntity
+    public class Status : IEntity, IVersionedEntity
     {
         #region Properties
 
@@ -17,10 +12,9 @@ namespace Blank.Data.Implementations.Entities
             set;
         }
 
-        public virtual long StatusId { get; set; }
         public virtual string Name { get; set; }
         public virtual int Ordinal { get; set; }
-        public virtual byte[] Version { get; set; }
+        public virtual string Version { get; set; }
 
         #endregion
 

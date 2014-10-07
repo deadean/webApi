@@ -1,13 +1,10 @@
 ﻿using Blank.Data.Interfaces.Entities;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Blank.Data.Implementations.Entities
 {
-    public class Task: IEntity
+    public class Task : IEntity, IVersionedEntity
     {
         #region Fields
 
@@ -38,7 +35,7 @@ namespace Blank.Data.Implementations.Entities
         {
             get { return _users; }
         }
-        public virtual byte[] Version { get; set; }
+        public virtual string Version { get; set; }
         
         #endregion
 

@@ -149,10 +149,6 @@
       <Project>{EBDE4D1C-C760-490B-A766-AA24CC83313B}</Project>
       <Name>Blank.Web.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Model\Model.csproj">
-      <Project>{daa64f3e-5dc7-421e-af0f-7a3b0796cb7e}</Project>
-      <Name>Model</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
