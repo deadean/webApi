@@ -3,7 +3,10 @@ using Blank.Common.Implementations.Logging;
 using Blank.Common.Interfaces;
 using Blank.Common.Interfaces.Logging;
 using log4net.Config;
+using NHibernate;
+using NHibernate.Context;
 using Ninject;
+using Ninject.Activation;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,6 +44,17 @@ namespace Blank.Web.Api.App_Start
         public void Configure(IKernel container)
         {
             AddBindings(container);
+        }
+
+        private ISession CreateSession(IContext context)
+        {
+            var sessionFactory = context.Kernel.Get<ISessionFactory>();
+            if (!CurrentSessionContext.HasBind(sessionFactory))
+            {
+                var session = sessionFactory.OpenSession();
+                CurrentSessionContext.Bind(session);
+            }
+            return sessionFactory.GetCurrentSession();
         }
 
         #endregion
