@@ -137,10 +137,10 @@ namespace WebApi2Book.Web.Api
 
         private void ConfigureNHibernate(IKernel container)
         {
+            var connectionString = MsSqlConfiguration.MsSql2008.ConnectionString(
+                        c => c.FromConnectionStringWithKey("WebApi2BookDb"));
             var sessionFactory = Fluently.Configure()
-                .Database(
-                    MsSqlConfiguration.MsSql2008.ConnectionString(
-                        c => c.FromConnectionStringWithKey("WebApi2BookDb")))
+                .Database(connectionString)
                 .CurrentSessionContext("web")
                 .Mappings(m => m.FluentMappings.AddFromAssemblyOf<TaskMap>())
                 .BuildSessionFactory();

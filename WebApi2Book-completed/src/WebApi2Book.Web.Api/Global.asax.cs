@@ -22,7 +22,7 @@ namespace WebApi2Book.Web.Api
 
             ConfigureFormatters();
 
-            RegisterHandlers();
+            //RegisterHandlers();
 
             new AutoMapperConfigurator().Configure(WebContainerManager.GetAll<IAutoMapperTypeConfigurator>());
         }
@@ -38,9 +38,9 @@ namespace WebApi2Book.Web.Api
             var logManager = WebContainerManager.Get<ILogManager>();
             var userSession = WebContainerManager.Get<IUserSession>();
 
-            //GlobalConfiguration.Configuration.MessageHandlers.Add(
-            //    new BasicAuthenticationMessageHandler(logManager,
-            //        WebContainerManager.Get<IBasicSecurityService>()));
+            GlobalConfiguration.Configuration.MessageHandlers.Add(
+                new BasicAuthenticationMessageHandler(logManager,
+                    WebContainerManager.Get<IBasicSecurityService>()));
 
             GlobalConfiguration.Configuration.MessageHandlers.Add(new TaskDataSecurityMessageHandler(logManager,
                 userSession));

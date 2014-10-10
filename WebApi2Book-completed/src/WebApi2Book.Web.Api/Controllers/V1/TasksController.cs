@@ -50,14 +50,6 @@ namespace WebApi2Book.Web.Api.Controllers.V1
             }
         }
 
-        public HttpResponseMessage Get()
-        {
-            return new HttpResponseMessage()
-            {
-                Content = new StringContent("This is a V1 response.")
-            };
-        }
-
         [Route("", Name = "GetTasksRoute")]
         public PagedDataInquiryResponse<Task> GetTasks(HttpRequestMessage requestMessage)
         {
