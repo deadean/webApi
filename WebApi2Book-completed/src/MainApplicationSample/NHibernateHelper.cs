@@ -30,14 +30,23 @@ namespace Blank.ConsoleMain
         {
             var connectionStr = MsSqlConfiguration.MsSql2008
                   .ConnectionString(@"Data Source=WE-04;Initial Catalog=WebApi2BookDb;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False");
-                  //.ShowSql;
             _sessionFactory = Fluently.Configure()
                 .Database(connectionStr)
-                .Mappings(m =>
-                          m.FluentMappings
-                              .AddFromAssemblyOf<StatusMap>())
-                //.ExposeConfiguration(cfg => new SchemaExport(cfg)
-                //                                .Create(true, true))
+                .Mappings(m => m.FluentMappings.AddFromAssemblyOf<TaskMap>())
+                .BuildSessionFactory();
+        }
+
+        private static void InitializeAndCreatDbTables()
+        {
+            var connectionStr = MsSqlConfiguration.MsSql2008
+                  .ConnectionString(@"Data Source=WE-04;Initial Catalog=WebApi2BookDb;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False");
+            _sessionFactory = Fluently.Configure()
+                .Database(connectionStr)
+                .Mappings(
+                    m =>
+                        m.FluentMappings.AddFromAssemblyOf<StatusMap>()
+                )
+                .ExposeConfiguration(cfg => new SchemaExport(cfg).Create(true, true))
                 .BuildSessionFactory();
         }
 

@@ -3,6 +3,9 @@
 
 using NHibernate;
 using NHibernate.Util;
+using NHibernate.Linq;
+using System;
+using System.Linq;
 using WebApi2Book.Common;
 using WebApi2Book.Common.Security;
 using WebApi2Book.Data.Entities;
@@ -28,8 +31,8 @@ namespace WebApi2Book.Data.SqlServer.QueryProcessors
         {
             task.CreatedDate = _dateTime.UtcNow;
             task.Status = _session.QueryOver<Status>().Where(x => x.Name == "Not Started").SingleOrDefault();
-            task.CreatedBy =
-                _session.QueryOver<User>().Where(x => x.Username == _userSession.Username).SingleOrDefault();
+            task.CreatedBy = _session.Query<User>().ToList().First();
+                //_session.QueryOver<User>().Where(x => x.Username == (string.IsNullOrWhiteSpace(_userSession.Username) ? "" : _userSession.Username)).SingleOrDefault();
 
             if (task.Users != null && task.Users.Any())
             {

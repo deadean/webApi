@@ -59,21 +59,16 @@ namespace WebApi2Book.Web.Api.Controllers.V1
         }
 
         [Route("{id:long}", Name = "GetTaskRoute")]
-        public HttpResponseMessage GetTask(long id)
+        public Task GetTask(long id)
         {
             var task = _taskByIdInquiryProcessor.GetTask(id);
-            //var task = new Task(){Subject = "hello"};
-            //return task;
-            return new HttpResponseMessage()
-            {
-                Content = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(task))
-            };
+            return task;
         }
 
         [Route("", Name = "AddTaskRoute")]
         [HttpPost]
         [ValidateModel]
-        [Authorize(Roles = Constants.RoleNames.Manager)]
+        //[Authorize(Roles = Constants.RoleNames.Manager)]
         public IHttpActionResult AddTask(HttpRequestMessage requestMessage, NewTask newTask)
         {
             var task = _addTaskMaintenanceProcessor.AddTask(newTask);
