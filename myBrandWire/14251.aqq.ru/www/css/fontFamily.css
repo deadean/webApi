@@ -1,0 +1,47 @@
+.commonTextStyle{
+	text-align: center;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 100%;
+}
+.commonTextFont{
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.commonTextFont107{
+	text-decoration: none;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 107%;
+}
+
+.commonNewsContentFont{
+	color: #222222;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: 18px;
+	line-height: 1.4;
+}
+
+.commonNewsContentHeader{
+	color: #333;
+	font-size: 23px;
+	line-height: 1em;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 700;
+}
+
+.commonTextNewsHeader{
+	font-family: 'PFDinDisplayProMedium', Arial, Helvetica, sans-serif;
+}
+
+.commonTextNewsContent{
+	font-family: Georgia, Times New Roman, Times, serif;
+}
+
+.fontNewsListWithEmptyNews{
+	font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    font-size: 17px;
+    line-height: 1.2;
+    text-indent: 35px;
+    color:#888888;
+}

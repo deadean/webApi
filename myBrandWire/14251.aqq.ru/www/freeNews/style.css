@@ -1,0 +1,124 @@
+/*===============================Navigation Styles========================*/
+.leftPart{
+	width : 700;
+}
+
+.rightPart{
+	width:300;
+}
+
+.repostBlock{
+	min-height: 20;
+}
+
+.bannerBlock{
+	height: 45;
+	width: 650;
+	background-color: DodgerBlue;
+	color:white;
+	padding-left: 20;
+	padding-top: 10;
+}
+
+.bannerBlock div{
+	line-height: 70%;
+}
+
+.showDetailsBlock{
+	height:35;
+	color:white;
+	background-color: Crimson;
+	font-size: 100%;
+	width:150;
+}
+
+/*===============================Elements Styles========================*/
+
+.newsImage{
+	width:200;
+	height:200;
+	background-color: DarkSlateGray;
+}
+
+.newsContainer{ width:435;padding-left: 30;padding-right: 30 }
+.newsContainer div { position: relative;top:-35; }
+
+.companyImage{
+	width:60;
+	height:60;
+	background-color: DarkSlateGray;
+}
+
+.dateImage{
+	height:20;
+	width:20;
+	background: url(images/notegrey.jpg) no-repeat;
+	background-size: 100%;
+	}
+	
+.tagsImage{
+	height:10;
+	width:10;
+	background: url(images/tags.jpg) no-repeat;
+	background-size: 100%;
+	}
+
+.mainNewsHref{
+	height:30;width:680;
+	color: MediumPurple;
+	text-decoration: underline;
+}
+
+
+	.adapteeNewsToTheMainNewsContainerServicesStyle{
+		padding-right: 10;
+	}
+	
+	.mainServices{
+		margin-left: 35;
+		display: block;
+		text-align: left;
+	}
+	.totalCost{
+		margin-top: 22;
+		margin-left: 50;
+		float: right;
+	}
+	.adapteeNewsToTheMainNewsContainerSeparator{
+		background: url(images/separator.jpg) no-repeat;
+		width:6;
+		height: 100;
+	}
+	
+	.adapteeNewsToTheMainNewsContainerServicesStyle{
+		padding-right: 10;
+	}
+	
+	.adapteeNewsToTheMainNewsContainerPrices{
+		width:50;
+	}
+	
+	.adapteeNewsToTheMainNewsContainerPrices div{
+		font-size: 120%;
+	}
+	
+	.adapteeNewsToTheMainNewsContainerPricesItemCurrency{
+		height: 40;
+	}
+	
+	.adapteeNewsToTheMainNewsContainerPricesItemCurrencyGrn{
+		background: url(images/grn.jpg) no-repeat;
+	}
+	
+	.adapteeNewsToTheMainNewsContainerPricesItemCurrencyEuro{
+		background: url(images/euro.jpg) no-repeat;
+	}
+	
+	.adapteeNewsToTheMainNewsContainerPricesItemCurrencyDollar{
+		background: url(images/dollar.jpg) no-repeat;
+	}
+	
+	.adapteeNewsToTheMainNewsContainerPricesItem{
+		top:0;
+		height: 27;
+	}

@@ -1,0 +1,42 @@
+<div style="width: 800px; text-align: center; font-size: 12px;">
+    <div><h3>Отправить сообщение клиенту</h3></div>
+    <div>
+        <!--ko foreach: defaultContent-->
+        <button data-bind='click: $parent.setDefaultInfo, text: name'></button>
+        <!--/ko-->
+    </div>
+    <br>
+    <div>
+        <table align="center" cellpadding="2" cellspacing="0" border="2" style="width: 600px">
+            <tr>
+                <th style="background-color: #dddddd; width: 100px">
+                    Получатель
+                </th>
+                <td style="text-align: left">
+                    <span data-bind='text: client.name + " " + client.surname'></span>
+                    <span data-bind='text: "<" + client.email + ">"'></span>
+                </td>
+            </tr>
+            <tr>
+                <th style="background-color: #dddddd;">
+                    Тема
+                </th>
+                <td>
+                    <input type="text" data-bind="value: subject" style="width: 500px"/>
+                </td>
+            </tr>
+            <tr>
+                <th style="background-color: #dddddd; vertical-align: top;">
+                    Содержание
+                </th>
+                <td>
+                    <textarea data-bind="value: message" style="width: 500px; height: 200px; resize: none"></textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <div>
+        <button data-bind="click: sendMessage">Отправить сообщение</button>
+    </div>
+</div>

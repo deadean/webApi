@@ -1,0 +1,81 @@
+==========================================HTML==================================
+#34aadc
+div align {
+	width: 98%;
+	margin: 0 auto;
+}
+
+==========================================JS====================================
+SetUnivaersalJSONAjax(contact, '', '../ajaxPages/crud.php', 'createContactByCompany');
+SetUnivaersalJSONAjax3('../ajaxPages/crud.php','UpdateInstance',data,resultFunc);
+SetUnivaersalCRUDAjax(id,'companyNewsContainer','../ajaxPages/crud.php','removeNews');
+
+contact = {
+	name : document.getElementById('name').value,
+	phone : document.getElementById('phone').value,
+};
+
+$('#MyUploadForm1').ajaxSubmit(options);
+LoadImages('<?php echo $currentCompany->logo;?>');
+var options = {
+    target:   '',   // target element(s) to be updated with server response
+    beforeSubmit:  beforeSubmit,  // pre-submit callback
+    success:       afterSuccess,  // post-submit callback
+    resetForm: true        // reset the form after successful submit
+};
+
+
+modules.modals.openModal($('.modal-trigger'),'modal-8');
+
+<script>data = <?php echo json_encode((array)$company); ?>;</script>
+<div><?php include_once 'Views/ctrCompanyAbout.php';?> </div>
+
+data-bind="click: approvalPassedClick"
+data-bind='visible:errorRecoverEmailMessageState'
+this.SetRememberMe = function(data) {
+        return true;
+}
+this.fullName = ko.computed(function() {
+        return this.firstName() + " " + this.lastName();
+}, this);
+
+instanceViewModel.about.subscribe(function (newValue) {
+    //console.log(newValue.length);
+    instanceViewModel.aboutCount(newValue.length);
+});
+
+
+========================================USAGE====================================
+<?php
+			$isShow="0";
+			$isNotCloseByActionOk=false;
+			$addedId = "ctrEmailRecoveryHasSent";
+			$headerMessage = "Восстановление пароля";
+			$actionBtnOk="";
+			$addedContent ="";
+			$contentMessage1 = "На введенный email были отправлены инструкции для восстановления доступа";
+			include '../lib/MessageBox.php';
+?>
+<?php echo GetPageByPlace("ShowNewsForm".$_SERVER['PHP_SELF']); ?>
+
+
+========================================PHP======================================
+is_file() -- is File exist
+$DOM = new DOMDocument;$DOM->loadHTML($str); $items = $DOM->getElementsByTagName('h1');
+
+=========================================SQL======================================
+SELECT * FROM news WHERE news.idCompany = '1' AND news.idCompany IN
+(
+	SELECT id as idCompany, name FROM company WHERE company.id = '1'
+)
+
+
+статусы :
+waiting_for_payment
+notPayed
+notModerated
+moderated
+published
+verification
+spell_checked
+editPublishedNews

@@ -1,0 +1,61 @@
+<div style="width: 800px; text-align: center; font-size: 12px;">
+    <div><h3>Информация по рассылки новости</h3></div>
+    <!--ko if: categories.length > 0-->
+    <div>
+        Категории сайтов: 
+        <select style='width: 400px; text-align: center;' data-bind='value: selectedCategory'>
+            <option value=""> - - Выберите категорию для добавления - - </option>
+            <!--ko foreach: categories-->
+            <option data-bind="attr: {value: idCategory}, text: name"></option>
+            <!--/ko-->
+        </select>
+        <button data-bind='click: addCategoryClick'>Добавить категорию</button>
+    </div>
+    <br>
+    <!--/ko-->
+    <div>
+        <table border="0" style="width: 100%">
+            <tr>
+                <th>
+                    
+                </th>
+                <th>
+                    Название
+                </th>
+                <th>
+                    Категория
+                </th>
+                <th>
+                    Ссылка на новость
+                </th>
+                <th>
+                    Статус
+                </th>
+                <th>
+                    Комментарий
+                </th>
+                <th>
+                    
+                </th>
+            </tr>
+            <!--ko foreach: sites-->
+            <tr>
+                <td>
+                    <img data-bind="attr: {src: main.logoPath + logo}">
+                </td>
+                <td data-bind="text: name"></td>
+                <td data-bind="text: category_name"></td>
+                <td><input type='text' data-bind="value: link"></td>
+                <td>
+                    <select data-bind='options: $parent.statuses, value: status'>
+                    </select>
+                </td>
+                <td>
+                    <textarea style='resize: none; width: 150px; height: 40px' data-bind='value: comment'></textarea>
+                </td>
+                <td><img src="images/save.png" style='width: 16px; height: 16px; cursor: pointer;' data-bind='click: $parent.saveSiteInfo'></td>
+            </tr>
+            <!--/ko-->
+        </table>
+    </div>
+</div>

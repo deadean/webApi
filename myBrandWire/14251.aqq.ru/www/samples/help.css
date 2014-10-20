@@ -1,0 +1,14 @@
+#container {
+    position: relative;
+  }
+  #wrapper > #container {
+    display: table;
+    position: static;
+  }
+  #container > div {
+    display: table-cell;
+    vertical-align: middle;
+    position: static;
+  }
+  
+border-spacing: 5;

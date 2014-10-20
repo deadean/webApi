@@ -1,0 +1,56 @@
+
+.choice-list {
+  background: #9b59b6;
+  border: 1px solid #8e44ad;
+  border-radius: 6px;
+  padding: 0;
+}
+.choice-list li {
+  border-bottom: 1px solid #8e44ad;
+  color: white;
+  color: rgba(255, 255, 255, 0.6);
+  display: block;
+  font-size: 14px;
+  padding: 12px;
+  position: relative;
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  -ms-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.choice-list li:after {
+  background: #8e44ad;
+  border-radius: 50%;
+  content: "";
+  display: inline-block;
+  height: 24px;
+  line-height: 24px;
+  position: absolute;
+  right: 10px;
+  text-align: center;
+  width: 24px;
+}
+.choice-list li:hover:after, .choice-list li.active:after {
+  background: #7f3d9b;
+}
+.choice-list li:hover {
+  background: #8e44ad;
+  cursor: pointer;
+}
+.choice-list li:first-child {
+  border-radius: 6px 6px 0 0;
+}
+.choice-list li:last-child {
+  border-radius: 0 0 6px 6px;
+}
+.choice-list li.active {
+  background: #8e44ad;
+  font-weight: 700;
+}
+.choice-list li.active:after {
+  content: "\2713";
+}

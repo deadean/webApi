@@ -1,0 +1,205 @@
+	.btnToolTip{
+		width:15;
+		height: 15;
+		background: Gainsboro;
+		color:black;
+	}
+	.btnMainMenu{
+		width:200;
+		height: 42;
+		font-size: 125.38%;
+		color:white;
+	}
+	
+	.btnClose{
+		width: 45;
+		height: 45;
+		background: url(../images/btnClose.png) no-repeat;
+		background-size: 100%;
+		cursor:hand;
+	}
+	
+	.dateImage{
+		height:20;
+		width:20;
+		background: url(../freeNews/images/notegrey.jpg) no-repeat;
+		background-size: 100%;
+	}
+	
+	.btnAbout{
+		width:150;
+		height: 32;
+		background: white;
+		color: LightSlateGray;
+		cursor:hand;
+		display: table-cell;
+		vertical-align: middle;
+		border: 1px solid #ccc; 
+	}
+	.btnPublish{
+		width:150;
+		height: 32;
+		background: red;
+		color: white;
+		cursor:hand;
+		display: table-cell;
+		vertical-align: middle;
+	}
+	.btnAdd{
+		width: 50;
+		height: 50;
+		background: url(../images/btnadd.png) no-repeat;
+		background-size: 100%;
+	}
+	.btnAdd:hover{
+		background: url(../images/btnadd1.png) no-repeat;
+		background-size: 100%;
+	}
+    .btnSave{
+        width: 30;
+        height: 30;
+        background: url(../images/btnsave.png) no-repeat;
+        background-size: 100%;
+    }
+    .btnSave:hover{
+        width:40;
+        height:40;
+        background: url(../images/btnsave.png) no-repeat;
+        background-size: 100%;
+    }
+	.btnEdit{
+		width: 30;
+		height: 30;
+		background: url(../images/btnedit.png) no-repeat;
+		background-size: 100%;
+	}
+	.btnEdit:hover{
+		width:40;
+		height:40;
+		background: url(../images/btnedit.png) no-repeat;
+		background-size: 100%;
+	}
+	.btnDelete{
+		width: 30;
+		height: 30;
+		background: url(../images/deletered.png) no-repeat;
+		background-size: 100%;
+	}
+	.btnDelete:hover{
+		width:40;
+		height:40;
+		background: url(../images/deletered.png) no-repeat;
+		background-size: 100%;
+	}
+    .btnSocialNetworks{
+        width:35;
+        height:35;
+    }
+
+    .btnSocialNetworks:hover{
+        width:40;
+        height:40;
+    }
+	.btnSeeNews{
+		width:150;
+		height: 32;
+		background: DarkSlateBlue;
+		color: white;
+	}
+	.btnSeeNews2{
+		width: 150;
+		height: 32;
+		background: DarkOrange;
+		color:white;
+	}
+	.btnSeeNews3{
+		width: 150;
+		height: 32;
+		background: Red;
+		color:white;
+	}
+	.btnSeeNews4{
+		width: 129;
+		height: 34;
+		background: white;
+		color:red;
+	}
+	.btnSeeNews5{
+		width: 129;
+		height: 34;
+		background: white;
+		color:red;
+	}
+	
+	.companyTab {
+		padding: 0px 0px 0px 0px;
+		text-align: center;
+		text-decoration: none;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 100%;
+		color: #4a4a4a;
+		min-width: 130px;
+		top: 0.0;
+		height: 36px;
+		width: 130px;
+		
+		background: url(../images/companyTab.jpg) no-repeat;
+
+		/*border: solid 1px grey;*/		
+		min-height: 36px;
+		display: inline;
+		cursor: hand;
+	}
+	
+	.one {
+	  position: relative;
+	  margin: auto;
+	  top: 0;
+	  left: 0;
+	  right: 0;
+	  bottom: 0;
+	  width: 35px;
+	  height: 35px;
+	  -webkit-box-shadow: 0 0 10px #4A8ACC;
+	  box-shadow: 0 0 10px #4A8ACC;
+	  border: 3px solid #4A8ACC;
+	  border-radius: 50px;
+	  cursor: pointer;
+	
+	  -webkit-transition: width 2s, box-shadow 3s, border 3s;
+	  -moz-transition: width 2s, box-shadow 3s, border 3s;
+	  -o-transition: width 2s, box-shadow 3s, border 3s;
+	  -ms-transition: width 2s, box-shadow 3s, border 3s;
+	  transition: width 2s, box-shadow 3s, border 3s;
+	  
+	}
+	.one1 {
+	  position:absolute;
+	  width: 0px;
+	  height: 35px;
+	  -webkit-box-shadow: 0 0 0px #4A8ACC;
+	  box-shadow: 0 0 00px #4A8ACC;
+	  border: 0px solid #4A8ACC;
+	  border-radius: 0px;
+	  cursor: pointer;
+	  display : none;
+	  top:-28;
+	
+	  -webkit-transition: width 2s, box-shadow 3s, border 3s, display 3s;
+	  -moz-transition: width 2s, box-shadow 3s, border 3s,display 3s;
+	  -o-transition: width 2s, box-shadow 3s, border 3s, display 3s;
+	  -ms-transition: width 2s, box-shadow 3s, border 3s,display 3s;
+	  transition: width 2s, box-shadow 3s, border 3s, display 3s;
+	}
+	
+	.activeLOGIC {
+	  width: 300px;
+	  border: 3px solid #FF9147;
+	  border-radius: 50px;
+	  -webkit-box-shadow: 0 0 20px #FF9147;
+	  box-shadow: 0 0 20px #FF9147;
+	}
+	.activeLOGIC1 {
+	  width: 100px;
+	  top:-38;
+	}

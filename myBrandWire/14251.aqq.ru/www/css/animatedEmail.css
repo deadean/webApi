@@ -1,0 +1,45 @@
+nav {
+  transform: translate3d(0,-125%,0);
+}
+
+input[id*="nav"] {
+  display:none;
+}
+
+input[id*="nav"] + label {
+  /*
+  color:red;
+    width:45px;
+    height:45px;
+    text-align:center;
+    line-height:45px;
+    font-size:27px;
+    cursor:pointer;*/
+  
+  user-select:none;
+  transition:1s;
+  z-index:1;
+  /*position:absolute;*/
+}
+
+input[id*="nav"]:checked + label {
+  color:#34aadc;
+}
+
+
+nav {
+  opacity : 0;
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:110%;
+  background:#34aadc;
+  z-index:10;
+  transition:1.10s;
+  backface-visibility:hidden;
+}
+
+input[id*="nav"]:checked ~ nav {
+  transform: translate3d(0,0,0);
+}

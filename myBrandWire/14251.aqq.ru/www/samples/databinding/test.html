@@ -1,0 +1,44 @@
+<script type='text/javascript' src='http://knockoutjs.com/downloads/knockout-3.0.0.js'></script>
+<script type="text/javascript" src='../../lib/jq/1.10.2/jquery-1.10.2.min.js'></script>
+<script type="text/javascript" src='../../services/servicesScript.js'></script>
+
+<div class='liveExample'>
+    <p>First name: <input data-bind='value: firstName' /></p>
+    <p>Last name: <input data-bind='value: lastName' /></p>
+    <p>test name: <input data-bind='value: dataname' /></p>
+    <h2>Hello, <span data-bind='text: fullName'> </span>!</h2>
+</div>
+
+<script>
+    data = {
+        name:'hello'
+    };
+    function resultFunc(data){
+        var objectData = JSON.parse( data );
+        instanceViewModel.dataname(objectData.name);
+    }
+</script>
+<div id="results" onclick="
+    SetUnivaersalJSONAjax3('../../test.php','',data,resultFunc);
+
+    ">
+    Click!
+</div>
+
+<script>
+    var ViewModel = function(first, last,dataName) {
+        this.firstName = ko.observable(first);
+        this.lastName = ko.observable(last);
+        this.dataname = ko.observable(dataName);
+
+        this.fullName = ko.computed(function() {
+            return this.firstName() + " " + this.lastName();
+        }, this);
+    };
+
+    var instanceViewModel = new ViewModel("Planet", "Earth","");
+    ko.applyBindings(instanceViewModel);
+    instanceViewModel.dataname('ddd');
+
+
+</script>

@@ -1,0 +1,129 @@
+.publishByNameContainer{
+	background: url(images/publishByName.jpg) no-repeat;
+	background-size: 100%;
+	height: 38;
+}
+
+.publishByNameContainer >div{
+	height: 36;
+}
+
+.lbPublishByName{
+	width: 280;
+	padding-right: 10;
+}
+
+.blockPublishByCompanyName{
+	border-left: 1px solid Gainsboro;
+	border-right: 1px solid Gainsboro;
+	background: white;
+	padding: 5;
+}
+
+.adapteeNewsForm{
+	margin-top: 20;
+	margin-bottom: 20;
+	margin-left: 140;
+	width:1000;
+}
+
+.adapteeNewsToTheMainNews{
+	
+}
+
+.adapteeNewsToTheMainNewsHeader{
+	text-align: left;
+	margin-left: -685;
+	margin-top: 20;
+	margin-bottom: 20;
+}
+
+.adapteeNewsToTheMainNewsContainerServicesStyle{
+	padding-right: 10;
+    width: 550px;
+}
+
+.adapteeNewsToTheMainNewsContainerPrices{
+	width:50;
+}
+
+.adapteeNewsToTheMainNewsContainerPrices div{
+	font-size: 120%;
+}
+
+.adapteeNewsToTheMainNewsContainerPricesItemCurrency{
+	height: 40;
+}
+
+.adapteeNewsToTheMainNewsContainerPricesItemCurrencyGrn{
+	background: url(images/grn.jpg) no-repeat;
+}
+
+.adapteeNewsToTheMainNewsContainerPricesItemCurrencyEuro{
+	background: url(images/euro.jpg) no-repeat;
+}
+
+.adapteeNewsToTheMainNewsContainerPricesItemCurrencyRub{
+    background: url(images/euro.jpg) no-repeat;
+}
+
+.adapteeNewsToTheMainNewsContainerPricesItemCurrencyDollar{
+	background: url(images/dollar.jpg) no-repeat;
+}
+
+.adapteeNewsToTheMainNewsContainerPricesItem{
+	top:0;
+	height: 27;
+}
+
+.adapteeNewsToTheMainNewsContainerSeparator{
+	background: url(images/separator.jpg) no-repeat;
+	width:6;
+	height: 100;
+}
+
+.mainServices{
+	margin-left: 135;
+	display: block;
+	text-align: left;
+}
+
+.totalCost{
+	margin-top: 22;
+	margin-left: 50;
+	float: right;
+}
+
+.localHorizontalSeparator{
+	margin-left: 140;
+}
+
+
+.newsFormItem{
+	height: 50;
+}
+
+.leftHeader{
+	width:200;
+}
+
+.leftHeader span{
+	font-weight: bold;
+}
+
+.leftItem{
+	width:700;
+}
+
+.addFile{
+	background: url(images/addFile.png) no-repeat;
+	width:10;
+	height: 25;	
+}
+
+.btnSeeNews{
+	width:150;
+	height: 32;
+	background: DarkSlateBlue;
+	color: white;
+}

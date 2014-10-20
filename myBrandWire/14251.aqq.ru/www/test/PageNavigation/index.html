@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+    <style>
+
+/* EDIT HERE FOR A DIFFERNET EFFECT */
+nav {
+  transform: translate3d(0,-125%,0);
+}
+
+body {
+  background:#34aadc;
+  color:#fff;
+}
+
+input[id*="nav"] {
+  display:none;
+}
+
+input[id*="nav"] + label {
+  display:block;
+  color:#fff;
+  width:45px;
+  height:45px;
+  text-align:center;
+  line-height:45px;
+  font-size:27px;
+  cursor:pointer;
+  user-select:none;
+  transition:1s;
+  z-index:1;
+  position:absolute;
+}
+
+input[id*="nav"]:checked + label {
+  color:#34aadc;
+}
+
+nav {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:#333;
+  z-index:0;
+  transition:.6s;
+  backface-visibility:hidden;
+}
+
+input[id*="nav"]:checked ~ nav {
+  transform: translate3d(0,0,0);
+}
+
+</style>
+
+  <script src="js/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+
+  <input type="checkbox" id="nav"/>
+  <label for="nav" class="entypo-menu">Click</label>
+  <div>
+  	Click the menu icon above to see the mega menu.
+  </div>
+
+	<nav>
+		<div>Hello</div>
+	</nav>
+
+</body>
+
+</html>

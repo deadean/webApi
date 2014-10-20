@@ -3,3 +3,5 @@ Sample/src/Blank.Common.Tests/obj/Debug/DesignTimeResolveAssemblyReferencesInput
 *.cache
 Sample/src/Blank.v12.suo
 Sample/src/BlankDb/BlankDb.dbmdl
+*.svn-base
+*.svn-base

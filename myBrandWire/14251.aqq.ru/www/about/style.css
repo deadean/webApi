@@ -1,0 +1,72 @@
+.showAbout{
+	margin-top: 20;
+	margin-bottom: 20;
+	margin-left: 140;
+	width:1000;
+	text-align:left;
+/*	font-size: 136%;*/
+}
+.localHorizontalSeparator{
+	margin-left: 140;
+}
+.titleNews{
+	font-size: 90%;
+	font-weight:normal;
+	text-align: left;
+}
+.sizepicture{
+	width: 30;
+}
+.textInNews
+{
+	font-size: 85%;
+}
+.linkInNews{
+	font-size: 85%;
+	color: blue;
+	text-decoration: underline;
+}
+.buttonMore{
+	width: 130;
+	height: 2.18em;
+	line-height: 2.18em;
+	margin-top:40;
+	text-align: center;
+	float:left;
+	
+	background: url(images/companyNewsOperationsItem.jpg) no-repeat;
+	background-size: 100%;
+	clear:both;
+	vertical-align: middle;
+	
+}
+.contentNews{
+	text-decoration: none;
+	font-weight: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 100%;
+}
+.newsContainer{
+	width:300;
+	padding-right: 40;
+}
+.contentNewsLength{
+	height: 150;
+}
+.global_container{
+	height: 100%;
+	width: 1280px;
+	margin: 0px auto 0px auto;
+	float: none;
+	position: relative;
+}
+
+.howitworksItem div{
+    width: 132;
+    line-height: 1.5;
+    vertical-align: top;
+}
+
+.howitworksItem .howitworksItemSpace{
+    width: 22;
+}

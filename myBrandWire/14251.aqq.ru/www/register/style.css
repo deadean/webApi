@@ -1,0 +1,558 @@
+/* meyerweb css reset start */
+/* The goal of a reset stylesheet is to reduce browser inconsistencies in things like default line heights, margins and font sizes of headings, and so on. */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+margin: 0;
+padding: 0;
+border: 0;
+outline: 0;
+font-weight: inherit;
+font-style: inherit;
+font-size: 100%;
+font-family: inherit;
+vertical-align: baseline;
+}
+a img, :link img, :visited img {
+border: 0;
+}
+/* remember to define focus styles! */
+:focus {
+outline: 0;
+}
+body {
+line-height: 1;
+color: black;
+background: white;
+font-size: 13px;
+text-align:center; /* for ie5.+*/
+}
+a {
+color: inherit;
+text-decoration: none;
+}
+ol, ul {
+list-style: none;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+border-collapse: separate;
+border-spacing: 0;
+}
+caption, th, td {
+text-align: left;
+font-weight: normal;
+}
+blockquote:before, blockquote:after,q:before, q:after {
+content: "";
+}
+blockquote, q {
+quotes: none;
+}
+/* meyerweb css reset end */
+
+em {font-style: italic;}
+strong {font-weight: bold;}
+h1, h2, h3, h4, h5, h6{font-weight:bold;}
+h1{font-size:197%}/* 26px */
+h2{font-size:182%}/* 24px */
+h3{font-size:167%}/* 22px */
+h4{font-size:152%}/* 20px */
+h5{font-size:136%}/* 18px */
+h6{font-size:122%}/* 16px */
+
+.clearfix:after {
+content: " ";
+display: block;
+height: 0;
+clear: both;
+visibility: hidden;
+}
+.clearfix {display: inline-block;}  /* for IE/Mac */
+
+/* For HTML5 to be rendered correctly in old browsers */
+article,aside,figcaption,figure,footer,header,hgroup,nav,section,time {display: block;}
+
+.before-last {
+    margin-right: 0 !important;
+}
+
+
+.global_container_ {
+	padding: 0.0px 0.0px 30.0px 0.0px;
+	width: 1280.0px;
+	min-height: 554.0px;
+	margin: 0.0px auto 0.0px auto;
+	float: none;
+	position: relative;
+}
+.header {
+	float: left;
+	position: relative;
+	width: 1280.0px;
+	margin: 0.0px 0.0px 0.0px 0.0px;
+}
+.layer_5_copy_2-holder {
+	padding: 10.0px 141.0px 30.0px 141.0px;
+	float: left;
+	position: relative;
+	width: 998.0px;
+	margin: 0.0px 0.0px 0.0px 0.0px;
+}
+.c_wrapper1 {
+	float: left;
+	position: relative;
+	width: 998.0px;
+	margin: 30.0px 0.0px 0.0px 0.0px;
+}
+.registraciya_novoi_uchetn {
+	text-align: center;
+	text-decoration: none;
+	font-family: 'Trebuchet MS', Helvetica, sans-serif;
+	font-size: 169.23%;
+	color: #ffffff;
+	margin: 0.0px 0.0px 0.0px 0.0px;
+	opacity: 0.7;
+	padding: 0.0px 0.0px 0.0px 0.0px;
+	clear: both;
+	min-width: 998.0px;
+}
+.brandwire {
+	float: left;
+	margin: 0.0px 0.0px 25.0px 401.0px;
+	display: block;
+}
+.zakryt {
+	text-align: center;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 84.62%;
+	color: #b0b0b0;
+	margin: 2.0px 0.0px 0.0px -167.0px;
+	float: left;
+	min-width: 49.0px;
+}
+.shape_1-holder {
+	padding: 4.0px 3.0px 3.0px 3.0px;
+	float: right;
+	position: relative;
+	width: 9.0px;
+	margin: 0.0px 99.0px 0.0px 0.0px;
+}
+.layer_4 {
+	float: left;
+	position: relative;
+}
+.shape_1-holder {
+	background: url(images/shape_1.png) no-repeat;
+	min-height: 8.0px;
+}
+.layer_5_copy_2-holder {
+	background: url(images/layer_5_copy_2.jpg) no-repeat;
+	min-height: 118.0px;
+}
+.layer_3 {
+	float: left;
+	clear: both;
+	margin: 0.0px 0.0px 0.0px 634.0px;
+}
+.shag_1_personalnaya_infor {
+	text-align: center;
+	text-decoration: none;
+	font-family: 'Trebuchet MS', Helvetica, sans-serif;
+	font-size: 169.23%;
+	color: #000000;
+	margin: 31.0px 0.0px 0.0px 142.0px;
+	float: left;
+	clear: both;
+	width: 997.0px;
+}
+.informaciya_budet_ispolzo {
+	text-align: center;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	color: #4a4a4a;
+	margin: 8.0px 0.0px 0.0px 142.0px;
+	float: left;
+	clear: both;
+	width: 996.0px;
+}
+.layer_2-holder {
+	padding: 40.0px 128.0px 40.0px 58.0px;
+	float: left;
+	clear: both;
+	position: relative;
+	width: 614.0px;
+	margin: 37.0px 0.0px 0.0px 240.0px;
+	background: url(images/layer_2.jpg) no-repeat;
+	min-height: 146.0px;
+}
+.layer_2-holder_Company {
+	padding: 40.0px 128.0px 40.0px 58.0px;
+	float: left;
+	clear: both;
+	position: relative;
+	width: 614.0px;
+	margin: 37.0px 0.0px 0.0px 240.0px;
+	background: url(images/layer_2_Company.jpg) no-repeat;
+	min-height: 146.0px;
+}
+.group_1 {
+	float: left;
+	position: relative;
+	width: 546.0px;
+	margin: 0.0px 0.0px 0.0px 68.0px;
+}
+.group_1_Company {
+	float: left;
+	position: relative;
+	width: 660.0px;
+	margin: 20.0px 0.0px 0.0px 0.0px;
+}
+.imya {
+	text-align: left;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 107.69%;
+	color: #4a4a4a;
+	margin: 12.0px 0.0px -3.0px 0.0px;
+	float: left;
+	width: 51.0px;
+}
+.imyaCompany {
+	text-align: left;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 107.69%;
+	color: #4a4a4a;
+	margin: 12.0px 20.0px 0.0px -110.0px;
+	float: left;
+	width: 141.0px;
+}
+
+.loginCompany {
+	text-align: right;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 107.69%;
+	color: #4a4a4a;
+	margin: 12.0px 14.0px 0.0px -10.0px;
+	float: left;
+	width: 115.0px;
+}
+.layer_1_copy_8-holder {
+	padding: 0.0px 0.0px 0.0px 10.0px;
+	text-align: left;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	color: #747474;
+	min-width: 32.0px;
+	position: relative;
+	float: left;
+	position: relative;
+	width: 232.0px;
+	height:37px;
+	margin: 0.0px 0.0px 0.0px 0.0px;
+}
+.layer_1_copy_8-holder {
+	background: url(images/layer_1_copy_8.jpg) no-repeat;
+	min-height: 24.0px;
+}
+
+.layer_1_copy_8-holder_Company {
+	padding: 0.0px 0.0px 0.0px 10.0px;
+	text-align: left;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	color: #747474;
+	min-width: 32.0px;
+	position: relative;
+	float: left;
+	position: relative;
+	width: 494px;
+	height:37px;
+	margin: 0.0px 0.0px 0.0px 0.0px;
+}
+.layer_1_copy_8-holder_Company {
+	background: url(images/layer_1_copy_8_Company.jpg) no-repeat;
+	min-height: 24.0px;
+}
+
+.layer_1_copy_8-holder_Password {
+	padding: 0.0px 0.0px 0.0px 10.0px;
+	text-align: left;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	color: #747474;
+	min-width: 32.0px;
+	position: relative;
+	float: left;
+	position: relative;
+	width: 247px;
+	height:37px;
+	margin: 0.0px 0.0px 0.0px 0.0px;
+	background: url(images/layer_1_copy_8_Company.jpg) no-repeat;
+	min-height: 24.0px;
+}
+
+.layer_1_copy_9-holder {
+	padding: 0.0px 0.0px 0.0px 10.0px;
+	text-align: left;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	color: #747474;
+	min-width: 63.0px;
+	position: relative;
+	float: right;
+	position: relative;
+	width: 232.0px;
+	height:37px;
+	margin: 0.0px 0.0px 0.0px 0.0px;
+}
+.layer_1_copy_9-holder {
+	background: url(images/layer_1_copy_8.jpg) no-repeat;
+	min-height: 24.0px;
+}
+.layer_1_copy_9-holder1 {
+	padding: 0.0px 0.0px 0.0px 10.0px;
+	text-align: left;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	color: #747474;
+	min-width: 63.0px;
+	position: relative;
+	float: right;
+	position: relative;
+	width: 400.0px;
+	height:37px;
+	margin: 0.0px 0.0px 0.0px 0.0px;
+}
+.layer_1_copy_9-holder1 {
+	background: url(images/layer_1_copy_10.jpg) no-repeat;
+	min-height: 24.0px;
+}
+.group_1_copy {
+	padding: 13.0px 191.0px 10.0px 0.0px;
+	float: left;
+	clear: both;
+	position: relative;
+	width: 423.0px;
+	margin: 19.0px 0.0px 0.0px 0.0px;
+}
+.elektropochta {
+	text-align: left;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 107.69%;
+	color: #4a4a4a;
+	margin: -1.0px 0.0px 0.0px 0.0px;
+	float: left;
+	width: 109.0px;
+}
+.logotype {
+	text-align: left;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 107.69%;
+	color: #4a4a4a;
+	margin: -1.0px 19.0px 0.0px -30.0px;
+	float: left;
+	width: 130.0px;
+}
+.my_vyshlem_pismo_so_ssylk {
+	padding: 0.0px 0.0px 0.0px 10.0px;
+	text-align: left;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	color: #747474;
+	min-width: 32.0px;
+	position: relative;
+	float: right;
+	position: relative;
+	width: 494px;
+	height:37px;
+	margin: -10.0px -190.0px 0.0px 0.0px;
+}
+
+.logotypePath{
+	padding: 0.0px 0.0px 0.0px 10.0px;
+	text-align: left;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	color: #747474;
+	min-width: 32.0px;
+	position: relative;
+	float: left;
+	position: relative;
+	width: 164px;
+	height:37px;
+	margin: -10.0px 0.0px 0.0px 0.0px;
+}
+.logoSelect{
+    background: url(images/logoSelect.jpg) no-repeat;
+	min-height: 24.0px;
+    cursor:pointer;
+    border:none;
+    width:32px;
+    height:32px;
+    position: relative;
+    float: left;
+    margin: -8px 0.0px 0.0px -35px;
+}
+
+.group_1_copy {
+	/*background: url(images/layer_1_copy_10.jpg) no-repeat 119px 0;*/
+	min-height: 32.0px;
+}
+.group_1_copy_2 {
+	padding: 13.0px 239.0px 10.0px 0.0px;
+	float: left;
+	clear: both;
+	position: relative;
+	width: 341.0px;
+	margin: 19.0px 0.0px 0.0px 34.0px;
+}
+
+.group_1_copy_2_Company {
+	padding: 13.0px 239.0px 10.0px 0.0px;
+	float: left;
+	clear: both;
+	position: relative;
+	width: 376.0px;
+	margin: 15.0px 0.0px 0.0px 0.0px;
+}
+.telefon {
+	text-align: left;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 107.69%;
+	color: #4a4a4a;
+	margin: -10.0px 0.0px 0.0px 0.0px;
+	float: left;
+	width: 50.0px;
+}
+
+.txtAboutCompany {
+	text-align: left;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 107.69%;
+	color: #4a4a4a;
+	margin: -10.0px 0.0px 0.0px 15.0px;
+	float: left;
+	width: 90.0px;
+}
+.dlya_svyazi_pri_fozniknov {
+	padding:10px;
+	text-align: left;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	color: #747474;
+	margin: -1.0px 0.0px 0.0px 0.0px;
+	float: right;
+	min-width: 245.0px;
+	width:494px;
+	height:37px;
+	margin: -20.0px -238.0px 0.0px 0.0px;
+}
+.aboutCompany {
+	padding:10px;
+	text-align: left;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	color: #747474;
+	margin: -1.0px 0.0px 0.0px 0.0px;
+	float: right;
+	min-width: 245.0px;
+	width:494px;
+	height:200px;
+	margin: -20.0px -238.0px 0.0px 0.0px;
+	resize: none;
+}
+.group_1_copy_2 {
+	/*background: url(images/layer_1_copy_10.jpg) no-repeat 85px 0;*/
+	min-height: 13.0px;
+}
+.layer_2-holder {
+	background: url(images/layer_2.jpg) no-repeat;
+	min-height: 146.0px;
+}
+.layer_3_copy {
+	float: left;
+	clear: both;
+	margin: 0.0px 0.0px 0.0px 634.0px;
+}
+.shag_2_informaciya_o_komp {
+	text-align: center;
+	text-decoration: none;
+	font-family: 'Trebuchet MS', Helvetica, sans-serif;
+	font-size: 169.23%;
+	color: #000000;
+	margin: 37.0px 0.0px 0.0px 141.0px;
+	float: left;
+	clear: both;
+	width: 997.0px;
+}
+.profil_kompanii_budet_vid {
+	text-align: center;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	color: #4a4a4a;
+	margin: 8.0px 0.0px 0.0px 142.0px;
+	float: left;
+	clear: both;
+	width: 996.0px;
+}
+
+.buttonSaveDiv {
+	text-align: center;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	color: #4a4a4a;
+	margin: 18.0px 0.0px 0.0px 142.0px;
+	float: left;
+	clear: both;
+	width: 996.0px;
+}
+
+.buttonSave {
+	text-align: center;
+	text-decoration: none;
+	font-family: 'Trebuchet MS', Helvetica, sans-serif;
+	font-size: 100%;
+	color: white;
+	height: 35px;
+	width:150px;
+	background: url(images/buttonSave.jpg) repeat;
+}
+
+.global_container_ {
+	background: url(images/layer_0.jpg) no-repeat;
+	min-height: 595.0px;
+}
+
+.borderStart{
+	border: 2px solid red;
+}
+
+#webmenu{
+	width:340px;
+}
+

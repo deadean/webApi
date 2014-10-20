@@ -1,0 +1,84 @@
+<div style="width: 800px; text-align: center; font-size: 12px;">
+    <div><h3>Client info</h3></div>
+    <table align="center" cellpadding="2" cellspacing="0" border="2" style="width: 100%">
+        <tr>
+            <th style="background-color: #dddddd; width: 100px">
+                Id
+            </th>
+            <td data-bind="text: client.id" style="text-align: left;"></td>
+        </tr>
+        <tr>
+            <th style="background-color: #dddddd;">
+                Name
+            </th>
+            <!--ko if: isEdit()-->
+            <td style="text-align: left;"><input type="text" id="client_name" data-bind="value: client.name"></td>
+            <!--/ko-->
+            <!--ko if: !isEdit()-->
+            <td data-bind="text: client.name" style="text-align: left;"></td>
+            <!--/ko-->
+        </tr>
+        <tr>
+            <th style="background-color: #dddddd;">
+                Surname
+            </th>
+            <!--ko if: isEdit()-->
+            <td style="text-align: left;"><input type="text" id="client_surname" data-bind="value: client.surname"></td>
+            <!--/ko-->
+            <!--ko if: !isEdit()-->
+            <td data-bind="text: client.surname" style="text-align: left;"></td>
+            <!--/ko-->
+        </tr>
+        <tr>
+            <th style="background-color: #dddddd;">
+                Phone
+            </th>
+            <!--ko if: isEdit()-->
+            <td style="text-align: left;"><input type="text" id="client_phone" data-bind="value: client.phone"></td>
+            <!--/ko-->
+            <!--ko if: !isEdit()-->
+            <td data-bind="text: client.phone" style="text-align: left;"></td>
+            <!--/ko-->
+        </tr>
+        <tr>
+            <th style="background-color: #dddddd;">
+                Email
+            </th>
+            <!--ko if: isEdit()-->
+            <td style="text-align: left;"><input type="text" id="client_email" data-bind="value: client.email"></td>
+            <!--/ko-->
+            <!--ko if: !isEdit()-->
+            <td style="text-align: left;"><span data-bind="text: client.email"></span><img src='images/mail.png' style='cursor: pointer; width: 16px; height: 16px;' data-bind='click: mailToClient'></td>
+            <!--/ko-->
+        </tr>
+        <tr>
+            <th style="background-color: #dddddd; vertical-align: top">
+                Companies
+            </th>
+            <td data-bind="foreach: client.companies" style="text-align: left;">
+                <div>
+                    <span data-bind="text: name"></span>, <span data-bind="text: region"></span>, <span data-bind="text: community"></span>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th style="background-color: #dddddd; vertical-align: top">
+                Last news
+            </th>
+            <td data-bind="foreach: client.news" style="text-align: left; cursor: pointer">
+                <div data-bind='click: $parent.clickNew' onmouseover="this.style.backgroundColor = '#dddddd';" onmouseout="this.style.backgroundColor = '#ffffff';">
+                    <span style="width: 10px; height: 10px; display: inline-table" data-bind="style: {'background': color}"></span><span data-bind="text: header" style='padding-left: 5px;'></span>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <div>
+        <!--ko if: !isEdit()-->
+        <span><button data-bind="click: startEdit">Редактировать</button></span>
+        <span><button data-bind="click: removeClient">Удалить клиента</button></span>
+        <!--/ko-->
+        <!--ko if: isEdit()-->
+        <span><button data-bind="click: saveChanges">Сохранить изменения</button></span>
+        <!--/ko-->
+    </div>
+</div>

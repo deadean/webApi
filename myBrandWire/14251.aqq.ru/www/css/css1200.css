@@ -1,0 +1,11 @@
+@import url("cs1200/header1200.css");
+@import url("cs1200/index1200.css");
+@import url("cs1200/footer1200.css");
+
+@media screen and (max-width: 1200px) {
+	
+	.global_container_, .header_global_container_, .header_layer_23-holder, .header_top_line, .header_main_menu {
+		width: 1005;
+	}
+
+}

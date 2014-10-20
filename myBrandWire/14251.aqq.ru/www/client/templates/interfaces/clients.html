@@ -1,0 +1,29 @@
+<div style="width: 800px; text-align: center; font-size: 12px;">
+    <div><h3>Clients</h3></div>
+    <div>
+        Search: <input type="text" data-bind="value: filter, valueUpdate: 'afterkeydown'">
+    </div>
+    <br>
+    <div>
+        <table style="width: 100%;" border="1" cellpadding="0" cellspacing="0">
+            <tr style="background-color: #cccccc;">
+                <th>Id</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th></th>
+            </tr>
+            <!--ko foreach: clients -->
+            <!--ko if: $parent.filter() == "" || ($parent.filter() != "" && (name.toLowerCase().match($parent.filter().toLowerCase()) || email.match($parent.filter()) || phone.match($parent.filter())))-->
+            <tr>
+                <td data-bind="text: id"></td>
+                <td data-bind="text: name + ' ' + surname"></td>
+                <td data-bind="text: phone"></td>
+                <td data-bind="text: email"></td>
+                <td><a href="" data-bind="click: $parent.editClientClick">Edit</a></td>
+            </tr>
+            <!--/ko-->
+            <!--/ko-->
+        </table>
+    </div>
+</div>

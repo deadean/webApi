@@ -1,0 +1,400 @@
+.header_global_container_ {
+	min-height: 190.0px;
+	width: 1280.0px;
+	margin: 0.0px auto 0.0px auto;
+	float: none;
+	height: auto;
+	position: relative;
+}
+
+.header_layer_23-holder {
+	padding: 4.0px 0.0px 74.0px 0.0px;
+	position: absolute;
+	top: 34.0px;
+	left: 0.0;
+	height: 61.0px;
+	width: 1280.0px;
+}
+.header_layer_23-holder {
+	background: url(images/layer_23.jpg) no-repeat;
+	min-height: 81.0px;
+}
+
+.header_layer_36_copy {
+	float: left;
+	margin: 0.0px 0.0px 0.0px 0.0px;
+}
+
+.header_wrapper1 {
+	float: left;
+	clear: both;
+	position: relative;
+	width: 999.0px;
+	margin: 31.0px 0.0px 0.0px 141.0px;
+}
+
+.header_search {
+	padding: 0.0px 0.0px 0.0px 12.0px;
+	float: right;
+	position: relative;
+	width: 266.0px;
+	margin: 6.0px 0.0px 0.0px 0.0px;
+}
+
+.header_search {
+	background: url(images/layer_5.jpg) no-repeat;
+	min-height: 32.0px;
+}
+
+.header_poisk_po_saitu {
+	text-align: left;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	color: #797979;
+	margin: 9.0px 0.0px 0.0px 0.0px;
+	float: left;
+	min-width: 97.0px;
+}
+
+.header_shape_5 {
+	float: left;
+	margin: 7.0px 0.0px 0.0px 111.0px;
+}
+
+.header_layer_6-holder {
+	padding: 8.0px 8.0px 8.0px 8.0px;
+	float: right;
+	position: relative;
+	width: 16.0px;
+	margin: 0.0px 0.0px 0.0px 0.0px;
+}
+.header_layer_6-holder {
+	background: url(images/layer_6.jpg) no-repeat;
+	min-height: 16.0px;
+}
+
+.header_settings {
+	float: left;
+	position: relative;
+}
+
+.header_vkontacte {
+	padding: 6.0px 7.0px 7.0px 7.0px;
+	float: left;
+	position: relative;
+	width: 14.0px;
+	margin: -26.0px 0.0px 0.0px 7.0px;
+}
+.header_layer_16 {
+	float: left;
+	position: relative;
+}
+.header_vkontacte {
+	background: url(images/icon_copy_2.png) no-repeat;
+	min-height: 15.0px;
+}
+
+.header_facebook {
+	padding: 4.0px 7.0px 0.0px 10.0px;
+	float: left;
+	position: relative;
+	width: 13.0px;
+	margin: -26.0px 0.0px 0.0px 382.0px;
+}
+.header_facebook_2 {
+	float: left;
+	position: relative;
+}
+.header_facebook {
+	background: url(images/icon_copy_5.png) no-repeat;
+	min-height: 24.0px;
+}
+
+.header_logotype {
+	min-height: 48.0px;
+	float: left;
+	position: relative;
+	width: 251.0px;
+	margin: 0.0px 0.0px 0.0px 0.0px;
+}
+.header_my {
+	position: absolute;
+	top: 18.0px;
+	left: 0.0;
+	height: 30.0px;
+}
+.header_brandwire {
+	position: absolute;
+	top: 0.0;
+	left: 36.0px;
+	height: 39.0px;
+}
+
+.header_main_menu {
+	position: absolute;
+	top: 149.0px;
+	left: 0.0;
+	height: 42.0px;
+	width: 1280.0px;
+}
+
+.header_layer_1-holder {
+	padding: 1.0px 140.0px 0.0px 140.0px;
+	float: left;
+	position: relative;
+	width: 1000.0px;
+	margin: 0.0px 0.0px 0.0px 0.0px;
+	background: url(images/layer_1.jpg) no-repeat;
+	min-height: 43.0px;
+}
+
+.header_layer_2_copy{
+	float: left;
+	margin: 0.0px 0.0px 0.0px 0.0px;
+}
+
+.header_layer_2_copy img:hover {
+    margin-top: 2px;
+}
+
+.header_itemMenu {
+	text-align: left;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 115.38%;
+	color: #ffffff;
+	margin: 14.0px 0.0px -3.0px 44.0px;
+	float: left;
+	min-width: 70.0px;
+}
+
+.header_layer_2 {
+	float: left;
+	margin: 0.0px 0.0px 0.0px 35.0px;
+}
+.header_layer_2_copy_4 {
+	float: left;
+	margin: 0.0px 0.0px 0.0px 37.0px;
+}
+.header_layer_2_copy_6 {
+	float: left;
+	margin: 0.0px 0.0px 0.0px 35.0px;
+}
+.header_layer_2_copy_2 {
+	float: left;
+	margin: 0.0px 0.0px 0.0px 37.0px;
+}
+.header_layer_2_copy_7 {
+	float: left;
+	margin: 0.0px 0.0px 0.0px 35.0px;
+}
+.header_layer_2_copy_5 {
+	float: right;
+	margin: 0.0px 0.0px 0.0px 0.0px;
+}
+.header_layer_35 {
+	float: left;
+	clear: both;
+	margin: 56.0px 0.0px 0.0px 158.0px;
+}
+.header_rss {
+	padding: 10.0px 11.0px 10.0px 10.0px;
+	position: absolute;
+	top: 40.0px;
+	left: 600.0px;
+	height: 17.0px;
+	width: 16.0px;
+}
+.header_rss_2 {
+	float: left;
+	position: relative;
+}
+.header_rss {
+	background: url(images/icon_2.jpg) no-repeat;
+	min-height: 17.0px;
+}
+
+.header_twitter_v2 {
+	padding: 11.0px 7.0px 7.0px 7.0px;
+	position: absolute;
+	top: 40.0px;
+	left: 635.0px;
+	height: 19.0px;
+	width: 23.0px;
+}
+.header_twitter {
+	float: left;
+	position: relative;
+}
+.header_twitter_v2 {
+	background: url(images/icon_3.jpg) no-repeat;
+	min-height: 19.0px;
+}
+
+.header_text {
+    position: absolute;
+    top: 30.0px;
+    left: 385.0px;
+    height: 19.0px;
+    width: 23.0px;
+}
+
+
+.header_top_line {
+	min-height: 38.0px;
+	position: absolute;
+	top: 0.0;
+	left: 0.0;
+	height: 38.0px;
+	width: 1280.0px;
+	background: url(images/layer_5_copy_2.jpg) no-repeat;
+	min-height: 38.0px;
+}
+.header_layer_25 {
+	position: absolute;
+	top: 0.0;
+	left: 945.0px;
+	height: 38.0px;
+}
+.header_layer_25_copy_3 {
+	position: absolute;
+	top: 0.0;
+	left: 1139.0px;
+	height: 38.0px;
+}
+.header_layer_25_copy {
+	position: absolute;
+	top: 0.0;
+	left: 1031.0px;
+	height: 38.0px;
+}
+.header_layer_25_copy_2 {
+	position: absolute;
+	top: 0.0;
+	left: 904.0px;
+	height: 38.0px;
+}
+.header_layer_32 {
+	position: absolute;
+	top: 12.0px;
+	left: 917.0px;
+	height: 16.0px;
+}
+.header_layer_30 {
+	position: absolute;
+	top: 35.0px;
+	left: 0.0;
+	height: 3.0px;
+}
+.header_login {
+	text-align: left;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	color: #ffffff;
+	margin: -1.0px 0.0px 0.0px 0.0px;
+	position: absolute;
+	top: 14.0px;
+	left: 1062.0px;
+	height: 13.0px;
+	min-width: 38.0px;
+}
+.header_register {
+	text-align: left;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	color: #ffffff;
+	margin: -1.0px 0.0px 0.0px 0.0px;
+	position: absolute;
+	top: 14.0px;
+	left: 945.0px;
+	height: 13.0px;
+	min-width: 70.0px;
+}
+.header_mybrandwire_gmail_com {
+	text-align: left;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	color: #ffffff;
+	margin: -1.0px 0.0px 0.0px 0.0px;
+	position: absolute;
+	top: 14.0px;
+	left: 165.0px;
+	height: 13.0px;
+	min-width: 155.0px;
+}
+.header_layer_37 {
+	position: absolute;
+	top: 13.0px;
+	left: 139.0px;
+	height: 13.0px;
+}
+.header_mybrandwire {
+	text-align: left;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	color: #ffffff;
+	margin: -1.0px 0.0px 0.0px 0.0px;
+	position: absolute;
+	top: 14.0px;
+	left: 358.0px;
+	height: 13.0px;
+	min-width: 81.0px;
+}
+.header_layer_54 {
+	position: absolute;
+	top: 9.0px;
+	left: 330.0px;
+	height: 20.0px;
+}
+
+.header_vybrat_yazyk {
+	text-align: left;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	color: #bbbbbb;
+	margin: -1.0px 0.0px 0.0px 0.0px;
+	position: absolute;
+	top: 14.0px;
+	left: 955.0px;
+	height: 13.0px;
+	min-width: 94.0px;
+}
+.header_layer_52 {
+	position: absolute;
+	top: 11.0px;
+	left: 1064.0px;
+	height: 18.0px;
+}
+.header_layer_53 {
+	position: absolute;
+	top: 11.0px;
+	left: 1094.0px;
+	height: 18.0px;
+}
+.header_layer_31 {
+	position: absolute;
+	top: 11.0px;
+	left: 1040.0px;
+	height: 16.0px;
+}
+
+.itemM{
+	text-align: left;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 115.38%;
+	color: #ffffff;
+	float: left;
+	min-width: 70.0px;
+	margin: 14.0px 0.0px 0.0px 44.0px;
+}
+
+.header_hrefWrapper:hover{
+	color: orange;
+}

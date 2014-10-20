@@ -1,0 +1,115 @@
+<div style="width: 800px; font-size: 12px; text-align: center;">
+    <div><h3>Sites</h3></div>
+    <div>
+        Filter: 
+        <input type="text" data-bind="value: filter, valueUpdate: 'afterkeydown'">
+    </div>
+    <br>
+    <div>
+        <table style="width: 100%">
+            <tr>
+                <th>
+                </th>
+                <th>
+                    Название сайта
+                </th>
+                <th>
+                    Адрес
+                </th>
+                <th>
+                    Описание
+                </th>
+                <th>
+                    Категория
+                </th>
+                <th>
+                    
+                </th>
+            </tr>
+            <!--ko foreach: sites-->
+            <!--ko if: $parent.filter() == "" || ($parent.filter() != "" && (name.toLowerCase().match($parent.filter().toLowerCase()) || url.toLowerCase().match($parent.filter().toLowerCase())))-->
+            <tr>
+                <td>
+                    <img data-bind="attr: {src: main.logoPath + logo}">
+                </td>
+                <td data-bind="text: name"></td>
+                <td data-bind="text: url"></td>
+                <td data-bind="text: description"></td>
+                <td data-bind="text: category_name"></td>
+                <td data-bind="click: $parent.deleteSiteClick" style="cursor: pointer;"><img src='images/trash.png' style='width: 16px; height: 16px;'></td>
+            </tr>
+            <tr>
+                <td colspan="5"><hr></td>
+            </tr>
+            <!--/ko-->
+            <!--/ko-->
+        </table>
+    </div>
+    <div>
+        <button data-bind="click: openAddSiteForm">Добавить сайт</button>
+    </div>
+</div>
+
+
+<div style="font-size: 12px; width: 600px; height: 280px; left: 100px; top: 50px; border: 2px black solid; background-color: #eeeeff; position: absolute;" data-bind="visible: showAddSiteForm">
+    <br>
+    <div style="text-align: center; font-size: 14px;">
+        <b>Добавление нового сайта</b>
+    </div>
+    <br>
+    <form action="/server/Sites/addSite" method="post" enctype="multipart/form-data" id="addSiteForm">
+        <table style="width: 100%">
+            <tr>
+                <td style="text-align: right; width: 200px;">
+                    Название
+                </td>
+                <td>
+                    <input type="text" name="name">
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: right">
+                    Адрес
+                </td>
+                <td>
+                    <input type="text" name="url">
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: right; vertical-align: top;">
+                    Описание
+                </td>
+                <td>
+                    <textarea style="resize: none; width: 316px; height: 50px" name="description"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: right">
+                    Логотип
+                </td>
+                <td>
+                    <input type="file" name="logo" accept="image/jpeg">
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: right">
+                    Категория
+                </td>
+                <td>
+                    <select name="category" style="text-align: center; width: 324px;">
+                        <option value="">-- Выберите категорию --</option>
+                        <!--ko foreach: categories-->
+                        <option data-bind="value: idCategory, text: name"></option>
+                        <!--/ko-->
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center">
+                    <br>
+                    <input type="submit" value="Добавить новый сайт" style="background: green; color: white;"> <input type="button" value="Закрыть" style="background: red; color: white;" data-bind="click: closeAddSiteForm">
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>

@@ -1,0 +1,11 @@
+.arrow-bottom:after {
+	position: absolute;
+	bottom: -7px;
+	margin-left: 90px;
+	content: "";
+	display: block;
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	border-top: 7px solid orange;
+}
+
