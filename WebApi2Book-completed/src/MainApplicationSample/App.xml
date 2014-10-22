@@ -6,7 +6,9 @@
 <configuration>
 
   <connectionStrings>
-    <add name="WebApi2BookDb" providerName="System.Data.SqlClient" connectionString="Data Source=WE-04;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False"/>
+    <add name="WebApi2BookDb" providerName="System.Data.SqlClient" 
+         connectionString="Data Source=DEAN-ПК;Initial Catalog=WebApi2BookDb;Integrated Security=True"/>
+         <!--connectionString="Data Source=WE-04;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False"/>-->
   </connectionStrings>
 
   <appSettings>

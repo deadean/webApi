@@ -29,7 +29,7 @@ namespace Blank.ConsoleMain
         private static void InitializeSessionFactory()
         {
             var connectionStr = MsSqlConfiguration.MsSql2008
-                  .ConnectionString(@"Data Source=WE-04;Initial Catalog=WebApi2BookDb;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False");
+                  .ConnectionString(@"Data Source=DEAN-ПК;Initial Catalog=WebApi2BookDb;Integrated Security=True");
             _sessionFactory = Fluently.Configure()
                 .Database(connectionStr)
                 .Mappings(m => m.FluentMappings.AddFromAssemblyOf<TaskMap>())
@@ -38,8 +38,8 @@ namespace Blank.ConsoleMain
 
         private static void InitializeAndCreatDbTables()
         {
-            var connectionStr = MsSqlConfiguration.MsSql2008
-                  .ConnectionString(@"Data Source=WE-04;Initial Catalog=WebApi2BookDb;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False");
+            var connectionStr = MsSqlConfiguration.MsSql2012
+                  .ConnectionString(@"Data Source=DEAN-ПК;Initial Catalog=WebApi2BookDb;Integrated Security=True");
             _sessionFactory = Fluently.Configure()
                 .Database(connectionStr)
                 .Mappings(
