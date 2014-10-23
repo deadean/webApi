@@ -33,6 +33,12 @@
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.6.0.1\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\..\lib\Iesi.Collections.3.2.0.1001\lib\Net35\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\..\lib\NHibernate.3.3.3.4001\lib\Net35\NHibernate.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -53,6 +59,8 @@
     <Compile Include="ModelServices\IModelServices.cs" />
     <Compile Include="ModelServices\ModelServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryProcessors\AllStatusesQueryProcessor.cs" />
+    <Compile Include="QueryProcessors\AllTasksQueryProcessor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -71,6 +79,14 @@
     <ProjectReference Include="..\ViewModelLib\ViewModelLib.csproj">
       <Project>{94e09330-43d3-4340-ae9d-46eba4b2d5ac}</Project>
       <Name>ViewModelLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebApi2Book.Common\WebApi2Book.Common.csproj">
+      <Project>{9e589099-f064-47c6-9d14-3a54ada6c8e6}</Project>
+      <Name>WebApi2Book.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebApi2Book.Data\WebApi2Book.Data.csproj">
+      <Project>{b4f56983-5b1c-42c7-b872-ae3a5545c02d}</Project>
+      <Name>WebApi2Book.Data</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

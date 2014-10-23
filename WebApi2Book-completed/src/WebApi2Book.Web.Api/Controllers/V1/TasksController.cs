@@ -10,6 +10,7 @@ using System.Web.Http.Cors;
 using WebApi2Book.Common;
 using WebApi2Book.Common.Logging;
 using WebApi2Book.Data.QueryProcessors;
+using WebApi2Book.Web.Api.DependencyBlock;
 using WebApi2Book.Web.Api.InquiryProcessing;
 using WebApi2Book.Web.Api.MaintenanceProcessing;
 using WebApi2Book.Web.Api.Models;
@@ -91,7 +92,7 @@ namespace WebApi2Book.Web.Api.Controllers.V1
 
         [Route("{id:long}", Name = "DeleteTaskRoute")]
         [HttpDelete]
-        [Authorize(Roles = Constants.RoleNames.Manager)]
+        //[Authorize(Roles = Constants.RoleNames.Manager)]
         public IHttpActionResult DeleteTask(long id)
         {
             _deleteTaskQueryProcessor.DeleteTask(id);

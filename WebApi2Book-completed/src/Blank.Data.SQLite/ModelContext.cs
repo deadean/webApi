@@ -1,10 +1,15 @@
 ﻿using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
 using Blank.Data.Implementations.Entities;
 
 namespace Blank.Data.SQLite
 {
     class ModelContext : DbContext
     {
+        public ModelContext()
+        {
+            Database.SetInitializer<ModelContext>(null);
+        } 
         public DbSet<User> USER { get; set; }
         public DbSet<Status> STATUS { get; set; }
 
@@ -19,6 +24,7 @@ namespace Blank.Data.SQLite
             //.WithRequired(s => s.Category).HasForeignKey(s => s.idCategory);
             modelBuilder.Entity<User>();
             modelBuilder.Entity<Status>();
+            //modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
     }
 }

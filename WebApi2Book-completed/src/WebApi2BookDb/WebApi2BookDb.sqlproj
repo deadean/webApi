@@ -75,5 +75,6 @@
     <Build Include="Tables\Task.sql" />
     <Build Include="Tables\TaskUser.sql" />
     <Build Include="Tables\User.sql" />
+    <Build Include="Tables\Cars.sql" />
   </ItemGroup>
 </Project>

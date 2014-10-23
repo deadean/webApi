@@ -18,6 +18,7 @@ using WebApi2Book.Data.SqlServer.Mapping;
 using WebApi2Book.Data.SqlServer.QueryProcessors;
 using WebApi2Book.Web.Api.AutoMappingConfiguration;
 using WebApi2Book.Web.Api.Controllers.V1;
+using WebApi2Book.Web.Api.DependencyBlock;
 using WebApi2Book.Web.Api.InquiryProcessing;
 using WebApi2Book.Web.Api.LegacyProcessing;
 using WebApi2Book.Web.Api.LegacyProcessing.ProcessingStrategies;
@@ -65,7 +66,8 @@ namespace WebApi2Book.Web.Api
             container.Bind<IPagedDataRequestFactory>().To<PagedDataRequestFactory>().InSingletonScope();
 
             container.Bind<IAllStatusesInquiryProcessor>().To<AllStatusesInquiryProcessor>().InRequestScope();
-            container.Bind<IAllStatusesQueryProcessor>().To<AllStatusesQueryProcessor>().InRequestScope();
+            //container.Bind<IAllStatusesQueryProcessor>().To<AllStatusesQueryProcessor>().InRequestScope();
+            container.Bind<IAllStatusesQueryProcessor>().To<Blank.Data.SQLite.QueryProcessors.AllStatusesQueryProcessor>().InRequestScope();
             container.Bind<IStatusLinkService>().To<StatusLinkService>().InRequestScope();
 
             container.Bind<IAllUsersInquiryProcessor>().To<AllUsersInquiryProcessor>().InRequestScope();
@@ -87,6 +89,7 @@ namespace WebApi2Book.Web.Api
             container.Bind<IUpdateTaskStatusQueryProcessor>().To<UpdateTaskStatusQueryProcessor>().InRequestScope();
             container.Bind<IAllTasksInquiryProcessor>().To<AllTasksInquiryProcessor>().InRequestScope();
             container.Bind<IAllTasksQueryProcessor>().To<AllTasksQueryProcessor>().InRequestScope();
+            //container.Bind<IAllTasksQueryProcessor>().To<Blank.Data.SQLite.QueryProcessors.AllTasksQueryProcessor>().InRequestScope();
             container.Bind<ITaskByIdInquiryProcessor>().To<TaskByIdInquiryProcessor>().InRequestScope();
             container.Bind<ITaskByIdQueryProcessor>().To<TaskByIdQueryProcessor>().InRequestScope();
             container.Bind<ITaskLinkService>().To<TaskLinkService>().InRequestScope();

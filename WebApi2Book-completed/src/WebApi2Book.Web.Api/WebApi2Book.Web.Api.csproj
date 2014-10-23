@@ -46,6 +46,13 @@
     <Reference Include="AutoMapper.Net4">
       <HintPath>..\..\lib\AutoMapper.3.1.1\lib\net40\AutoMapper.Net4.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Sample\src\packages\EntityFramework.6.0.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\..\..\Sample\src\packages\EntityFramework.6.0.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="FluentNHibernate">
       <HintPath>..\..\lib\FluentNHibernate.1.4.0.0\lib\net35\FluentNHibernate.dll</HintPath>
     </Reference>
@@ -77,6 +84,13 @@
     <Reference Include="Ninject.Web.Common, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\lib\Ninject.Web.Common.3.2.0.0\lib\net45-full\Ninject.Web.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\..\..\Sample\src\packages\System.Data.SQLite.x86.1.0.88.0\lib\net45\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=2.0.88.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Sample\src\packages\System.Data.SQLite.Linq.1.0.88\lib\net45\System.Data.SQLite.Linq.dll</HintPath>
     </Reference>
     <Reference Include="System.IdentityModel" />
     <Reference Include="System.IdentityModel.Tokens.Jwt">
@@ -141,8 +155,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\AutoMapperConfigurator.cs" />
-    <Compile Include="Controllers\V1\ITasksControllerDependencyBlock.cs" />
-    <Compile Include="Controllers\V1\TasksControllerDependencyBlock.cs" />
+    <Compile Include="DependencyBlock\ITasksControllerDependencyBlock.cs" />
+    <Compile Include="DependencyBlock\TasksControllerDependencyBlock.cs" />
     <Compile Include="Controllers\V1\ValuesController.cs" />
     <Compile Include="MaintenanceProcessing\LocationLinkCalculator.cs" />
     <Compile Include="MaintenanceProcessing\TaskCreatedActionResult.cs" />
@@ -238,12 +252,16 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Blank.Data.SQLite\Blank.Data.SQLite.csproj">
+      <Project>{7d525aa4-3983-4185-bbd2-7e21897cc445}</Project>
+      <Name>Blank.Data.SQLite</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WebApi2Book.Common\WebApi2Book.Common.csproj">
       <Project>{9E589099-F064-47C6-9D14-3A54ADA6C8E6}</Project>
       <Name>WebApi2Book.Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\WebApi2Book.Data.SqlServer\WebApi2Book.Data.SqlServer.csproj">
-      <Project>{36CAC611-2F82-456D-923D-EF959AEB5BBA}</Project>
+      <Project>{36cac611-2f82-456d-923d-ef959aeb5bba}</Project>
       <Name>WebApi2Book.Data.SqlServer</Name>
     </ProjectReference>
     <ProjectReference Include="..\WebApi2Book.Data\WebApi2Book.Data.csproj">
