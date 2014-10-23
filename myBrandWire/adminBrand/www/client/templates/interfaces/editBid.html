@@ -1,0 +1,168 @@
+<div style="width: 500px; text-align: center;">
+    <!--ko if: info.comments-->
+    <div style='font-size: 12px;'>
+        <b>Client comment:</b> 
+        <p data-bind='text: "&nbsp;&nbsp;&nbsp;"+info.comments' style='text-align: justify;'></p>
+    </div>
+    <br>
+    <!--/ko-->
+    <div>Заголовок</div>
+    <div>
+        <!--ko if: info.status == 'published' || info.status == 'moderated' -->
+        <span data-bind='text: header'></span>
+        <!--/ko -->
+        <!--ko if: info.status != 'published' && info.status != 'moderated' -->
+        <input type="text" style="width: 400px;" data-bind='value: header'>
+        <!--/ko-->
+    </div>
+    <br>
+    <div>Краткий текст</div>
+    <div>
+        <!--ko if: info.status == 'published' || info.status == 'moderated' -->
+        <span data-bind='text: common'></span>
+        <!--/ko -->
+        <!--ko if: info.status != 'published' && info.status != 'moderated' -->
+        <textarea style="width: 400px; height: 150px; resize: none" data-bind='value: common'></textarea>
+        <!--/ko-->
+    </div>
+    <br>
+    <div>Полный текст</div>
+    <div>
+        <!--ko if: info.status == 'published' || info.status == 'moderated' -->
+        <span data-bind='text: content'></span>
+        <!--/ko -->
+        <!--ko if: info.status != 'published' && info.status != 'moderated' -->
+        <textarea class="edit" style="resize: none" data-bind='value: content'></textarea>
+        <!--/ko-->
+    </div>
+    <br>
+    <div>Ключевые слова</div>
+    <div>
+        <!--ko if: info.status == 'published' || info.status == 'moderated' -->
+        <span data-bind='text: tags'></span>
+        <!--/ko -->
+        <!--ko if: info.status != 'published' && info.status != 'moderated' -->
+        <input type="text" style="width: 400px;" data-bind='value: tags'>
+        <!--/ko-->
+    </div>
+    <br>
+</div>
+
+<div style="width: 280px; position: absolute; top: 0px; left: 520px; text-align: center; font-size: 12px;">
+    <div style="border-bottom: 2px ridge black; border-top: 2px ridge black">
+        <br>
+        <div>
+            <b>Модератор:</b><br>
+            <span data-bind='text: info.moderator || "-"'></span>
+        </div>
+        <br>
+        <div>
+            <b>Тип заявки:</b><br>
+            <!--ko if: info.payment == 0-->
+            Бесплатная
+            <!--/ko-->
+            <!--ko if: info.payment == 1-->
+            Платная
+            <!--/ko-->
+        </div>
+        <br>
+        <div>
+            <b>Язык заявки:</b><br>
+            <span>Русский</span>
+        </div>
+        <br>
+        <div>
+            <b>Время создания:</b><br> 
+            <span>08.03.2014 22:12:20</span>
+        </div>
+        <br>
+        <div>
+            <b>Время публикации:</b><br> 
+            <!--ko if: info.status == 'moderated' || info.status == 'published'-->
+            <span data-bind="text: info.publish_time || '-'"></span>
+            <!--/ko-->
+            <!--ko if: info.status != 'moderated' && info.status != 'published'-->
+            <input id="datetimepicker" type="text" style="text-align: center">
+            <!--/ko-->
+        </div>
+        <br>
+        <div>
+            <b>Компания:</b><br>
+            <span>Apple</span>
+        </div>
+        <br>
+    </div>
+    <div style="border-bottom: 2px ridge black;">
+        <br>
+        <div>
+            <b>Орфография:</b> 
+            <!--ko if: info.grammerCheck == 0 -->
+            <span style="color: green;">Проверка не требуется</span>            
+            <!--/ko-->
+            <!--ko if: info.grammerCheck == 1 && info.status == 'payed' -->
+            <span style="color: red;">Не проверено</span>            
+            <!--/ko-->
+            <!--ko if: info.grammerCheck == 1 && (info.status == 'spell_checked' || info.status == 'moderated' || info.status == 'published') -->
+            <span style="color: green;">Проверено</span>            
+            <!--/ko-->
+        </div>
+        <br>
+        <div>
+            <!--ko if: info.status != 'moderated' -->
+            <b>Модераторство:</b> <span style="color: red;">Не пройдено</span>
+            <!--/ko -->
+            <!--ko if: info.status == 'moderated' -->
+            <b>Модераторство:</b> <span style="color: green;">Пройдено</span>
+            <!--/ko -->
+        </div>
+        <br>
+    </div>
+    <div style="border-bottom: 2px ridge black;">
+        <!--ko if: info.status != 'moderated' && info.status != 'published' && info.status != 'waiting_for_payment' -->
+        <!--ko if: !info.is_bind_to_you -->
+        <br>
+        <div>
+            <button style="width: 100%;" data-bind='click: bindBidClick;'>Начать работу с заявкой</button>         
+        </div>
+        <br>
+        <!--/ko -->
+        <!--ko if: info.is_bind_to_you -->
+        <!--ko if: info.grammerCheck != 0 && info.status == 'payed'-->
+        <br>
+        <div>
+            <button style="width: 100%;" data-bind="click: spellCheckedClick">Орфография проверена</button>         
+        </div>
+        <!--/ko-->
+        <br>
+        <div>
+            <button style="width: 100%;" data-bind="click: removeTagsClick">Убрать лишние теги</button>         
+        </div>
+        <br>
+        <div>
+            <button style="width: 100%;" data-bind="click: saveBidInfoClick">Сохранить изменения</button>         
+        </div>
+        <br>
+        <div>
+            <button style="width: 100%;" data-bind="click: mailClientClick">Написать письмо заказчику</button>         
+        </div>
+        <br>
+        <div>
+            <button style="width: 100%;" data-bind="click: approvalPassedClick">Опубликовать новость</button>         
+        </div>
+        <br>
+        <!--/ko -->
+        <!--/ko -->
+        
+        <!--ko if: info.is_bind_to_you && (info.status == 'moderated' || info.status == 'published')-->
+        <br>
+        <div>
+            <button style="width: 100%;" data-bind="click: deliveryInfoClick">Информация о рассылке</button>         
+        </div>
+        <br>
+        <div>
+            <button style="width: 100%;" data-bind="click: makeReport">Создать отчет о рассылке</button>         
+        </div>
+        <br>
+        <!--/ko -->
+    </div>
+</div>

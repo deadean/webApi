@@ -1,0 +1,49 @@
+<div style="width: 800px; text-align: center; font-size: 12px;">
+    <div><h3>Client info</h3></div>
+    <table align="center" cellpadding="2" cellspacing="0" border="2" style="width: 100%">
+        <tr>
+            <th style="background-color: #dddddd; width: 100px">
+                Id
+            </th>
+            <td data-bind="text: client.id" style="text-align: left;"></td>
+        </tr>
+        <tr>
+            <th style="background-color: #dddddd;">
+                Name
+            </th>
+            <td data-bind="text: client.name + ' ' + client.surname" style="text-align: left;"></td>
+        </tr>
+        <tr>
+            <th style="background-color: #dddddd;">
+                Phone
+            </th>
+            <td data-bind="text: client.phone" style="text-align: left;"></td>
+        </tr>
+        <tr>
+            <th style="background-color: #dddddd;">
+                Email
+            </th>
+            <td style="text-align: left;"><span data-bind="text: client.email"></span><img src='images/mail.png' style='cursor: pointer; width: 16px; height: 16px;' data-bind='click: mailToClient'></td>
+        </tr>
+        <tr>
+            <th style="background-color: #dddddd; vertical-align: top">
+                Companies
+            </th>
+            <td data-bind="foreach: client.companies" style="text-align: left;">
+                <div>
+                    <span data-bind="text: name"></span>, <span data-bind="text: region"></span>, <span data-bind="text: community"></span>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th style="background-color: #dddddd; vertical-align: top">
+                Last news
+            </th>
+            <td data-bind="foreach: client.news" style="text-align: left; cursor: pointer">
+                <div data-bind='click: $parent.clickNew' onmouseover="this.style.backgroundColor = '#dddddd';" onmouseout="this.style.backgroundColor = '#ffffff';">
+                    <span data-bind="text: header"></span>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>

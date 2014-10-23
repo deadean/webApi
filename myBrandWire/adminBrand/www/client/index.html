@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, max-age=0, must-revalidate">
+        
+        <style>
+            .menu {
+                width: 200px;  
+                border-top: 1px black solid; 
+                border-bottom: 1px black solid;
+            }
+            
+            .menuButton {
+                width: 200px; 
+                text-align: center; 
+                cursor: pointer;
+                font-size: 12px;
+            }
+        </style>
+        
+        <script src='js/libs/jquery-1.9.1.min.js' type='text/javascript'></script>
+        <script src='js/libs/jquery.form.min.js' type='text/javascript'></script>
+        <script src='js/libs/knockout-3.0.0.js' type='text/javascript'></script>
+        <script src="//tinymce.cachefly.net/4.0/tinymce.min.js"></script>
+        
+        <link rel="stylesheet" type="text/css" href="js/libs/datetimepicker/jquery.datetimepicker.css"/ >
+        <script src='js/libs/datetimepicker/jquery.datetimepicker.js' type='text/javascript'></script>
+        
+        <script src='js/main.js' type='text/javascript'></script>
+        
+        <script src='js/interface.js' type='text/javascript'></script>
+        <script src='js/interface/bids.js' type='text/javascript'></script>
+        <script src='js/interface/reports.js' type='text/javascript'></script>
+        <script src='js/interface/editBid.js' type='text/javascript'></script>
+        <script src='js/interface/clients.js' type='text/javascript'></script>
+        <script src='js/interface/editClient.js' type='text/javascript'></script>
+        <script src='js/interface/mailToClient.js' type='text/javascript'></script>
+        <script src='js/interface/sites.js' type='text/javascript'></script>
+        <script src='js/interface/newSites.js' type='text/javascript'></script>
+        
+        <script src='js/server.js' type='text/javascript'></script>
+    </head>
+    <body onload="main.init();">
+        <div style='position: absolute; top: 20px;"'>
+            <div class='menu'>
+                <div class='menuButton' onmouseover="this.style.backgroundColor = '#dddddd';" onmouseout="this.style.backgroundColor = '#ffffff';" onclick="main.interface.showInterface('bids')">Bids</div>
+                <div class='menuButton' onmouseover="this.style.backgroundColor = '#dddddd';" onmouseout="this.style.backgroundColor = '#ffffff';" onclick="main.interface.showInterface('clients')">Clients</div>
+                <div class='menuButton' onmouseover="this.style.backgroundColor = '#dddddd';" onmouseout="this.style.backgroundColor = '#ffffff';" onclick="main.interface.showInterface('sites')">Sites</div>
+            </div>
+        </div>
+        <div style="width: 800px; height: 600px; left: 250px; top: 20px; position: absolute" id="interface"></div>
+        
+        <div style="position: absolute; text-align: center; width: 500px; height: 300px; left: 250px; top: 100px; border: 5px ridge #123456; background-color: #aaaaaa; display: none;" id="messagePopup">
+            <div data-bind="text: title" style="position: absolute; width: 100%; height: 50px; top: 20px; font-size: 20px;"></div>
+            <div data-bind="text: info" style="position: absolute; width: 100%; height: 150px; top: 80px"></div>
+            <div data-bind="foreach: buttons" id="popupButtons" style="position: absolute; width: 100%; height: 50px; top: 250px">
+                <button data-bind="text: name, click: click"></button>
+            </div>
+        </div>
+        
+        <div style="position: absolute; border: 2px ridge #123456; display: none;" id="alertPopup">
+            <div data-bind='style: {background: styles[style()].bgcolor}' style="padding: 5px;">
+                <img data-bind='attr: {src: styles[style()].icon}' style="width: 24px; height: 24px; vertical-align: middle;"/><span data-bind='text: message' style="padding-left: 10px;"></span>
+            </div>
+        </div>
+    </body>
+</html>
