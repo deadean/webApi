@@ -1,0 +1,198 @@
+DROP TABLE IF EXISTS person_communication;
+DROP TABLE IF EXISTS orders_contact;
+DROP TABLE IF EXISTS company_person;
+DROP TABLE IF EXISTS news_category;
+DROP TABLE IF EXISTS news;
+DROP TABLE IF EXISTS orders;
+DROP TABLE IF EXISTS company_social_networks;
+DROP TABLE IF EXISTS communication_type;
+DROP TABLE IF EXISTS person;
+DROP TABLE IF EXISTS company;
+DROP TABLE IF EXISTS user_recovery;
+DROP TABLE IF EXISTS users;
+
+
+CREATE TABLE communication_type (
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	name TEXT
+);
+
+INSERT INTO communication_type VALUES(NULL,'Email');
+INSERT INTO communication_type VALUES(NULL,'Phone');
+INSERT INTO communication_type VALUES(NULL,'Facebook');
+INSERT INTO communication_type VALUES(NULL,'Vkontakte');
+INSERT INTO communication_type VALUES(NULL,'Twitter');
+INSERT INTO communication_type VALUES(NULL,'Googleplus');
+INSERT INTO communication_type VALUES(NULL,'Skype');
+INSERT INTO communication_type VALUES(NULL,'Odnoklassniki');
+INSERT INTO communication_type VALUES(NULL,'Instagramm');
+INSERT INTO communication_type VALUES(NULL,'Pinterest');
+INSERT INTO communication_type VALUES(NULL,'Tumblr');
+INSERT INTO communication_type VALUES(NULL,'LinkedIN');
+
+CREATE TABLE person (
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	firstname TEXT,
+	middlename TEXT,
+	secondname TEXT,
+	position TEXT
+);
+
+INSERT INTO person VALUES(NULL,'Person1','','','');
+INSERT INTO person VALUES(NULL,'Person2','','','');
+
+CREATE TABLE person_communication (
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	idPerson INT,
+	idCommunicationType INT,
+	communicationValue TEXT,
+	CONSTRAINT FOREIGN KEY (`idCommunicationType`) REFERENCES `communication_type` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+	CONSTRAINT FOREIGN KEY (`idPerson`) REFERENCES `person` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+INSERT INTO person_communication VALUES(NULL,'1','1','deadean@yandex.ru');
+INSERT INTO person_communication VALUES(NULL,'1','6','deadeanSkype');
+INSERT INTO person_communication VALUES(NULL,'2','1','leafane@yandex.ru');
+INSERT INTO person_communication VALUES(NULL,'1','2','999-999-999');
+INSERT INTO person_communication VALUES(NULL,'2','2','888-888-888');
+
+CREATE TABLE users (
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	login TEXT NOT NULL,
+	password TEXT NOT NULL,
+	name TEXT,
+	surname TEXT,
+	email TEXT,
+	phone TEXT,
+	is_delete tinyint(1) NOT NULL DEFAULT '0'
+);
+
+INSERT INTO users VALUES(NULL,'user1','1','user1','userious','test@yandex.ru','067','0');
+INSERT INTO users VALUES(NULL,'user2','2','user2','userious','test@yandex.ru','067','0');
+
+CREATE TABLE company (
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	name TEXT,
+	logo TEXT,
+	about TEXT,
+	region TEXT,
+	community TEXT,
+	idUser INT,
+	CONSTRAINT FOREIGN KEY (`idUser`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+INSERT INTO company VALUES(NULL,'Company1','1','aboutCompany','Ukraine','Niko','1');
+INSERT INTO company VALUES(NULL,'Company2','1','aboutCompany','Ukraine','Kyiv','2');
+INSERT INTO company VALUES(NULL,'Company3','1','aboutCompany','Ukraine','Kyiv','1');
+
+CREATE TABLE company_person (
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	idPerson INT,
+	idCompany INT,
+	CONSTRAINT FOREIGN KEY (`idPerson`) REFERENCES `person` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+	CONSTRAINT FOREIGN KEY (`idCompany`) REFERENCES `company` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+INSERT INTO company_person VALUES(NULL,'1','1');
+INSERT INTO company_person VALUES(NULL,'1','2');
+INSERT INTO company_person VALUES(NULL,'2','2');
+
+CREATE TABLE company_social_networks (
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	idCompany INT,
+	idCommunicationType INT,
+	communicationValue TEXT,
+	CONSTRAINT FOREIGN KEY (`idCommunicationType`) REFERENCES `communication_type` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+	CONSTRAINT FOREIGN KEY (`idCompany`) REFERENCES `company` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+INSERT INTO company_social_networks VALUES(NULL,'1','3','facebookCompany1');
+INSERT INTO company_social_networks VALUES(NULL,'1','4','vkontakteCompany1');
+INSERT INTO company_social_networks VALUES(NULL,'2','3','facebookCompany2');
+INSERT INTO company_social_networks VALUES(NULL,'2','4','vkontakteCompany2');
+
+CREATE TABLE orders (
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	grammerCheck INT,
+	payment INT,
+	idCompany INT,
+	isPublish INT,
+	datePublish DATETIME,
+	isAutoAddCompanySocialNetworks INT,
+	isAutoAddCompanyContacts INT,
+	isAutoAddAboutCompanyInfo INT,
+	isAutoAddCompanyAddress INT,
+	totalCost INT,
+	idModerator int(11) DEFAULT NULL,
+	CONSTRAINT FOREIGN KEY (`idCompany`) REFERENCES `company` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+INSERT INTO orders VALUES(NULL,'0','0','1','1','2014-03-01','0','0','0','0','1000','1');
+INSERT INTO orders VALUES(NULL,'0','1','1','1','2014-03-02','0','0','0','0','1000','1');
+INSERT INTO orders VALUES(NULL,'0','0','2','1','2014-03-02','0','0','0','0','1000','1');
+INSERT INTO orders VALUES(NULL,'0','1','2','1','2014-03-03','0','0','0','0','1000','1');
+INSERT INTO orders VALUES(NULL,'0','1','1','1','2014-03-03','0','0','0','0','1000','1');
+INSERT INTO orders VALUES(NULL,'0','1','1','1','2014-03-03','0','0','0','0','1000','1');
+INSERT INTO orders VALUES(NULL,'0','1','1','1','2014-03-04','0','0','0','0','1000','1');
+INSERT INTO orders VALUES(NULL,'0','1','1','1','2014-03-04','0','0','0','0','1000','1');
+INSERT INTO orders VALUES(NULL,'0','1','1','1','2014-03-04','0','0','0','0','1000','1');
+INSERT INTO orders VALUES(NULL,'0','1','1','1','2014-03-05','0','0','0','0','1000','1');
+INSERT INTO orders VALUES(NULL,'0','1','1','1','2014-03-05','0','0','0','0','1000','1');
+INSERT INTO orders VALUES(NULL,'0','1','1','1','2014-03-05','0','0','0','0','1000','1');
+INSERT INTO orders VALUES(NULL,'0','1','1','1','2014-03-05','0','0','0','0','1000','1');
+INSERT INTO orders VALUES(NULL,'0','1','1','1','2014-03-05','0','0','0','0','1000','1');
+
+
+CREATE TABLE news (
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	header TEXT,
+	common TEXT,
+	content TEXT,
+	tags TEXT,
+	comments TEXT,
+	idOrder INT,
+	status TEXT,
+	isBlog INT,
+	isCompanyOwner INT,
+	publish_time timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	is_delete tinyint(1) NOT NULL DEFAULT '0',
+	CONSTRAINT FOREIGN KEY (`idOrder`) REFERENCES `orders` (`id`)
+);
+
+CREATE TABLE news_category (
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	idCategory INT,
+	idNews INT,
+	CONSTRAINT FOREIGN KEY (`idCategory`) REFERENCES `category` (`id`),
+	CONSTRAINT FOREIGN KEY (`idNews`) REFERENCES `news` (`id`)
+);
+
+INSERT INTO news VALUES(NULL,'News 1','common1','content1','tags1','',1,'spell_checked',0,1,'2014-04-22 08:51:17','0');
+INSERT INTO news VALUES(NULL,'News 2','common2','content2','tags2','',2,'spell_checked',0,1,'2014-04-22 08:51:17','0');
+INSERT INTO news VALUES(NULL,'News 3','common3','content3','tags3','',3,'spell_checked',0,1,'2014-04-22 08:51:17','0');
+INSERT INTO news VALUES(NULL,'News 4','common4','content4','tags4','',4,'spell_checked',0,1,'2014-04-22 08:51:17','0');
+INSERT INTO news VALUES(NULL,'News 5','common5','content5','tags5','',5,'spell_checked',0,1,'2014-04-22 08:51:17','0');
+INSERT INTO news VALUES(NULL,'News 6','common6','content6','tags6','',6,'spell_checked',0,1,'2014-04-22 08:51:17','0');
+INSERT INTO news VALUES(NULL,'News 7','common7','content7','tags7','',7,'spell_checked',0,1,'2014-04-22 08:51:17','0');
+INSERT INTO news VALUES(NULL,'News 8','common8','content8','tags8','',8,'spell_checked',0,1,'2014-04-22 08:51:17','0');
+INSERT INTO news VALUES(NULL,'News 9','common9','content9','tags9','',9,'spell_checked',0,1,'2014-04-22 08:51:17','0');
+INSERT INTO news VALUES(NULL,'News 10','common10','content10','tags10','',10,'spell_checked',0,1,'2014-04-22 08:51:17','0');
+INSERT INTO news VALUES(NULL,'News Blog1','commonBlog1','contentBlog1','tagsBlog1','',11,'spell_checked',1,1,'2014-04-22 08:51:17','0');
+INSERT INTO news VALUES(NULL,'News Blog1','commonBlog1','contentBlog1','tagsBlog1','',12,'spell_checked',1,1,'2014-04-22 08:51:17','0');
+INSERT INTO news VALUES(NULL,'News Blog1','commonBlog1','contentBlog1','tagsBlog1','',13,'spell_checked',1,1,'2014-04-22 08:51:17','0');
+INSERT INTO news VALUES(NULL,'News Blog1','commonBlog1','contentBlog1','tagsBlog1','',14,'spell_checked',1,1,'2014-04-22 08:51:17','0');
+
+CREATE TABLE orders_contact (
+	idOrder INT NOT NULL,
+	idContact INT NOT NULL,
+	CONSTRAINT FOREIGN KEY (`idOrder`) REFERENCES `orders` (`id`),
+	CONSTRAINT FOREIGN KEY (`idContact`) REFERENCES `company_person` (`id`)
+);
+
+INSERT INTO orders_contact VALUES(1,1);
+
+CREATE TABLE user_recovery (
+	idUser INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	sendTime DATETIME,
+	hashCode TEXT
+);

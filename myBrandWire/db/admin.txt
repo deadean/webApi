@@ -1,0 +1,79 @@
+DROP TABLE IF EXISTS `moderators`;
+CREATE TABLE `moderators` (
+  `idModerator` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `login` varchar(32) DEFAULT NULL,
+  `password` varchar(32) DEFAULT NULL,
+  PRIMARY KEY (`idModerator`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+LOCK TABLES `moderators` WRITE;
+INSERT INTO `moderators` VALUES (1,'snkjunior','b0d16c07aa462bd4ce68cfce4762a079'),(2,'test2','b0d16c07aa462bd4ce68cfce4762a079');
+UNLOCK TABLES;
+
+DROP TABLE IF EXISTS `news_sites`;
+CREATE TABLE `news_sites` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `idNews` int(11) NOT NULL,
+  `idSite` int(11) NOT NULL,
+  `link` text,
+  `status` set('notStarted','verification','published') NOT NULL DEFAULT 'notStarted',
+  `comment` text,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `idNews` (`idNews`,`idSite`)
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
+
+LOCK TABLES `news_sites` WRITE;
+INSERT INTO `news_sites` VALUES (8,2,6,NULL,'notStarted',NULL),(9,2,7,NULL,'verification',NULL),(10,2,12,NULL,'published',NULL),(11,1,6,'http%3A%2F%2Fgoogle.com%2F%3Fsomeinfo%3F%3F','notStarted','asdas'),(12,1,7,'asd','verification',''),(13,1,15,'http%3A%2F%2Fgoogle.com%2F%3Fsomeinfo%3F%3Fa','published',''),(17,1,14,'','notStarted',NULL),(18,10,6,'http://google.com/?asdzxcas=asdasd','notStarted',NULL),(19,10,7,NULL,'notStarted',NULL),(20,10,15,NULL,'notStarted',NULL),(21,10,12,NULL,'notStarted',NULL);
+UNLOCK TABLES;
+
+DROP TABLE IF EXISTS `recess_tools_classes`;
+CREATE TABLE `recess_tools_classes` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `parentId` int(11) DEFAULT NULL,
+  `packageId` int(11) DEFAULT NULL,
+  `docComment` text,
+  `file` text,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+LOCK TABLES `recess_tools_classes` WRITE;
+INSERT INTO `recess_tools_classes` VALUES (1,'BidsController',2,1,'/**\r\n * !RespondsWith Layouts, Json\r\n * !Prefix Routes: bids/, \r\n */','/home/hunter/work/adminka/server/apps/bids/controllers/BidsController.class.php'),(2,'Controller',3,3,'/**\r\n * The controller is responsible for interpretting a preprocessed Request,\r\n * performing some action in response to the Request (usually CRUDS), and\r\n * returning a Response which contains relevant state for a view to render\r\n * the Response.\r\n * \r\n * @author Kris Jordan <krisjordan@gmail.com>\r\n * @author Joshua Paine\r\n */','/home/hunter/work/adminka/server/recess/recess/framework/controllers/Controller.class.php'),(3,'AbstractController',4,4,'/**\r\n * The controller is responsible for interpretting a preprocessed Request,\r\n * performing some action in response to the Request (usually CRUDS), and\r\n * returning a Response which contains relevant state for a view to render\r\n * the Response.\r\n * \r\n * @author Kris Jordan <krisjordan@gmail.com>\r\n */','/home/hunter/work/adminka/server/recess/recess/framework/AbstractController.class.php'),(4,'Object',NULL,6,'/**\r\n * Object is the base class for extensible classes in the Recess.\r\n * Object introduces a standard mechanism for building a class\r\n * descriptor through reflection and the realization of Annotations.\r\n * Object also introduces the ability to attach methods to a class\r\n * at run-time.\r\n * \r\n * Sub-classes of Object can introduce extensibility points \r\n * with \'wrappable\' methods. A wrappable method can be dynamically \'wrapped\' \r\n * by other methods which are called prior to or after the wrapped method.\r\n * \r\n * Wrappable methods can be declared using a Wrappable annotation on the \r\n * method being wrapped. The annotation takes a single parameter, which is\r\n * the desired name of the wrapped method. By convention the native PHP method\r\n * being wrapped is prefixed with \'wrapped\', i.e.:\r\n *  class Foobar {\r\n *    /** !Wrappable foo * /\r\n *    function wrappedFoo() { ... }\r\n *  }\r\n *  $obj->foo();\r\n * \r\n * Example usage of wrappable methods and a hypothetical \"EchoWrapper\" which\r\n * wraps a method by echo\'ing strings before and after. \r\n * \r\n *   class Model extends Object {\r\n *     /** !Wrappable insert * /\r\n *     function wrappedInsert() { echo \"Wrapped (insert)\"; }\r\n *   }\r\n * \r\n *   /** !EchoWrapper insert, Before: \"Hello\", After: \"World\" * /\r\n *   class Person extends Model {}\r\n * \r\n *   $person = new Person();\r\n *   $person->insert();\r\n *   \r\n *   // Output:\r\n *   Hello\r\n *   Wrapped (insert)\r\n *   World\r\n * \r\n * @author Kris Jordan <krisjordan@gmail.com>\r\n * @copyright 2008, 2009 Kris Jordan\r\n * @package Recess PHP Framework\r\n * @license MIT\r\n * @link http://www.recessframework.org/\r\n */','/home/hunter/work/adminka/server/recess/recess/lang/Object.class.php');
+UNLOCK TABLES;
+
+DROP TABLE IF EXISTS `recess_tools_packages`;
+CREATE TABLE `recess_tools_packages` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `parentId` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+
+LOCK TABLES `recess_tools_packages` WRITE;
+INSERT INTO `recess_tools_packages` VALUES (1,'bids.controllers',2),(2,'bids',NULL),(3,'recess.framework.controllers',4),(4,'recess.framework',5),(5,'recess',NULL),(6,'recess.lang',5);
+UNLOCK TABLES;
+
+DROP TABLE IF EXISTS `sites`;
+CREATE TABLE `sites` (
+  `idSite` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `idCategory` int(11) DEFAULT NULL,
+  `name` varchar(32) DEFAULT NULL,
+  `url` varchar(128) DEFAULT NULL,
+  `description` text NOT NULL,
+  `logo` text NOT NULL,
+  `status` tinyint(1) NOT NULL,
+  PRIMARY KEY (`idSite`)
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+
+LOCK TABLES `sites` WRITE;
+INSERT INTO `sites` VALUES (6,1,'Google','http://google.com','','6.png',0),(7,1,'Yandex','http://ya.ru','','7.png',0),(12,3,'gmail','http://gmail.com','','6.png',0),(14,2,'Site name','http://vk.com','','14.png',0),(15,1,'asd','asd','asd','15.png',0);
+UNLOCK TABLES;
+
+DROP TABLE IF EXISTS `sites_categories`;
+CREATE TABLE `sites_categories` (
+  `idCategory` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(32) DEFAULT NULL,
+  PRIMARY KEY (`idCategory`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+LOCK TABLES `sites_categories` WRITE;
+INSERT INTO `sites_categories` VALUES (1,'Общие'),(2,'Медицина'),(3,'Инвестиции');
+UNLOCK TABLES;
