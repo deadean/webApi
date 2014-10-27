@@ -72,7 +72,7 @@ namespace WebApi.DataBase.Oracle.EnterpriseLibrary
                     Console.WriteLine(item.ID);
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 throw;
             }
