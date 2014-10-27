@@ -14,17 +14,17 @@ namespace WebApi.Console
 		{
 			try
 			{
-                //CDataBase.close();
-                //CDataBase.DataSource = "RONI_DE";
-                //CDataBase.UserID = "VUDATA";
-                //CDataBase.Password = "guru";
+                CDataBase.close();
+                CDataBase.DataSource = "RONI";
+                CDataBase.UserID = "VUDATA";
+                CDataBase.Password = "guru";
 
-                //CDataBase.connect();
+                CDataBase.connect();
 
-                //var classType = Load(null);
-                //System.Console.WriteLine(classType);
+                var classType = Load(null);
+                System.Console.WriteLine(classType);
 
-                //CDataBase.close();
+                CDataBase.close();
 
                 Connection cn = new Connection();
                 cn.Connect();

@@ -69,7 +69,7 @@ namespace WebApi.DataBase.Oracle.EnterpriseLibrary
 
                 foreach (var item in vurObjectsByProc)
                 {
-                    Debug.WriteLine(item.ID);
+                    Console.WriteLine(item.ID);
                 }
             }
             catch (Exception ex)
