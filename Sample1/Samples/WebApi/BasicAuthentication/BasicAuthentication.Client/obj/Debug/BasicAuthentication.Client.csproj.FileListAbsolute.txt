@@ -1,0 +1,12 @@
+D:\dean\GitHub\webApi\webApi\Sample1\Samples\WebApi\BasicAuthentication\BasicAuthentication.Client\bin\Debug\BasicAuthentication.Client.exe.config
+D:\dean\GitHub\webApi\webApi\Sample1\Samples\WebApi\BasicAuthentication\BasicAuthentication.Client\bin\Debug\BasicAuthentication.Client.exe
+D:\dean\GitHub\webApi\webApi\Sample1\Samples\WebApi\BasicAuthentication\BasicAuthentication.Client\bin\Debug\BasicAuthentication.Client.pdb
+D:\dean\GitHub\webApi\webApi\Sample1\Samples\WebApi\BasicAuthentication\BasicAuthentication.Client\bin\Debug\BasicAuthentication.Models.dll
+D:\dean\GitHub\webApi\webApi\Sample1\Samples\WebApi\BasicAuthentication\BasicAuthentication.Client\bin\Debug\Newtonsoft.Json.dll
+D:\dean\GitHub\webApi\webApi\Sample1\Samples\WebApi\BasicAuthentication\BasicAuthentication.Client\bin\Debug\System.Net.Http.Formatting.dll
+D:\dean\GitHub\webApi\webApi\Sample1\Samples\WebApi\BasicAuthentication\BasicAuthentication.Client\bin\Debug\BasicAuthentication.Models.pdb
+D:\dean\GitHub\webApi\webApi\Sample1\Samples\WebApi\BasicAuthentication\BasicAuthentication.Client\bin\Debug\Newtonsoft.Json.xml
+D:\dean\GitHub\webApi\webApi\Sample1\Samples\WebApi\BasicAuthentication\BasicAuthentication.Client\bin\Debug\System.Net.Http.Formatting.xml
+D:\dean\GitHub\webApi\webApi\Sample1\Samples\WebApi\BasicAuthentication\BasicAuthentication.Client\obj\Debug\BasicAuthentication.Client.csprojResolveAssemblyReference.cache
+D:\dean\GitHub\webApi\webApi\Sample1\Samples\WebApi\BasicAuthentication\BasicAuthentication.Client\obj\Debug\BasicAuthentication.Client.exe
+D:\dean\GitHub\webApi\webApi\Sample1\Samples\WebApi\BasicAuthentication\BasicAuthentication.Client\obj\Debug\BasicAuthentication.Client.pdb

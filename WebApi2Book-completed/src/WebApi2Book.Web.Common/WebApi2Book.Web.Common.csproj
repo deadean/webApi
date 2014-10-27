@@ -21,7 +21,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <IntermediateOutputPath>C:\Users\dean\AppData\Local\Temp\vsDECF.tmp\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\acmyk\AppData\Local\Temp\vsD01.tmp\Debug\</IntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -31,7 +31,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <IntermediateOutputPath>C:\Users\dean\AppData\Local\Temp\vsDECF.tmp\Release\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\acmyk\AppData\Local\Temp\vsD01.tmp\Release\</IntermediateOutputPath>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Iesi.Collections">

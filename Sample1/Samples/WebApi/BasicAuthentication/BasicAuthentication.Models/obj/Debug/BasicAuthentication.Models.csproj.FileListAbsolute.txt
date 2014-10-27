@@ -1,0 +1,5 @@
+D:\dean\GitHub\webApi\webApi\Sample1\Samples\WebApi\BasicAuthentication\BasicAuthentication.Models\bin\Debug\BasicAuthentication.Models.dll
+D:\dean\GitHub\webApi\webApi\Sample1\Samples\WebApi\BasicAuthentication\BasicAuthentication.Models\bin\Debug\BasicAuthentication.Models.pdb
+D:\dean\GitHub\webApi\webApi\Sample1\Samples\WebApi\BasicAuthentication\BasicAuthentication.Models\obj\Debug\BasicAuthentication.Models.csprojResolveAssemblyReference.cache
+D:\dean\GitHub\webApi\webApi\Sample1\Samples\WebApi\BasicAuthentication\BasicAuthentication.Models\obj\Debug\BasicAuthentication.Models.dll
+D:\dean\GitHub\webApi\webApi\Sample1\Samples\WebApi\BasicAuthentication\BasicAuthentication.Models\obj\Debug\BasicAuthentication.Models.pdb

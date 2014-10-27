@@ -1,0 +1,4 @@
+<Modules>
+  <Module PersistentId="9BD6C0B0-B741-4121-B342-2BFFCE8E5A7F" ModuleId="WebApi.Console" />
+  <Module PersistentId="8D9822EF-6347-49A1-9715-701B11CD47B2" ModuleId="WebApi.DataBase.Oracle" />
+</Modules>
