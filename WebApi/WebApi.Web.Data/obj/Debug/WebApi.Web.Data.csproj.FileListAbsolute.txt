@@ -2,3 +2,10 @@ D:\dean\GitHub\webApi\webApi\WebApi\WebApi.Web.Data\bin\Debug\WebApi.Web.Data.dl
 D:\dean\GitHub\webApi\webApi\WebApi\WebApi.Web.Data\bin\Debug\WebApi.Web.Data.pdb
 D:\dean\GitHub\webApi\webApi\WebApi\WebApi.Web.Data\obj\Debug\WebApi.Web.Data.dll
 D:\dean\GitHub\webApi\webApi\WebApi\WebApi.Web.Data\obj\Debug\WebApi.Web.Data.pdb
+D:\dean\webapi\WebApi\WebApi.Web.Data\bin\Debug\WebApi.Web.Data.dll
+D:\dean\webapi\WebApi\WebApi.Web.Data\bin\Debug\WebApi.Web.Data.pdb
+D:\dean\webapi\WebApi\WebApi.Web.Data\bin\Debug\WebApi.Data.dll
+D:\dean\webapi\WebApi\WebApi.Web.Data\bin\Debug\WebApi.Data.pdb
+D:\dean\webapi\WebApi\WebApi.Web.Data\obj\Debug\WebApi.Web.Data.csprojResolveAssemblyReference.cache
+D:\dean\webapi\WebApi\WebApi.Web.Data\obj\Debug\WebApi.Web.Data.dll
+D:\dean\webapi\WebApi\WebApi.Web.Data\obj\Debug\WebApi.Web.Data.pdb

@@ -100,9 +100,12 @@
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\TestsController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Implementations\DependencyBlock\UsersDependencyBlock.cs" />
+    <Compile Include="Interfaces\DependencyBlock\IUsersDependencyBlock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -116,6 +119,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Bases\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WebApi.DataBase.Oracle\WebApi.DataBase.Oracle.csproj">

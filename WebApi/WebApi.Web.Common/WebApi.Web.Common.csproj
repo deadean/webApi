@@ -67,11 +67,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Implementations\Controllers\BaseController.cs" />
     <Compile Include="Implementations\Logging\GlobalExceptionHandler.cs" />
     <Compile Include="Implementations\Logging\LogManagerAdapter.cs" />
     <Compile Include="Implementations\Logging\SimpleErrorResult.cs" />
     <Compile Include="Implementations\Logging\SimpleExceptionLogger.cs" />
     <Compile Include="Implementations\Logging\SimpleTraceWriter.cs" />
+    <Compile Include="Interfaces\DependencyBlock\IDependencyBlock.cs" />
     <Compile Include="Interfaces\Logging\ILogManager.cs" />
     <Compile Include="Ninject\NinjectDependencyResolver.cs" />
     <Compile Include="Ninject\WebContainerManager.cs" />

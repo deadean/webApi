@@ -1,11 +1,15 @@
 ﻿using log4net.Config;
 using Ninject;
+using Ninject.Activation;
+using Ninject.Web.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using WebApi.Web.Common.Implementations.Logging;
 using WebApi.Web.Common.Interfaces.Logging;
+using WebApi.WebApiService.Implementations.DependencyBlock;
+using WebApi.WebApiService.Interfaces.DependencyBlock;
 
 namespace WebApi.WebApiService.App_Start
 {
@@ -24,6 +28,8 @@ namespace WebApi.WebApiService.App_Start
         private void AddBindings(IKernel container)
         {
             ConfigureLog4net(container);
+
+            container.Bind<IUsersDependencyBlock>().To<UsersDependencyBlock>().InRequestScope();
         }
 
         private void ConfigureLog4net(IKernel container)

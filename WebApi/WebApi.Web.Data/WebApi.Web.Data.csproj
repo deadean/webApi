@@ -41,10 +41,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bases\EntityBase.cs" />
-    <Compile Include="Implementations\EntityBase.cs" />
+    <Compile Include="Implementations\EntityBaseImplementation.cs" />
+    <Compile Include="Implementations\Response\UserResponse.cs" />
     <Compile Include="Implementations\TestEntity.cs" />
     <Compile Include="Interfaces\IEntity.cs" />
+    <Compile Include="Interfaces\Response\IResponse.cs" />
+    <Compile Include="Interfaces\Response\IUserResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WebApi.Data\WebApi.Data.csproj">
+      <Project>{31016b38-9104-493a-9778-01ee3b30376f}</Project>
+      <Name>WebApi.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -39,10 +39,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bases\EntityBase.cs" />
-    <Compile Include="Implementations\EntityBase.cs" />
-    <Compile Include="Implementations\TestEntity.cs" />
-    <Compile Include="Interfaces\IEntity.cs" />
+    <Compile Include="Bases\Entities\EntityBase.cs" />
+    <Compile Include="Implementations\Entities\EntityBaseImplementation.cs" />
+    <Compile Include="Implementations\Entities\TestEntity.cs" />
+    <Compile Include="Interfaces\Entities\IEntity.cs" />
+    <Compile Include="Interfaces\Entities\IPersonHeader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
