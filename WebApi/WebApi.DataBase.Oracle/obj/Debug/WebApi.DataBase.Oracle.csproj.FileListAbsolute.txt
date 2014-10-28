@@ -1,4 +1,0 @@
-D:\dean\webapi\WebApi\WebApi.DataBase.Oracle\bin\Debug\WebApi.DataBase.Oracle.dll
-D:\dean\webapi\WebApi\WebApi.DataBase.Oracle\bin\Debug\WebApi.DataBase.Oracle.pdb
-D:\dean\webapi\WebApi\WebApi.DataBase.Oracle\obj\Debug\WebApi.DataBase.Oracle.dll
-D:\dean\webapi\WebApi\WebApi.DataBase.Oracle\obj\Debug\WebApi.DataBase.Oracle.pdb

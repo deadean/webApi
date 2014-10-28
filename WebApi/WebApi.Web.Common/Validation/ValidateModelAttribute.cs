@@ -18,5 +18,10 @@ namespace WebApi.Web.Common.Validation
                     HttpStatusCode.BadRequest, actionContext.ModelState);
             }
         }
+
+        public override bool AllowMultiple
+        {
+            get { return false; }
+        }
     }
 }

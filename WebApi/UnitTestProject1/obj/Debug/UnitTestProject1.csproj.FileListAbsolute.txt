@@ -1,5 +1,0 @@
-D:\dean\webapi\WebApi\UnitTestProject1\bin\Debug\UnitTestProject1.dll
-D:\dean\webapi\WebApi\UnitTestProject1\bin\Debug\UnitTestProject1.pdb
-D:\dean\webapi\WebApi\UnitTestProject1\obj\Debug\UnitTestProject1.csprojResolveAssemblyReference.cache
-D:\dean\webapi\WebApi\UnitTestProject1\obj\Debug\UnitTestProject1.dll
-D:\dean\webapi\WebApi\UnitTestProject1\obj\Debug\UnitTestProject1.pdb
