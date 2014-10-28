@@ -1,0 +1,4 @@
+D:\dean\GitHub\webApi\webApi\WebApi\WebApi.Data\bin\Debug\WebApi.Data.dll
+D:\dean\GitHub\webApi\webApi\WebApi\WebApi.Data\bin\Debug\WebApi.Data.pdb
+D:\dean\GitHub\webApi\webApi\WebApi\WebApi.Data\obj\Debug\WebApi.Data.dll
+D:\dean\GitHub\webApi\webApi\WebApi\WebApi.Data\obj\Debug\WebApi.Data.pdb

@@ -28,7 +28,9 @@ namespace WebApi.Web.Common.Implementations.Logging
 
         public virtual void WriteTrace(TraceRecord rec)
         {
-            const string traceFormat =
+            string traceFormat =
+                Environment.NewLine +
+                "=================================================================================================================" + Environment.NewLine +
                 "RequestId={0};{1}Kind={2};{3}Status={4};{5}Operation={6};{7}Operator={8};{9}Category={10}{11}Request={12}{13}Message={14}";
 
             var args = new object[]

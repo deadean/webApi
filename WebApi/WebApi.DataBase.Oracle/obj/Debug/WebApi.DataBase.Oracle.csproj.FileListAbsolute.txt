@@ -1,0 +1,4 @@
+D:\dean\GitHub\webApi\webApi\WebApi\WebApi.DataBase.Oracle\bin\Debug\WebApi.DataBase.Oracle.dll
+D:\dean\GitHub\webApi\webApi\WebApi\WebApi.DataBase.Oracle\bin\Debug\WebApi.DataBase.Oracle.pdb
+D:\dean\GitHub\webApi\webApi\WebApi\WebApi.DataBase.Oracle\obj\Debug\WebApi.DataBase.Oracle.dll
+D:\dean\GitHub\webApi\webApi\WebApi\WebApi.DataBase.Oracle\obj\Debug\WebApi.DataBase.Oracle.pdb
