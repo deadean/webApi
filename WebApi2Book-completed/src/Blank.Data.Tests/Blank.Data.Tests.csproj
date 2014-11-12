@@ -41,7 +41,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.SQLite">
-      <HintPath>..\..\lib\System.Data.SQLite.x86.1.0.88.0\lib\net45\System.Data.SQLite.dll</HintPath>
+      <HintPath>..\..\..\Sample\src\packages\System.Data.SQLite.x86.1.0.88.0\lib\net45\System.Data.SQLite.dll</HintPath>
     </Reference>
     <Reference Include="System.Data.SQLite.Linq, Version=1.0.88.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
