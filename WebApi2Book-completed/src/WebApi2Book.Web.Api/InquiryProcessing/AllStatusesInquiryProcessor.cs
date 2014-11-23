@@ -12,33 +12,22 @@ namespace WebApi2Book.Web.Api.InquiryProcessing
 {
     public class AllStatusesInquiryProcessor : IAllStatusesInquiryProcessor
     {
-        private readonly IAutoMapper _autoMapper;
         private readonly IAllStatusesQueryProcessor _queryProcessor;
-        private readonly IStatusLinkService _statusLinkService;
 
-        public AllStatusesInquiryProcessor(IAllStatusesQueryProcessor queryProcessor, IAutoMapper autoMapper,
-            IStatusLinkService statusLinkService)
+        public AllStatusesInquiryProcessor(IAllStatusesQueryProcessor queryProcessor)
         {
             _queryProcessor = queryProcessor;
-            _autoMapper = autoMapper;
-            _statusLinkService = statusLinkService;
-        }
-
-        public StatusesInquiryResponse GetStatuses()
-        {
-            var statusEntities = _queryProcessor.GetStatuses();
-
-            var statuses = GetStatuses(statusEntities);
-            var allLink = _statusLinkService.GetAllStatusesLink();
-            var inquiryResponse = new StatusesInquiryResponse {Statuses = statuses, Links = new List<Link> {allLink}};
-
-            return inquiryResponse;
         }
 
         public virtual List<Status> GetStatuses(IEnumerable<Data.Entities.Status> statusEntities)
         {
-            var statuses = statusEntities.Select(x => _autoMapper.Map<Status>(x)).ToList();
+					var statuses = statusEntities.Select(x => new Status() { Name = x.Name, Ordinal = x.Ordinal}).ToList();
             return statuses;
         }
-    }
+
+				public StatusesInquiryResponse GetStatuses()
+				{
+					return new StatusesInquiryResponse() { Statuses = this.GetStatuses(_queryProcessor.GetStatuses()) };
+				}
+		}
 }

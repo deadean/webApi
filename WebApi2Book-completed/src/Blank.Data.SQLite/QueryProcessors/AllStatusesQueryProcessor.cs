@@ -14,7 +14,7 @@ namespace Blank.Data.SQLite.QueryProcessors
     {
         private readonly IModelServices _modelServices;
 
-        public AllStatusesQueryProcessor(ISession session)
+        public AllStatusesQueryProcessor()
         {
             _modelServices = new ModelServices.ModelServices();
         }
