@@ -7,22 +7,33 @@ using Blank.Data.SQLite.ModelServices;
 using NHibernate;
 using WebApi2Book.Data.Entities;
 using WebApi2Book.Data.QueryProcessors;
+using Blank.Data.SQLite.Bases.QueryProcessors;
+using WebApi.Common.Implementations.Logging;
 
 namespace Blank.Data.SQLite.QueryProcessors
 {
-    public class AllStatusesQueryProcessor : IAllStatusesQueryProcessor
-    {
-        private readonly IModelServices _modelServices;
+	public class AllStatusesQueryProcessor : QueryProcessorBase, IAllStatusesQueryProcessor
+	{
+		private readonly IModelServices _modelServices;
 
-        public AllStatusesQueryProcessor()
-        {
-            _modelServices = new ModelServices.ModelServices();
-        }
+		public AllStatusesQueryProcessor()
+		{
+			_modelServices = new ModelServices.ModelServices();
+		}
 
-        public IEnumerable<Status> GetStatuses()
-        {
-            var statuses = _modelServices.GettEntities<Blank.Data.Implementations.Entities.Status>();
-            return statuses.Select(x => new Status(){StatusId = x.Id, Name = x.Name});
-        }
-    }
+		public IEnumerable<Status> GetStatuses()
+		{
+			var statuses = _modelServices.GettEntities<Blank.Data.Implementations.Entities.Status>();
+			return statuses.Select(x => new Status() { StatusId = x.Id, Name = x.Name });
+		}
+
+		#region Protected Methods
+
+		public override void InitLog()
+		{
+			modLog = LogService.GetLogService<AllStatusesQueryProcessor>();
+		}
+
+		#endregion
+	}
 }

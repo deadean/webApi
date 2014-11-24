@@ -151,10 +151,14 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Global.asax" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\AutoMapperConfigurator.cs" />
+    <Compile Include="BaseInquiryProcessor.cs" />
+    <Compile Include="BaseInquiryProcessorImpl.cs" />
     <Compile Include="DependencyBlock\ITasksControllerDependencyBlock.cs" />
     <Compile Include="DependencyBlock\TasksControllerDependencyBlock.cs" />
     <Compile Include="Controllers\V1\ValuesController.cs" />
@@ -240,7 +244,9 @@
     <Compile Include="Security\TaskDataSecurityMessageHandler.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="packages.config" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -255,6 +261,22 @@
     <ProjectReference Include="..\Blank.Data.SQLite\Blank.Data.SQLite.csproj">
       <Project>{7d525aa4-3983-4185-bbd2-7e21897cc445}</Project>
       <Name>Blank.Data.SQLite</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Blank.Data\Blank.Data.csproj">
+      <Project>{91ce9c41-4c3d-4d47-9883-ab1cc1ee9c15}</Project>
+      <Name>Blank.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebApi.Common\WebApi.Common.csproj">
+      <Project>{6f1274b7-d2a6-41d3-9c41-32c97bc08ff3}</Project>
+      <Name>WebApi.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebApi.Web.Common\WebApi.Web.Common.csproj">
+      <Project>{856a2758-18fd-4b30-b9b3-fe66adb7e380}</Project>
+      <Name>WebApi.Web.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebApi.Web.Data\WebApi.Web.Data.csproj">
+      <Project>{b8f1f5bc-736e-45ec-b2f9-a0aa1d8b77a0}</Project>
+      <Name>WebApi.Web.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\WebApi2Book.Common\WebApi2Book.Common.csproj">
       <Project>{9E589099-F064-47C6-9D14-3A54ADA6C8E6}</Project>

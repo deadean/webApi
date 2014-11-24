@@ -91,6 +91,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bases\QueryProcessors\QueryProcessorBase.cs" />
     <Compile Include="ModelContext.cs" />
     <Compile Include="ModelServices\IModelServices.cs" />
     <Compile Include="ModelServices\ModelServices.cs" />
@@ -99,7 +100,9 @@
     <Compile Include="QueryProcessors\AllTasksQueryProcessor.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="dean.db3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -115,6 +118,10 @@
     <ProjectReference Include="..\ViewModelLib\ViewModelLib.csproj">
       <Project>{94e09330-43d3-4340-ae9d-46eba4b2d5ac}</Project>
       <Name>ViewModelLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebApi.Common\WebApi.Common.csproj">
+      <Project>{6f1274b7-d2a6-41d3-9c41-32c97bc08ff3}</Project>
+      <Name>WebApi.Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\WebApi2Book.Common\WebApi2Book.Common.csproj">
       <Project>{9e589099-f064-47c6-9d14-3a54ada6c8e6}</Project>

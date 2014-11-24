@@ -1,16 +1,19 @@
 ﻿// AllStatusesInquiryProcessor.cs
 // Copyright Jamie Kurtz, Brian Wortman 2014.
 
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
+using WebApi.Web.Data.Implementations.Response;
+using WebApi.WebApiService.Bases.Processing.Inquiry;
 using WebApi2Book.Common.TypeMapping;
 using WebApi2Book.Data.QueryProcessors;
 using WebApi2Book.Web.Api.LinkServices;
-using WebApi2Book.Web.Api.Models;
 
 namespace WebApi2Book.Web.Api.InquiryProcessing
 {
-    public class AllStatusesInquiryProcessor : IAllStatusesInquiryProcessor
+	public class AllStatusesInquiryProcessor : BaseInquiryProcessorImpl, IAllStatusesInquiryProcessor
     {
         private readonly IAllStatusesQueryProcessor _queryProcessor;
 
@@ -19,15 +22,20 @@ namespace WebApi2Book.Web.Api.InquiryProcessing
             _queryProcessor = queryProcessor;
         }
 
-        public virtual List<Status> GetStatuses(IEnumerable<Data.Entities.Status> statusEntities)
-        {
-					var statuses = statusEntities.Select(x => new Status() { Name = x.Name, Ordinal = x.Ordinal}).ToList();
-            return statuses;
-        }
-
-				public StatusesInquiryResponse GetStatuses()
+				public async Task<StatusesResponse> GetStatuses()
 				{
-					return new StatusesInquiryResponse() { Statuses = this.GetStatuses(_queryProcessor.GetStatuses()) };
+					try
+					{
+						return await Task.Run(() =>
+						{
+							return new StatusesResponse() { Items = _queryProcessor.GetStatuses().Select(x => new  Blank.Data.Implementations.Entities.Status(){Id = x.StatusId, Name = x.Name, Ordinal = x.Ordinal}) };
+						});
+					}
+					catch (Exception ex)
+					{
+						modLog.Debug("GetPerson", ex);
+						throw new Exception("Person not found");
+					}
 				}
 		}
 }

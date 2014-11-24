@@ -20,9 +20,9 @@ namespace WebApi2Book.Web.Common
 
         public void Trace(HttpRequestMessage request, string category, TraceLevel level, Action<TraceRecord> traceAction)
         {
-            var rec = new TraceRecord(request, category, level);
-            traceAction(rec);
-            WriteTrace(rec);
+            //var rec = new TraceRecord(request, category, level);
+            //traceAction(rec);
+            //WriteTrace(rec);
         }
 
         public virtual void WriteTrace(TraceRecord rec)
