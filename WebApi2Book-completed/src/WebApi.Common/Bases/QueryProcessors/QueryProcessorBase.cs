@@ -1,5 +1,4 @@
-﻿using Blank.Data.SQLite.ModelServices;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,28 +8,21 @@ using WebApi.Common.Implementations.Logging;
 using WebApi.Common.Implementations.Unity;
 using WebApi.Common.Interfaces.Logging;
 
-namespace Blank.Data.SQLite.Bases.QueryProcessors
+namespace WebApi.Common.Bases.QueryProcessors
 {
-	public class QueryProcessorBase : WebApi.Common.Bases.QueryProcessors.QueryProcessorBase
+	public abstract class QueryProcessorBase
 	{
 		#region Fields
 
-		protected IModelServices modModelService;
+		protected ILogService modLog;
 
 		#endregion
-
-		static QueryProcessorBase()
-		{
-			Container.RegisterType(typeof(IModelServices), typeof(Blank.Data.SQLite.ModelServices.ModelServices), enTypeLifeTime.Singleton);
-		}
 
 		public QueryProcessorBase()
 		{
 			try
 			{
 				InitLog();
-
-				modModelService = Container.Resolve<IModelServices>();
 			}
 			catch (Exception ex)
 			{
@@ -38,10 +30,14 @@ namespace Blank.Data.SQLite.Bases.QueryProcessors
 			}
 		}
 
-		public override  void InitLog()
+		public virtual void InitLog()
 		{
 			modLog = LogService.GetLogService<QueryProcessorBase>();
 		}
 
+		protected ILogService GetLog<T>() where T : class
+		{
+			return LogService.GetLogService<T>();
+		}
 	}
 }

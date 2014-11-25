@@ -60,6 +60,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bases\QueryProcessors\QueryProcessorBase.cs" />
     <Compile Include="Enumerations\enTypeLifeTime.cs" />
     <Compile Include="Implementations\Constants\Constants.cs" />
     <Compile Include="Implementations\Converters\DbReaderConvert.cs" />
@@ -82,9 +83,7 @@
     <Compile Include="Interfaces\Logging\ILogManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Bases\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

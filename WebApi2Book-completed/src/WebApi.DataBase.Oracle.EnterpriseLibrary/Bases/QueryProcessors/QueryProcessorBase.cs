@@ -1,5 +1,4 @@
-﻿using Blank.Data.SQLite.ModelServices;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,8 +7,9 @@ using WebApi.Common.Enumerations;
 using WebApi.Common.Implementations.Logging;
 using WebApi.Common.Implementations.Unity;
 using WebApi.Common.Interfaces.Logging;
+using WebApi.DataBase.Sqlite.EnterpriseLibrary.ModelServices;
 
-namespace Blank.Data.SQLite.Bases.QueryProcessors
+namespace WebApi.DataBase.Sqlite.EnterpriseLibrary.Bases.QueryProcessorBase
 {
 	public class QueryProcessorBase : WebApi.Common.Bases.QueryProcessors.QueryProcessorBase
 	{
@@ -21,7 +21,7 @@ namespace Blank.Data.SQLite.Bases.QueryProcessors
 
 		static QueryProcessorBase()
 		{
-			Container.RegisterType(typeof(IModelServices), typeof(Blank.Data.SQLite.ModelServices.ModelServices), enTypeLifeTime.Singleton);
+			Container.RegisterType(typeof(IModelServices), typeof(ModelServices.ModelServices), enTypeLifeTime.Singleton);
 		}
 
 		public QueryProcessorBase()
