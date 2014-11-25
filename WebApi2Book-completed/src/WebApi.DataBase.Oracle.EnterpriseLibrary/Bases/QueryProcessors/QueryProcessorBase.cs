@@ -1,15 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using WebApi.Common.Enumerations;
 using WebApi.Common.Implementations.Logging;
 using WebApi.Common.Implementations.Unity;
-using WebApi.Common.Interfaces.Logging;
 using WebApi.DataBase.Sqlite.EnterpriseLibrary.ModelServices;
 
-namespace WebApi.DataBase.Sqlite.EnterpriseLibrary.Bases.QueryProcessorBase
+namespace WebApi.DataBase.Sqlite.EnterpriseLibrary.Bases.QueryProcessors
 {
 	public class QueryProcessorBase : WebApi.Common.Bases.QueryProcessors.QueryProcessorBase
 	{
@@ -38,7 +33,7 @@ namespace WebApi.DataBase.Sqlite.EnterpriseLibrary.Bases.QueryProcessorBase
 			}
 		}
 
-		public override  void InitLog()
+		public override sealed void InitLog()
 		{
 			modLog = LogService.GetLogService<QueryProcessorBase>();
 		}

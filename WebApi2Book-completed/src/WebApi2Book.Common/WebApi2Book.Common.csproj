@@ -90,11 +90,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BusinessRuleViolationException.cs" />
     <Compile Include="Extensions\UriExtensions.cs" />
     <Compile Include="Security\IUserSession.cs" />
     <Compile Include="TypeMapping\AutoMapperAdapter.cs" />
-    <Compile Include="Constants.cs" />
     <Compile Include="DateTimeAdapter.cs" />
     <Compile Include="Extensions\DateTimeExtensions.cs" />
     <Compile Include="Extensions\IntExtensions.cs" />

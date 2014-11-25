@@ -1,7 +1,7 @@
 ﻿// ITasksControllerDependencyBlock.cs
 // Copyright Jamie Kurtz, Brian Wortman 2014.
 
-using WebApi2Book.Data.QueryProcessors;
+using WebApi.Data.QueryProcessors;
 using WebApi2Book.Web.Api.InquiryProcessing;
 using WebApi2Book.Web.Api.MaintenanceProcessing;
 

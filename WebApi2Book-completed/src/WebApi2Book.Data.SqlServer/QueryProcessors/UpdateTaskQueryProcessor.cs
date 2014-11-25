@@ -5,9 +5,9 @@ using System.Collections.Generic;
 using System.Linq;
 using NHibernate;
 using WebApi2Book.Data.Entities;
-using WebApi2Book.Data.Exceptions;
-using WebApi2Book.Data.QueryProcessors;
 using PropertyValueMapType = System.Collections.Generic.Dictionary<string, object>;
+using WebApi.Data.QueryProcessors;
+using WebApi.Common.Exceptions;
 
 namespace WebApi2Book.Data.SqlServer.QueryProcessors
 {

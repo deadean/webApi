@@ -1,8 +1,9 @@
 ﻿using Blank.Data.Implementations.Entities;
 using Blank.Data.SQLite.ModelServices;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using WebApi.Data.Implementations.Entities;
 
-namespace Blank.Data.Tests
+namespace WebApi.Tests.Sqlite.EntityFramework
 {
     [TestClass]
     public class TestData

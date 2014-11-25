@@ -7,6 +7,7 @@ using System.Threading;
 using System.Web;
 using log4net;
 using NHibernate;
+using WebApi.Common.Implementations.Constants;
 using WebApi2Book.Common;
 using WebApi2Book.Common.Logging;
 using WebApi2Book.Data.Entities;

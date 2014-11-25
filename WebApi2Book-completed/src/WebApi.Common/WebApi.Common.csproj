@@ -62,6 +62,9 @@
   <ItemGroup>
     <Compile Include="Bases\QueryProcessors\QueryProcessorBase.cs" />
     <Compile Include="Enumerations\enTypeLifeTime.cs" />
+    <Compile Include="Exceptions\BusinessRuleViolationException.cs" />
+    <Compile Include="Exceptions\ChildObjectNotFoundException.cs" />
+    <Compile Include="Exceptions\RootObjectNotFoundException.cs" />
     <Compile Include="Implementations\Constants\Constants.cs" />
     <Compile Include="Implementations\Converters\DbReaderConvert.cs" />
     <Compile Include="Implementations\Extensions\CommonExtensions.cs" />

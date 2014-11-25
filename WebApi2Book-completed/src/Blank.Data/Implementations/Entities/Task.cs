@@ -1,6 +1,7 @@
 ﻿using Blank.Data.Interfaces.Entities;
 using System;
 using System.Collections.Generic;
+using WebApi.Data.Implementations.Entities;
 
 namespace Blank.Data.Implementations.Entities
 {

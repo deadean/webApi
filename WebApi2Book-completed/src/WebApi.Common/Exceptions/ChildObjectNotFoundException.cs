@@ -3,7 +3,7 @@
 
 using System;
 
-namespace WebApi2Book.Data.Exceptions
+namespace WebApi.Common.Exceptions
 {
     /// <summary>
     ///     Exception thrown when a required child of the primary object is not found.

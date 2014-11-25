@@ -2,9 +2,9 @@
 // Copyright Jamie Kurtz, Brian Wortman 2014.
 
 using System;
-using WebApi2Book.Common;
+using WebApi.Common.Implementations.Constants;
 
-namespace WebApi2Book.Data
+namespace WebApi.Data.Implementations.Requests
 {
     /// <summary>
     ///     Utility supporting paging of results.

@@ -5,8 +5,9 @@ using System.IO;
 using System.Linq;
 using System.Xml.Linq;
 using System.Xml.Serialization;
+using WebApi.Common.Exceptions;
+using WebApi.Common.Implementations.Constants;
 using WebApi2Book.Common;
-using WebApi2Book.Data.Exceptions;
 using WebApi2Book.Web.Api.InquiryProcessing;
 using WebApi2Book.Web.Api.Models;
 

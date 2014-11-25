@@ -3,6 +3,7 @@
 
 using System;
 using NUnit.Framework;
+using WebApi.Data.Implementations.Requests;
 
 namespace WebApi2Book.Data.Tests
 {

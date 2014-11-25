@@ -4,6 +4,8 @@
 using System.IO;
 using System.Xml.Linq;
 using System.Xml.Serialization;
+using WebApi.Common.Implementations.Constants;
+using WebApi.Data.Implementations.Requests;
 using WebApi2Book.Common;
 using WebApi2Book.Data;
 using WebApi2Book.Web.Api.InquiryProcessing;

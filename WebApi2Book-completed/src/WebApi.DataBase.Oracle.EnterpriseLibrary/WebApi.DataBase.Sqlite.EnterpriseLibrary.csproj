@@ -7,7 +7,7 @@
     <ProjectGuid>{AB1BB87F-DC33-471D-944F-0111AF713717}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WebApi.DataBase.Oracle.EnterpriseLibrary</RootNamespace>
+    <RootNamespace>WebApi.DataBase.Sqlite.EnterpriseLibrary</RootNamespace>
     <AssemblyName>WebApi.DataBase.Sqlite.EnterpriseLibrary</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -106,7 +106,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bases\QueryProcessors\QueryProcessorBase.cs" />
-    <Compile Include="Connection.cs" />
     <Compile Include="ModelServices\IModelServices.cs" />
     <Compile Include="ModelServices\ModelContext.cs" />
     <Compile Include="ModelServices\ModelServices.cs" />
@@ -119,9 +118,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Blank.Data\Blank.Data.csproj">
+    <ProjectReference Include="..\Blank.Data\WebApi.Data.csproj">
       <Project>{91ce9c41-4c3d-4d47-9883-ab1cc1ee9c15}</Project>
-      <Name>Blank.Data</Name>
+      <Name>WebApi.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\ViewModelLib\ViewModelLib.csproj">
       <Project>{94e09330-43d3-4340-ae9d-46eba4b2d5ac}</Project>

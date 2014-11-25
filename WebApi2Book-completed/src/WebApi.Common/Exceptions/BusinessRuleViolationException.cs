@@ -3,7 +3,7 @@
 
 using System;
 
-namespace WebApi2Book.Common
+namespace WebApi.Common
 {
     public class BusinessRuleViolationException : Exception
     {

@@ -7,11 +7,9 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
 using WebApi.Web.Common.Implementations.FilterAttributes;
+using WebApi.Web.Common.Routing;
 using WebApi.Web.Data.Implementations.Response;
 using WebApi2Book.Web.Api.InquiryProcessing;
-using WebApi2Book.Web.Api.Models;
-using WebApi2Book.Web.Common;
-using WebApi2Book.Web.Common.Routing;
 
 namespace WebApi2Book.Web.Api.Controllers.V1
 {

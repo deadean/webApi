@@ -1,7 +1,7 @@
 ﻿// PagedDataRequest.cs
 // Copyright Jamie Kurtz, Brian Wortman 2014.
 
-namespace WebApi2Book.Data
+namespace WebApi.Data.Implementations.Requests
 {
     public class PagedDataRequest
     {

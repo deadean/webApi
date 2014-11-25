@@ -65,9 +65,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blank.ConsoleMain", "MainAp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blank.Data.SQLite", "Blank.Data.SQLite\Blank.Data.SQLite.csproj", "{7D525AA4-3983-4185-BBD2-7E21897CC445}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blank.Data", "Blank.Data\Blank.Data.csproj", "{91CE9C41-4C3D-4D47-9883-AB1CC1EE9C15}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi.Data", "Blank.Data\WebApi.Data.csproj", "{91CE9C41-4C3D-4D47-9883-AB1CC1EE9C15}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blank.Data.Tests", "Blank.Data.Tests\Blank.Data.Tests.csproj", "{5D6CA7B3-FC33-4645-86CB-4F31A0EAC819}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi.Tests.Sqlite.EntityFramework", "Blank.Data.Tests\WebApi.Tests.Sqlite.EntityFramework.csproj", "{5D6CA7B3-FC33-4645-86CB-4F31A0EAC819}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewModelLib", "ViewModelLib\ViewModelLib.csproj", "{94E09330-43D3-4340-AE9D-46EBA4B2D5AC}"
 EndProject

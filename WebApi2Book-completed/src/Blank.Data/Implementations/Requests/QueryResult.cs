@@ -2,8 +2,9 @@
 // Copyright Jamie Kurtz, Brian Wortman 2014.
 
 using System.Collections.Generic;
+using WebApi2Book.Data;
 
-namespace WebApi2Book.Data
+namespace WebApi.Data.Implementations.Requests
 {
     public class QueryResult<T>
     {

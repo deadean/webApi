@@ -1,49 +1,42 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Linq;
-using Blank.Data.Implementations.Entities;
+﻿using System.Collections.Generic;
 using Blank.Data.Interfaces.Entities;
-using ViewModelLib.Commands;
-using WebApi.DataBase.Oracle.EnterpriseLibrary.ModelServices;
 
 namespace WebApi.DataBase.Sqlite.EnterpriseLibrary.ModelServices
 {
-    public class ModelServices:IModelServices
-    {
-        #region Fields
+	public class ModelServices : IModelServices
+	{
+		#region Fields
 
-        private static IModelServices modInstance;
-        private ModelContext modDbContext = new ModelContext();
+		private static IModelServices modInstance;
+		private ModelContext modDbContext = new ModelContext();
 
-        #endregion
+		#endregion
 
-        #region Properties
+		#region Properties
 
-        #endregion
+		#endregion
 
-        #region Public Services
+		#region Ctor
 
-        public ModelServices()
-        {
-        }
+		private ModelServices()
+		{
+		}
 
-        public static IModelServices GetInstance()
-        {
-					if (modInstance == null)
-						modInstance = new ModelServices();
-           return modInstance;
-        }
+		#endregion
 
-        public List<T> GettEntities<T>() where T : IEntity
-        {
-						//if (typeof(T) == typeof(User)) return modDbContext.USER.OfType<T>().ToList();
-						//if (typeof(T) == typeof(Status)) return modDbContext.STATUS.OfType<T>().ToList();
+		#region Public Services
 
-            return null;
-        }
+		public static IModelServices GetInstance()
+		{
+			return modInstance ?? (modInstance = new ModelServices());
+		}
 
-        #endregion
-    
-    }
+		public IEnumerable<T> GetEntities<T>() where T : class, new()
+		{
+			return modDbContext.Get<T>();
+		}
+
+		#endregion
+
+	}
 }

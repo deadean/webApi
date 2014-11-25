@@ -2,6 +2,7 @@
 // Copyright Jamie Kurtz, Brian Wortman 2014.
 
 using System;
+using WebApi.Data.Implementations.Requests;
 using WebApi2Book.Data;
 
 namespace WebApi2Book.Web.Api.InquiryProcessing

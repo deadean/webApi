@@ -2,8 +2,9 @@
 // Copyright Jamie Kurtz, Brian Wortman 2014.
 
 using NHibernate;
+using WebApi.Data.Implementations.Requests;
+using WebApi.Data.QueryProcessors;
 using WebApi2Book.Data.Entities;
-using WebApi2Book.Data.QueryProcessors;
 
 namespace WebApi2Book.Data.SqlServer.QueryProcessors
 {

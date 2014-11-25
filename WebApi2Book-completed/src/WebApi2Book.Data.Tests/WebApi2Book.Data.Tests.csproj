@@ -91,6 +91,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Blank.Data\WebApi.Data.csproj">
+      <Project>{91CE9C41-4C3D-4D47-9883-AB1CC1EE9C15}</Project>
+      <Name>WebApi.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WebApi2Book.Data\WebApi2Book.Data.csproj">
       <Project>{B4F56983-5B1C-42C7-B872-AE3A5545C02D}</Project>
       <Name>WebApi2Book.Data</Name>

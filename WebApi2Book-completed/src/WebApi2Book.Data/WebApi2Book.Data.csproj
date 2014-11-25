@@ -81,25 +81,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Exceptions\ChildObjectNotFoundException.cs" />
     <Compile Include="Entities\IVersionedEntity.cs" />
     <Compile Include="Entities\Status.cs" />
     <Compile Include="Entities\Task.cs" />
     <Compile Include="Entities\User.cs" />
-    <Compile Include="QueryProcessors\IAddTaskQueryProcessor.cs" />
-    <Compile Include="QueryProcessors\IAllStatusesQueryProcessor.cs" />
-    <Compile Include="QueryProcessors\IAllTasksQueryProcessor.cs" />
-    <Compile Include="QueryProcessors\IAllUsersQueryProcessor.cs" />
-    <Compile Include="QueryProcessors\IDeleteTaskQueryProcessor.cs" />
-    <Compile Include="QueryProcessors\ITaskByIdQueryProcessor.cs" />
-    <Compile Include="QueryProcessors\IUpdateTaskQueryProcessor.cs" />
-    <Compile Include="QueryProcessors\IUpdateTaskStatusQueryProcessor.cs" />
-    <Compile Include="QueryProcessors\IUserByIdQueryProcessor.cs" />
-    <Compile Include="PagedDataRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QueryResult.cs" />
-    <Compile Include="ResultsPagingUtility.cs" />
-    <Compile Include="Exceptions\RootObjectNotFoundException.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WebApi2Book.Common\WebApi2Book.Common.csproj">

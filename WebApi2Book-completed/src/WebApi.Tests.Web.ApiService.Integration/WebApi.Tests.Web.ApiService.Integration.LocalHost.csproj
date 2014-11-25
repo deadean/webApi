@@ -59,9 +59,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Blank.Data\Blank.Data.csproj">
+    <ProjectReference Include="..\Blank.Data\WebApi.Data.csproj">
       <Project>{91ce9c41-4c3d-4d47-9883-ab1cc1ee9c15}</Project>
-      <Name>Blank.Data</Name>
+      <Name>WebApi.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\WebApi.Common\WebApi.Common.csproj">
       <Project>{6f1274b7-d2a6-41d3-9c41-32c97bc08ff3}</Project>

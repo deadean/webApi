@@ -9,8 +9,8 @@ using System.Linq;
 using WebApi2Book.Common;
 using WebApi2Book.Common.Security;
 using WebApi2Book.Data.Entities;
-using WebApi2Book.Data.Exceptions;
-using WebApi2Book.Data.QueryProcessors;
+using WebApi.Data.QueryProcessors;
+using WebApi.Common.Exceptions;
 
 namespace WebApi2Book.Data.SqlServer.QueryProcessors
 {

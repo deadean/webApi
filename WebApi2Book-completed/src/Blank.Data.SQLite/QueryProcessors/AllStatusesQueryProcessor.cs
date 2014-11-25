@@ -6,9 +6,8 @@ using System.Linq;
 using Blank.Data.SQLite.ModelServices;
 using NHibernate;
 using WebApi2Book.Data.Entities;
-using WebApi2Book.Data.QueryProcessors;
 using Blank.Data.SQLite.Bases.QueryProcessors;
-using WebApi.Common.Implementations.Logging;
+using WebApi.Data.QueryProcessors;
 
 namespace Blank.Data.SQLite.QueryProcessors
 {
@@ -23,7 +22,7 @@ namespace Blank.Data.SQLite.QueryProcessors
 
 		public IEnumerable<Status> GetStatuses()
 		{
-			var statuses = _modelServices.GettEntities<Blank.Data.Implementations.Entities.Status>();
+			var statuses = _modelServices.GettEntities<WebApi.Data.Implementations.Entities.Status>();
 			return statuses.Select(x => new Status() { StatusId = x.Id, Name = x.Name });
 		}
 
@@ -31,7 +30,7 @@ namespace Blank.Data.SQLite.QueryProcessors
 
 		public override void InitLog()
 		{
-			modLog = LogService.GetLogService<AllStatusesQueryProcessor>();
+			//modLog = LogService.GetLogService<AllStatusesQueryProcessor>();
 		}
 
 		#endregion

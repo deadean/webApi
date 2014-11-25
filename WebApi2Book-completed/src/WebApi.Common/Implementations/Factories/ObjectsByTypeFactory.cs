@@ -34,10 +34,28 @@ namespace WebApi.Common.Implementations.Factories
 			return func(obj) as R;
 		}
 
+		public R GetObjectFromFactory<T,R>()
+			where R : class
+		{
+			Func<object, object> func;
+			modRegisteredObjectsByType.TryGetValue(typeof(T), out func);
+
+			if (func == null)
+				return default(R);
+
+			return func(null) as R;
+		}
+
 		public void RegisterObject<T, R>(Func<T, R> func)
 			where R : class
 		{
 			modRegisteredObjectsByType[typeof(T)] = o => func((T)o);
+		}
+
+		public void RegisterObject<T, R>(Func<R> func)
+			where R : class
+		{
+			modRegisteredObjectsByType[typeof(T)] = o => func();
 		}
 	}
 }

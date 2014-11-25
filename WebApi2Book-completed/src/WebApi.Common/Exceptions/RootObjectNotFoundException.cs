@@ -3,7 +3,7 @@
 
 using System;
 
-namespace WebApi2Book.Data.Exceptions
+namespace WebApi.Common.Exceptions
 {
     /// <summary>
     ///     Exception thrown when the primary, or "aggregate root", object is not found.

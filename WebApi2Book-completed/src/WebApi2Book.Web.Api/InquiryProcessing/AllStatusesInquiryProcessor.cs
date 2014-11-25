@@ -2,14 +2,12 @@
 // Copyright Jamie Kurtz, Brian Wortman 2014.
 
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WebApi.Data.Implementations.Entities;
+using WebApi.Data.QueryProcessors;
 using WebApi.Web.Data.Implementations.Response;
 using WebApi.WebApiService.Bases.Processing.Inquiry;
-using WebApi2Book.Common.TypeMapping;
-using WebApi2Book.Data.QueryProcessors;
-using WebApi2Book.Web.Api.LinkServices;
 
 namespace WebApi2Book.Web.Api.InquiryProcessing
 {
@@ -28,7 +26,7 @@ namespace WebApi2Book.Web.Api.InquiryProcessing
 					{
 						return await Task.Run(() =>
 						{
-							return new StatusesResponse() { Items = _queryProcessor.GetStatuses().Select(x => new  Blank.Data.Implementations.Entities.Status(){Id = x.StatusId, Name = x.Name, Ordinal = x.Ordinal}) };
+							return new StatusesResponse() { Items = _queryProcessor.GetStatuses().Select(x => new  Status(){Id = x.StatusId, Name = x.Name, Ordinal = x.Ordinal}) };
 						});
 					}
 					catch (Exception ex)

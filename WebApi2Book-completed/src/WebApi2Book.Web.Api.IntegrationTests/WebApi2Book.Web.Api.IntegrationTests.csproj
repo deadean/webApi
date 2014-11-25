@@ -108,6 +108,10 @@
     <Compile Include="WebClientHelper.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\WebApi.Common\WebApi.Common.csproj">
+      <Project>{6F1274B7-D2A6-41D3-9C41-32C97BC08FF3}</Project>
+      <Name>WebApi.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WebApi2Book.Common\WebApi2Book.Common.csproj">
       <Project>{9E589099-F064-47C6-9D14-3A54ADA6C8E6}</Project>
       <Name>WebApi2Book.Common</Name>

@@ -4,9 +4,10 @@
 using System.Linq;
 using Blank.Data.SQLite.ModelServices;
 using NHibernate;
+using WebApi.Data.Implementations.Requests;
 using WebApi2Book.Data;
 using WebApi2Book.Data.Entities;
-using WebApi2Book.Data.QueryProcessors;
+using WebApi.Data.QueryProcessors;
 
 namespace Blank.Data.SQLite.QueryProcessors
 {

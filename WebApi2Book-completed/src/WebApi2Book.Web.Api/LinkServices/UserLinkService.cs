@@ -2,6 +2,7 @@
 // Copyright Jamie Kurtz, Brian Wortman 2014.
 
 using System.Net.Http;
+using WebApi.Common.Implementations.Constants;
 using WebApi2Book.Common;
 using WebApi2Book.Web.Api.Models;
 

@@ -2,6 +2,7 @@
 // Copyright Jamie Kurtz, Brian Wortman 2014.
 
 using NUnit.Framework;
+using WebApi.Data.Implementations.Requests;
 using WebApi2Book.Data;
 using WebApi2Book.Web.Api.Controllers.V1;
 using WebApi2Book.Web.Api.Models;

@@ -1,6 +1,7 @@
 ﻿// IAllUsersInquiryProcessor.cs
 // Copyright Jamie Kurtz, Brian Wortman 2014.
 
+using WebApi.Data.Implementations.Requests;
 using WebApi2Book.Data;
 using WebApi2Book.Web.Api.Models;
 

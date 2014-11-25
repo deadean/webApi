@@ -1,6 +1,7 @@
 ﻿using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using Blank.Data.Implementations.Entities;
+using WebApi.Data.Implementations.Entities;
 
 namespace Blank.Data.SQLite
 {

@@ -1,17 +1,16 @@
 ﻿// WebApiConfig.cs
 // Copyright Jamie Kurtz, Brian Wortman 2014.
 
-using Blank.Web.Api;
 using System.Web.Http;
 using System.Web.Http.Dispatcher;
 using System.Web.Http.ExceptionHandling;
 using System.Web.Http.Routing;
 using System.Web.Http.Tracing;
+using WebApi.Web.Common.Routing;
 using WebApi2Book.Common.Logging;
 using WebApi2Book.Web.Api.LegacyProcessing;
 using WebApi2Book.Web.Common;
 using WebApi2Book.Web.Common.ErrorHandling;
-using WebApi2Book.Web.Common.Routing;
 
 namespace WebApi2Book.Web.Api
 {

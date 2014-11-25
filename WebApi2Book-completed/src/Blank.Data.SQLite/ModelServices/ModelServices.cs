@@ -5,6 +5,7 @@ using System.Linq;
 using Blank.Data.Implementations.Entities;
 using Blank.Data.Interfaces.Entities;
 using ViewModelLib.Commands;
+using WebApi.Data.Implementations.Entities;
 
 namespace Blank.Data.SQLite.ModelServices
 {

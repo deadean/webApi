@@ -2,8 +2,7 @@
 // Copyright Jamie Kurtz, Brian Wortman 2014.
 
 using Moq;
-using WebApi2Book.Data.QueryProcessors;
-using WebApi2Book.Web.Api.Controllers.V1;
+using WebApi.Data.QueryProcessors;
 using WebApi2Book.Web.Api.DependencyBlock;
 using WebApi2Book.Web.Api.InquiryProcessing;
 using WebApi2Book.Web.Api.MaintenanceProcessing;

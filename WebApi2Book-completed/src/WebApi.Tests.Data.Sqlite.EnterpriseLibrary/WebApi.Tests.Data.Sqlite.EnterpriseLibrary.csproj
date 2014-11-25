@@ -60,6 +60,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Blank.Data\WebApi.Data.csproj">
+      <Project>{91ce9c41-4c3d-4d47-9883-ab1cc1ee9c15}</Project>
+      <Name>WebApi.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WebApi.DataBase.Oracle.EnterpriseLibrary\WebApi.DataBase.Sqlite.EnterpriseLibrary.csproj">
       <Project>{ab1bb87f-dc33-471d-944f-0111af713717}</Project>
       <Name>WebApi.DataBase.Sqlite.EnterpriseLibrary</Name>

@@ -1,6 +1,6 @@
 ﻿using Blank.Data.Interfaces.Entities;
 
-namespace Blank.Data.Implementations.Entities
+namespace WebApi.Data.Implementations.Entities
 {
     public class Status : IEntity, IVersionedEntity
     {

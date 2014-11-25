@@ -4,8 +4,8 @@
 using System.Net;
 using System.Web;
 using System.Web.Http.ExceptionHandling;
-using WebApi2Book.Common;
-using WebApi2Book.Data.Exceptions;
+using WebApi.Common;
+using WebApi.Common.Exceptions;
 
 namespace WebApi2Book.Web.Common.ErrorHandling
 {

@@ -6,6 +6,8 @@ using System.Net;
 using System.Net.Http;
 using System.Web;
 using log4net;
+using WebApi.Common.Implementations.Constants;
+using WebApi.Data.Implementations.Requests;
 using WebApi2Book.Common;
 using WebApi2Book.Common.Extensions;
 using WebApi2Book.Common.Logging;

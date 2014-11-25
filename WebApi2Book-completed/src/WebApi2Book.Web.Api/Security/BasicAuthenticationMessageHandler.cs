@@ -10,6 +10,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Web;
 using log4net;
+using WebApi.Common.Implementations.Constants;
 using WebApi2Book.Common;
 using WebApi2Book.Common.Logging;
 
