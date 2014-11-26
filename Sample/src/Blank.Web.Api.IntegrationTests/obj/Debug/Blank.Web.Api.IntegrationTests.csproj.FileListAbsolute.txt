@@ -1,4 +1,0 @@
-E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\src\Blank.Web.Api.IntegrationTests\bin\Debug\Blank.Web.Api.IntegrationTests.dll
-E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\src\Blank.Web.Api.IntegrationTests\bin\Debug\Blank.Web.Api.IntegrationTests.pdb
-E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\src\Blank.Web.Api.IntegrationTests\obj\Debug\Blank.Web.Api.IntegrationTests.dll
-E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\src\Blank.Web.Api.IntegrationTests\obj\Debug\Blank.Web.Api.IntegrationTests.pdb

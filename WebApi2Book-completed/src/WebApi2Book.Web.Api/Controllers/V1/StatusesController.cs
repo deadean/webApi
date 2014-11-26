@@ -14,7 +14,6 @@ using WebApi2Book.Web.Api.InquiryProcessing;
 namespace WebApi2Book.Web.Api.Controllers.V1
 {
 	[ApiVersion1RoutePrefix("statuses")]
-	//[UnitOfWorkActionFilter]
 	[UnitOfWorkAttribute]
 	public class StatusesController : ApiController
 	{

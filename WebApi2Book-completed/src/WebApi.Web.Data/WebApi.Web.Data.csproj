@@ -80,7 +80,6 @@
     <Compile Include="Implementations\Constants\Constants.cs" />
     <Compile Include="Implementations\EntityBaseImplementation.cs" />
     <Compile Include="Implementations\Response\StatuseResponse.cs" />
-    <Compile Include="Implementations\TestEntity.cs" />
     <Compile Include="Interfaces\IEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

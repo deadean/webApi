@@ -19,7 +19,6 @@ namespace WebApi.Web.Common.Implementations.FilterAttributes
 
 		private readonly ILogService modlog = LogService.GetLogService<UnitOfWorkAttribute>();
 		private System.Diagnostics.Stopwatch modStopWatch = new System.Diagnostics.Stopwatch();
-		private readonly IJsonService modJsonService = new JsonService();
 
 		#endregion
 

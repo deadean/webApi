@@ -1,0 +1,15 @@
+D:\dean\GitHub\webApi\webApi\Sample1\Samples\WebApi\Elmah\Elmah.Server\bin\Elmah.Server.dll.config
+D:\dean\GitHub\webApi\webApi\Sample1\Samples\WebApi\Elmah\Elmah.Server\bin\Elmah.Server.dll
+D:\dean\GitHub\webApi\webApi\Sample1\Samples\WebApi\Elmah\Elmah.Server\bin\Elmah.Server.pdb
+D:\dean\GitHub\webApi\webApi\Sample1\Samples\WebApi\Elmah\Elmah.Server\bin\Elmah.dll
+D:\dean\GitHub\webApi\webApi\Sample1\Samples\WebApi\Elmah\Elmah.Server\bin\Newtonsoft.Json.dll
+D:\dean\GitHub\webApi\webApi\Sample1\Samples\WebApi\Elmah\Elmah.Server\bin\System.Net.Http.Formatting.dll
+D:\dean\GitHub\webApi\webApi\Sample1\Samples\WebApi\Elmah\Elmah.Server\bin\System.Web.Http.dll
+D:\dean\GitHub\webApi\webApi\Sample1\Samples\WebApi\Elmah\Elmah.Server\bin\System.Web.Http.WebHost.dll
+D:\dean\GitHub\webApi\webApi\Sample1\Samples\WebApi\Elmah\Elmah.Server\bin\Newtonsoft.Json.xml
+D:\dean\GitHub\webApi\webApi\Sample1\Samples\WebApi\Elmah\Elmah.Server\bin\System.Net.Http.Formatting.xml
+D:\dean\GitHub\webApi\webApi\Sample1\Samples\WebApi\Elmah\Elmah.Server\bin\System.Web.Http.xml
+D:\dean\GitHub\webApi\webApi\Sample1\Samples\WebApi\Elmah\Elmah.Server\bin\System.Web.Http.WebHost.xml
+D:\dean\GitHub\webApi\webApi\Sample1\Samples\WebApi\Elmah\Elmah.Server\obj\Debug\Elmah.Server.csprojResolveAssemblyReference.cache
+D:\dean\GitHub\webApi\webApi\Sample1\Samples\WebApi\Elmah\Elmah.Server\obj\Debug\Elmah.Server.dll
+D:\dean\GitHub\webApi\webApi\Sample1\Samples\WebApi\Elmah\Elmah.Server\obj\Debug\Elmah.Server.pdb

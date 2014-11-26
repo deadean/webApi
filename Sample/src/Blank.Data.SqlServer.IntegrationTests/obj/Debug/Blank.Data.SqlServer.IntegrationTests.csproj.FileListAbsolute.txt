@@ -1,4 +1,0 @@
-E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\src\Blank.Data.SqlServer.IntegrationTests\bin\Debug\Blank.Data.SqlServer.IntegrationTests.dll
-E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\src\Blank.Data.SqlServer.IntegrationTests\bin\Debug\Blank.Data.SqlServer.IntegrationTests.pdb
-E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\src\Blank.Data.SqlServer.IntegrationTests\obj\Debug\Blank.Data.SqlServer.IntegrationTests.dll
-E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\src\Blank.Data.SqlServer.IntegrationTests\obj\Debug\Blank.Data.SqlServer.IntegrationTests.pdb

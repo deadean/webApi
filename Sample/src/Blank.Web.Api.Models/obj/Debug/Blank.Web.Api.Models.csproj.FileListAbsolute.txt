@@ -1,4 +1,0 @@
-E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\src\Blank.Web.Api.Models\bin\Debug\Blank.Web.Api.Models.dll
-E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\src\Blank.Web.Api.Models\bin\Debug\Blank.Web.Api.Models.pdb
-E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\src\Blank.Web.Api.Models\obj\Debug\Blank.Web.Api.Models.dll
-E:\OneDrive\Документы\Books\Programming Language\ASP\_OnReading\Sample\src\Blank.Web.Api.Models\obj\Debug\Blank.Web.Api.Models.pdb

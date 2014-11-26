@@ -67,6 +67,8 @@ namespace WebApi2Book.Web.Api
             container.Bind<IAllStatusesInquiryProcessor>().To<AllStatusesInquiryProcessor>().InRequestScope();
             //container.Bind<IAllStatusesQueryProcessor>().To<AllStatusesQueryProcessor>().InRequestScope();
             container.Bind<IAllStatusesQueryProcessor>().To<Blank.Data.SQLite.QueryProcessors.AllStatusesQueryProcessor>().InRequestScope();
+						//container.Bind<IAllStatusesQueryProcessor>().To<WebApi.DataBase.Sqlite.EnterpriseLibrary.QueryProcessors.AllStatusesQueryProcessor>().InRequestScope();
+
             container.Bind<IStatusLinkService>().To<StatusLinkService>().InRequestScope();
 
             container.Bind<IAllUsersInquiryProcessor>().To<AllUsersInquiryProcessor>().InRequestScope();

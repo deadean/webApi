@@ -46,6 +46,9 @@
     <Reference Include="AutoMapper.Net4">
       <HintPath>..\..\lib\AutoMapper.3.1.1\lib\net40\AutoMapper.Net4.dll</HintPath>
     </Reference>
+    <Reference Include="Elmah">
+      <HintPath>..\..\lib\elmah.corelibrary.1.2.2\lib\Elmah.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\Sample\src\packages\EntityFramework.6.0.1\lib\net45\EntityFramework.dll</HintPath>
@@ -66,6 +69,23 @@
       <HintPath>..\..\lib\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Enterprise Library\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Enterprise Library\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling">
+      <HintPath>..\packages\Enterprise Library\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging">
+      <HintPath>..\packages\Enterprise Library\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation">
+      <HintPath>..\packages\Enterprise Library\Microsoft.Practices.EnterpriseLibrary.Validation.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\..\lib\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
@@ -150,6 +170,8 @@
       <Link>AutoMapper.Net4.dll</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="App_Readme\Elmah.txt" />
+    <Content Include="default.html" />
     <Content Include="Global.asax" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -157,8 +179,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\AutoMapperConfigurator.cs" />
-    <Compile Include="BaseInquiryProcessor.cs" />
-    <Compile Include="BaseInquiryProcessorImpl.cs" />
+    <Compile Include="Base\Processing\Inquiry\BaseInquiryProcessor.cs" />
+    <Compile Include="Base\Processing\Inquiry\BaseInquiryProcessorImpl.cs" />
     <Compile Include="DependencyBlock\ITasksControllerDependencyBlock.cs" />
     <Compile Include="DependencyBlock\TasksControllerDependencyBlock.cs" />
     <Compile Include="Controllers\V1\ValuesController.cs" />
@@ -269,6 +291,10 @@
     <ProjectReference Include="..\WebApi.Common\WebApi.Common.csproj">
       <Project>{6f1274b7-d2a6-41d3-9c41-32c97bc08ff3}</Project>
       <Name>WebApi.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebApi.DataBase.Oracle.EnterpriseLibrary\WebApi.DataBase.Sqlite.EnterpriseLibrary.csproj">
+      <Project>{ab1bb87f-dc33-471d-944f-0111af713717}</Project>
+      <Name>WebApi.DataBase.Sqlite.EnterpriseLibrary</Name>
     </ProjectReference>
     <ProjectReference Include="..\WebApi.Web.Common\WebApi.Web.Common.csproj">
       <Project>{856a2758-18fd-4b30-b9b3-fe66adb7e380}</Project>
