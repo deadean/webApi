@@ -6,8 +6,9 @@ using WebApi2Book.Data.Entities;
 
 namespace WebApi.Data.QueryProcessors
 {
-    public interface IAllStatusesQueryProcessor
-    {
-        IEnumerable<Status> GetStatuses();
-    }
+	public interface IAllStatusesQueryProcessor
+	{
+		IEnumerable<Status> GetStatuses();
+		Status AddStatus(Status status);
+	}
 }

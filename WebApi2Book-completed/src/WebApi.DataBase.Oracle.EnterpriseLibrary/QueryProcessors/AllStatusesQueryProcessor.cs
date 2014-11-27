@@ -34,5 +34,10 @@ namespace WebApi.DataBase.Sqlite.EnterpriseLibrary.QueryProcessors
 		}
 
 		#endregion
+
+		public Status AddStatus(Status status)
+		{
+			throw new System.NotImplementedException();
+		}
 	}
 }

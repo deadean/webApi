@@ -2,6 +2,7 @@
 // Copyright Jamie Kurtz, Brian Wortman 2014.
 
 using AutoMapper;
+using WebApi.Web.Data.Implementations.Requests;
 using WebApi2Book.Common.TypeMapping;
 using WebApi2Book.Web.Api.Models;
 using Task = WebApi2Book.Data.Entities.Task;
@@ -12,7 +13,7 @@ namespace WebApi2Book.Web.Api.AutoMappingConfiguration
     {
         public void Configure()
         {
-            Mapper.CreateMap<NewTask, Task>()
+            Mapper.CreateMap<TaskRequest, Task>()
                 .ForMember(opt => opt.Version, x => x.Ignore())
                 .ForMember(opt => opt.CreatedBy, x => x.Ignore())
                 .ForMember(opt => opt.TaskId, x => x.Ignore())

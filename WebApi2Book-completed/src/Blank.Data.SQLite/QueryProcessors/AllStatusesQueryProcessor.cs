@@ -34,5 +34,12 @@ namespace Blank.Data.SQLite.QueryProcessors
 		}
 
 		#endregion
+
+		public Status AddStatus(Status status)
+		{
+			_modelServices.AddNewEntity(new WebApi.Data.Implementations.Entities.Status() { Name = status.Name });
+			status.StatusId = _modelServices.GettEntities<WebApi.Data.Implementations.Entities.Status>().FirstOrDefault(x => x.Name == status.Name).Id;
+			return status;
+		}
 	}
 }

@@ -1,6 +1,7 @@
 ﻿// NinjectConfigurator.cs
 // Copyright Jamie Kurtz, Brian Wortman 2014.
 
+using AutoMapper;
 using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
 using log4net.Config;
@@ -10,10 +11,13 @@ using Ninject;
 using Ninject.Activation;
 using Ninject.Web.Common;
 using WebApi.Data.QueryProcessors;
+using WebApi.Web.Data.Implementations.Requests;
+using WebApi.Web.Data.Implementations.Response;
 using WebApi2Book.Common;
 using WebApi2Book.Common.Logging;
 using WebApi2Book.Common.Security;
 using WebApi2Book.Common.TypeMapping;
+using WebApi2Book.Data.Entities;
 using WebApi2Book.Data.SqlServer.Mapping;
 using WebApi2Book.Data.SqlServer.QueryProcessors;
 using WebApi2Book.Web.Api.AutoMappingConfiguration;
@@ -130,6 +134,17 @@ namespace WebApi2Book.Web.Api
             container.Bind<IAutoMapperTypeConfigurator>()
                 .To<NewTaskV2ToTaskEntityAutoMapperTypeConfigurator>()
                 .InRequestScope();
+
+						Mapper.CreateMap<StatusRequest, Status>()
+										.ForMember(opt => opt.Name, x => x.MapFrom(y => y.NameStatus))
+										.ForMember(opt => opt.Ordinal, x => x.Ignore())
+										.ForMember(opt => opt.StatusId, x => x.Ignore())
+										.ForMember(opt => opt.Version, x => x.Ignore());
+
+						Mapper.CreateMap<Status, StatusResponse>()
+											.ForMember(opt => opt.Id, x => x.MapFrom(y => y.StatusId))
+											.ForMember(opt => opt.Name, x => x.MapFrom(y => y.Name));
+
         }
 
         private void ConfigureUserSession(IKernel container)

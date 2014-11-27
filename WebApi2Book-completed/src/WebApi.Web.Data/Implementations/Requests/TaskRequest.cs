@@ -1,13 +1,14 @@
 // NewTask.cs
 // Copyright Jamie Kurtz, Brian Wortman 2014.
 
+using Blank.Data.Implementations.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace WebApi2Book.Web.Api.Models
+namespace WebApi.Web.Data.Implementations.Requests
 {
-    public class NewTask
+    public class TaskRequest
     {
         [Required(AllowEmptyStrings = false)]
         public string Subject { get; set; }

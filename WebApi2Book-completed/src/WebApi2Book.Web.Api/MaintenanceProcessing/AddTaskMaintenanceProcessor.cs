@@ -2,6 +2,7 @@
 // Copyright Jamie Kurtz, Brian Wortman 2014.
 
 using WebApi.Data.QueryProcessors;
+using WebApi.Web.Data.Implementations.Requests;
 using WebApi2Book.Common.TypeMapping;
 using WebApi2Book.Web.Api.LinkServices;
 using WebApi2Book.Web.Api.Models;
@@ -22,7 +23,7 @@ namespace WebApi2Book.Web.Api.MaintenanceProcessing
             _taskLinkService = taskLinkService;
         }
 
-        public Task AddTask(NewTask newTask)
+        public Task AddTask(TaskRequest newTask)
         {
             var taskEntity = _autoMapper.Map<Data.Entities.Task>(newTask);
 

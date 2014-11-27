@@ -22,5 +22,10 @@ namespace WebApi2Book.Data.SqlServer.QueryProcessors
             var statuses = _session.QueryOver<Status>().List();
             return statuses;
         }
-    }
+
+				public Status AddStatus(Status status)
+				{
+					throw new System.NotImplementedException();
+				}
+		}
 }

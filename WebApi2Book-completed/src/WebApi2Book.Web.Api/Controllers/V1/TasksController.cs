@@ -9,6 +9,7 @@ using System.Web.Http.Cors;
 using WebApi.Common.Implementations.Constants;
 using WebApi.Data.QueryProcessors;
 using WebApi.Web.Common.Routing;
+using WebApi.Web.Data.Implementations.Requests;
 using WebApi2Book.Common;
 using WebApi2Book.Common.Logging;
 using WebApi2Book.Web.Api.DependencyBlock;
@@ -70,7 +71,7 @@ namespace WebApi2Book.Web.Api.Controllers.V1
         [HttpPost]
         [ValidateModel]
         //[Authorize(Roles = Constants.RoleNames.Manager)]
-        public IHttpActionResult AddTask(HttpRequestMessage requestMessage, NewTask newTask)
+        public IHttpActionResult AddTask(HttpRequestMessage requestMessage, TaskRequest newTask)
         {
             var task = _addTaskMaintenanceProcessor.AddTask(newTask);
 

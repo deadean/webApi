@@ -1,6 +1,7 @@
 ﻿// IAddTaskMaintenanceProcessor.cs
 // Copyright Jamie Kurtz, Brian Wortman 2014.
 
+using WebApi.Web.Data.Implementations.Requests;
 using WebApi2Book.Web.Api.Models;
 
 namespace WebApi2Book.Web.Api.MaintenanceProcessing
@@ -10,6 +11,6 @@ namespace WebApi2Book.Web.Api.MaintenanceProcessing
     /// </summary>
     public interface IAddTaskMaintenanceProcessor
     {
-        Task AddTask(NewTask newTask);
+        Task AddTask(TaskRequest newTask);
     }
 }
