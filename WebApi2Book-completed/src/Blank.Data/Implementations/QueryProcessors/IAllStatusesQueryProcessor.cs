@@ -10,5 +10,7 @@ namespace WebApi.Data.QueryProcessors
 	{
 		IEnumerable<Status> GetStatuses();
 		Status AddStatus(Status status);
+
+		bool RemoveStatus(string id);
 	}
 }

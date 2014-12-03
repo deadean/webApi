@@ -57,5 +57,23 @@ namespace WebApi2Book.Web.Api.InquiryProcessing
 				throw new Exception("Can not add new Status");
 			}
 		}
+
+
+		public async Task<string> RemoveStatus(string id)
+		{
+			try
+			{
+				return await Task.Run(() =>
+				{
+					bool isRemoved = _queryProcessor.RemoveStatus(id);
+					return isRemoved ? "Status has been removed successfully" : "Status has not been removed";
+				});
+			}
+			catch (Exception ex)
+			{
+				modLog.Debug("RemoveStatus", ex);
+				throw new Exception(string.Format("Can not remove status with id:{0}", id));
+			}
+		}
 	}
 }

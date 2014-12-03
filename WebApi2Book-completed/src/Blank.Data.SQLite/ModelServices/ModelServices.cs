@@ -16,13 +16,9 @@ namespace Blank.Data.SQLite.ModelServices
         private static IModelServices modInstance;
         private ModelContext modDbContext = new ModelContext();
 
-        const string csDataBaseName = "dataBase";
-
         #endregion
 
         #region Properties
-
-        public bool IsUseEntityFrameWork { get; set; }
 
         #endregion
 
@@ -30,13 +26,12 @@ namespace Blank.Data.SQLite.ModelServices
 
         public ModelServices()
         {
-            IsUseEntityFrameWork = true;
         }
 
         public static IModelServices GetInstance()
         {
-            if (modInstance == null)
-                modInstance = new ModelServices() { IsUseEntityFrameWork = true };
+					if (modInstance == null)
+						modInstance = new ModelServices();
             return modInstance;
         }
 
@@ -82,24 +77,21 @@ namespace Blank.Data.SQLite.ModelServices
             }, "UpdateEntity");
         }
 
-        public void RemoveEntity(IEntity entity)
+        public bool RemoveEntity(IEntity entity)
         {
-            this.TryCatch(() =>
+					this.TryCatch(() =>
             {
                 var dict = new Dictionary<Type, Action<IEntity>>() 
                 { 
-                    { typeof(User),(x) => this.modDbContext.USER.Find(x.Id).With(y => modDbContext.USER.Remove((User)x))}
+                    { typeof(User),(x) => this.modDbContext.USER.Find(x.Id).With(y => modDbContext.USER.Remove((User)y))},
+										{ typeof(Status),(x) => this.modDbContext.STATUS.Find(x.Id).With(y => modDbContext.STATUS.Remove((Status)y))},
                 };
                 entity.With(x => dict.If(y => y.ContainsKey(x.GetType()), y => y[x.GetType()].Invoke(x)));
                 this.modDbContext.SaveChanges();
             }, "RemoveEntity");
+						return true;
         }
 
-        public string GetAppSettingsDataBase()
-        {
-            return ConfigurationManager.AppSettings[csDataBaseName];
-        }
-        
         #endregion
     
     }

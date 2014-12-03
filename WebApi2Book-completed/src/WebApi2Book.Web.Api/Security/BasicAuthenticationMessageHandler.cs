@@ -88,6 +88,9 @@ namespace WebApi2Book.Web.Api.Security
             var credentialParts = GetCredentialParts(authHeader);
             if (credentialParts.Length != ExpectedCredentialCount)
             {
+							if (credentialParts.Length == 3 && credentialParts[2] == string.Empty)
+							{ }
+							else
                 return false;
             }
 

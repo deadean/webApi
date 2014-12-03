@@ -23,7 +23,7 @@ namespace WebApi2Book.Web.Api.Controllers.V1
 {
     [ApiVersion1RoutePrefix("tasks")]
     [UnitOfWorkActionFilter]
-    //[Authorize(Roles = Constants.RoleNames.JuniorWorker)]
+    [Authorize(Roles = Constants.RoleNames.JuniorWorker)]
     [EnableCors("http://localhost:52976", "*", "*")]
     public class TasksController : ApiController
     {
@@ -70,7 +70,7 @@ namespace WebApi2Book.Web.Api.Controllers.V1
         [Route("", Name = "AddTaskRoute")]
         [HttpPost]
         [ValidateModel]
-        //[Authorize(Roles = Constants.RoleNames.Manager)]
+        [Authorize(Roles = Constants.RoleNames.Manager)]
         public IHttpActionResult AddTask(HttpRequestMessage requestMessage, TaskRequest newTask)
         {
             var task = _addTaskMaintenanceProcessor.AddTask(newTask);

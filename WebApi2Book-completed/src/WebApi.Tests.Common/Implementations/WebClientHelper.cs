@@ -5,9 +5,8 @@ using System;
 using System.Net;
 using System.Text;
 using WebApi.Common.Implementations.Constants;
-using WebApi2Book.Common;
 
-namespace WebApi2Book.Web.Api.IntegrationTests
+namespace WebApi.Tests.Common.Implementations
 {
     public class WebClientHelper
     {

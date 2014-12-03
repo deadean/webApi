@@ -10,7 +10,7 @@ namespace Blank.Data.SQLite.ModelServices
 
         void AddNewEntity(IEntity entity);
         void UpdateEntity(IEntity entity);
-        void RemoveEntity(IEntity entity);
+        bool RemoveEntity(IEntity entity);
 
         void SaveChanges();
     }

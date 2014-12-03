@@ -27,5 +27,10 @@ namespace WebApi2Book.Data.SqlServer.QueryProcessors
 				{
 					throw new System.NotImplementedException();
 				}
+
+				public bool RemoveStatus(string id)
+				{
+					throw new System.NotImplementedException();
+				}
 		}
 }

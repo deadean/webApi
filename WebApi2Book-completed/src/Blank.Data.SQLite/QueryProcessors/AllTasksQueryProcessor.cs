@@ -8,6 +8,7 @@ using WebApi.Data.Implementations.Requests;
 using WebApi2Book.Data;
 using WebApi2Book.Data.Entities;
 using WebApi.Data.QueryProcessors;
+using System;
 
 namespace Blank.Data.SQLite.QueryProcessors
 {
@@ -28,7 +29,7 @@ namespace Blank.Data.SQLite.QueryProcessors
 
             var tasks = query.Skip(startIndex).Take(requestInfo.PageSize).ToList();
 
-            var queryResult = new QueryResult<Task>(tasks.Select(x => new Task(){TaskId = x.Id,Subject = x.Subject}), query.Count, requestInfo.PageSize);
+            var queryResult = new QueryResult<Task>(tasks.Select(x => new Task(){TaskId = Convert.ToInt64(x.Id),Subject = x.Subject}), query.Count, requestInfo.PageSize);
 
             return queryResult;
         }

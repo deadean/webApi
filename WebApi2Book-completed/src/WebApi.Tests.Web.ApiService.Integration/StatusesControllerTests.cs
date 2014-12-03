@@ -6,6 +6,7 @@ using System.Net;
 using Newtonsoft.Json;
 using System.Linq;
 using WebApi.Web.Data.Implementations.Response;
+using Newtonsoft.Json.Linq;
 
 namespace WebApi.Tests.Web.ApiService.Integration.LocalHost
 {
@@ -26,16 +27,31 @@ namespace WebApi.Tests.Web.ApiService.Integration.LocalHost
 		[TestMethod]
 		public void StatusesControllerTests_TestMethod2()
 		{
-			//HttpResponseMessage response = this.modClient.GetAsync("api/v1/addresses/1410291328341454192148/directions/TS/stopps/?time=2014-11-11T06:30:36").Result;
+			this.RunTest(() =>
+			{
+				const string dataAddNewStatus = "{\"NameStatus\":\"Status 001_Test\"}";
+				string address = this.modBaseAddress + "api/v1/statuses";
 
-			//Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
+				using (var client = modClientHelper.CreateWebClient())
+				{
+					var responseString = client.UploadString(address, HttpMethod.Post.Method, dataAddNewStatus);
 
-			//var responseString = response.Content.ReadAsStringAsync().Result;
-			//var response_ = JsonConvert.DeserializeObject<RoutesStoppsResponseHeaderForSchool>(responseString);
-			//Assert.IsTrue(response_.BusStopps.Any());
-			//Assert.IsTrue(response_.BusStopps.Count() == 1);
-			//Assert.AreEqual(response_.BusStopps.First().BusStopName, "Visby, Stenkumlaväg, 37");
+					StatusResponse response_ = JsonConvert.DeserializeObject<StatusResponse>(responseString);
+					Assert.IsTrue(response_.Name.Contains("001"));
+					var id = response_.Id;
+
+					responseString = client.UploadString(address + "/" + id, HttpMethod.Delete.Method, "");
+
+					HttpResponseMessage response = this.modClient.GetAsync(address).Result;
+					Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
+
+					responseString = response.Content.ReadAsStringAsync().Result;
+					StatusesResponse response__ = JsonConvert.DeserializeObject<StatusesResponse>(responseString);
+
+					Assert.IsFalse(response__.Items.Any(x => x.Id.ToString() == id));
+
+				}
+			});
 		}
-		
 	}
 }

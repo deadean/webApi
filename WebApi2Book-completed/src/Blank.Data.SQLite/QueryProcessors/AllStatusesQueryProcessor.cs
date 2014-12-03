@@ -8,6 +8,8 @@ using NHibernate;
 using WebApi2Book.Data.Entities;
 using Blank.Data.SQLite.Bases.QueryProcessors;
 using WebApi.Data.QueryProcessors;
+using WebApi.Common.Implementations.Logging;
+using System;
 
 namespace Blank.Data.SQLite.QueryProcessors
 {
@@ -23,14 +25,14 @@ namespace Blank.Data.SQLite.QueryProcessors
 		public IEnumerable<Status> GetStatuses()
 		{
 			var statuses = _modelServices.GettEntities<WebApi.Data.Implementations.Entities.Status>();
-			return statuses.Select(x => new Status() { StatusId = x.Id, Name = x.Name });
+			return statuses.Select(x => new Status() { StatusId = Convert.ToInt64(x.Id), Name = x.Name });
 		}
 
 		#region Protected Methods
 
 		public override void InitLog()
 		{
-			//modLog = LogService.GetLogService<AllStatusesQueryProcessor>();
+			modLog = LogService.GetLogService<AllStatusesQueryProcessor>();
 		}
 
 		#endregion
@@ -38,8 +40,13 @@ namespace Blank.Data.SQLite.QueryProcessors
 		public Status AddStatus(Status status)
 		{
 			_modelServices.AddNewEntity(new WebApi.Data.Implementations.Entities.Status() { Name = status.Name });
-			status.StatusId = _modelServices.GettEntities<WebApi.Data.Implementations.Entities.Status>().FirstOrDefault(x => x.Name == status.Name).Id;
+			status.StatusId = Convert.ToInt64(_modelServices.GettEntities<WebApi.Data.Implementations.Entities.Status>().FirstOrDefault(x => x.Name == status.Name).Id);
 			return status;
+		}
+
+		public bool RemoveStatus(string id)
+		{
+			return _modelServices.RemoveEntity(new WebApi.Data.Implementations.Entities.Status() { Id = Convert.ToInt64(id) });
 		}
 	}
 }

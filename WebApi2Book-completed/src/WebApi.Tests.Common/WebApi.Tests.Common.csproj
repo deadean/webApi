@@ -45,11 +45,16 @@
     <Compile Include="Bases\BaseServerHostController.cs" />
     <Compile Include="Bases\BaseUnitTestController.cs" />
     <Compile Include="Implementations\EmailService.cs" />
+    <Compile Include="Implementations\WebClientHelper.cs" />
     <Compile Include="Interfaces\IEmailService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <ProjectReference Include="..\WebApi.Common\WebApi.Common.csproj">
+      <Project>{6f1274b7-d2a6-41d3-9c41-32c97bc08ff3}</Project>
+      <Name>WebApi.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WebApi.Web.Data\WebApi.Web.Data.csproj">
       <Project>{b8f1f5bc-736e-45ec-b2f9-a0aa1d8b77a0}</Project>
       <Name>WebApi.Web.Data</Name>

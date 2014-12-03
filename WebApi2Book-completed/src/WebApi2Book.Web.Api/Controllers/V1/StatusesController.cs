@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
+using WebApi.Common.Implementations.Constants;
 using WebApi.Web.Common.Implementations.FilterAttributes;
 using WebApi.Web.Common.Routing;
 using WebApi.Web.Common.Validation;
@@ -28,7 +29,7 @@ namespace WebApi2Book.Web.Api.Controllers.V1
 
 		[ResponseType(typeof(StatusesResponse))]
 		[Route("", Name = "GetStatusesRoute")]
-		public async Task<IHttpActionResult> GetStatuses(HttpRequestMessage request)
+		public async Task<IHttpActionResult> Get(HttpRequestMessage request)
 		{
 			try
 			{
@@ -43,12 +44,28 @@ namespace WebApi2Book.Web.Api.Controllers.V1
 		[Route("", Name = "AddStatusRoute")]
 		[HttpPost]
 		[ValidateModel]
-		[ResponseType(typeof(StatusesResponse))]
+		[ResponseType(typeof(StatusResponse))]
+		[Authorize(Roles = Constants.RoleNames.Manager)]
 		public async Task<IHttpActionResult> AddStatus(HttpRequestMessage requestMessage, StatusRequest newStatus)
 		{
 			try
 			{
 				return Ok(await _allStatusesInquiryProcessor.AddStatus(newStatus));
+			}
+			catch (Exception ex)
+			{
+				return BadRequest(ex.Message);
+			}
+		}
+
+		[Route("{id}", Name = "DeleteStatusRoute")]
+		[HttpDelete]
+		[Authorize(Roles = Constants.RoleNames.Manager)]
+		public async Task<IHttpActionResult> DeleteStatus(HttpRequestMessage requestMessage, string id)
+		{
+			try
+			{
+				return Ok(await _allStatusesInquiryProcessor.RemoveStatus(id));
 			}
 			catch (Exception ex)
 			{

@@ -13,5 +13,7 @@ namespace WebApi2Book.Web.Api.InquiryProcessing
 			Task<StatusesResponse> GetStatuses();
 
 			Task<StatusResponse> AddStatus(StatusRequest newStatus);
+
+			Task<string> RemoveStatus(string id);
 		}
 }

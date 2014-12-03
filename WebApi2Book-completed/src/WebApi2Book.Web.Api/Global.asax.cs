@@ -20,9 +20,9 @@ namespace WebApi2Book.Web.Api
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
 
-            ConfigureFormatters();
+            //ConfigureFormatters();
 
-            //RegisterHandlers();
+            RegisterHandlers();
 
             new AutoMapperConfigurator().Configure(WebContainerManager.GetAll<IAutoMapperTypeConfigurator>());
         }
@@ -42,20 +42,20 @@ namespace WebApi2Book.Web.Api
                 new BasicAuthenticationMessageHandler(logManager,
                     WebContainerManager.Get<IBasicSecurityService>()));
 
-            GlobalConfiguration.Configuration.MessageHandlers.Add(new TaskDataSecurityMessageHandler(logManager,
-                userSession));
-            GlobalConfiguration.Configuration.MessageHandlers.Add(new PagedTaskDataSecurityMessageHandler(logManager,
-                userSession));
+						//GlobalConfiguration.Configuration.MessageHandlers.Add(new TaskDataSecurityMessageHandler(logManager,
+						//		userSession));
+						//GlobalConfiguration.Configuration.MessageHandlers.Add(new PagedTaskDataSecurityMessageHandler(logManager,
+						//		userSession));
 
-            var builder = new SecurityTokenBuilder();
-            var reader = new ConfigurationReader();
-            GlobalConfiguration.Configuration.MessageHandlers.Add(
-                new JwtAuthenticationMessageHandler
-                {
-                    AllowedAudience = reader.AllowedAudience,
-                    Issuer = reader.Issuer,
-                    SigningToken = builder.CreateFromKey(reader.SymmetricKey)
-                });
+						//var builder = new SecurityTokenBuilder();
+						//var reader = new ConfigurationReader();
+						//GlobalConfiguration.Configuration.MessageHandlers.Add(
+						//		new JwtAuthenticationMessageHandler
+						//		{
+						//				AllowedAudience = reader.AllowedAudience,
+						//				Issuer = reader.Issuer,
+						//				SigningToken = builder.CreateFromKey(reader.SymmetricKey)
+						//		});
         }
 
         protected void Application_Error()

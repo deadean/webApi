@@ -1,6 +1,7 @@
 ﻿// AllStatusesQueryProcessor.cs
 // Copyright Jamie Kurtz, Brian Wortman 2014.
 
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using WebApi.Common.Bases.QueryProcessors;
@@ -23,7 +24,7 @@ namespace WebApi.DataBase.Sqlite.EnterpriseLibrary.QueryProcessors
 		public IEnumerable<Status> GetStatuses()
 		{
 			var statuses = _modelServices.GetEntities<Data.Implementations.Entities.Status>();
-			return statuses.Select(x => new Status() { StatusId = x.Id, Name = x.Name });
+			return statuses.Select(x => new Status() { StatusId = Convert.ToInt64(x.Id), Name = x.Name });
 		}
 
 		#region Protected Methods
@@ -36,6 +37,11 @@ namespace WebApi.DataBase.Sqlite.EnterpriseLibrary.QueryProcessors
 		#endregion
 
 		public Status AddStatus(Status status)
+		{
+			throw new System.NotImplementedException();
+		}
+
+		public bool RemoveStatus(string id)
 		{
 			throw new System.NotImplementedException();
 		}
