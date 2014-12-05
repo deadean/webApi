@@ -3,40 +3,42 @@
 
 using System.Net;
 using System.Net.Http;
+using System.Linq;
 using Newtonsoft.Json.Linq;
-using WebApi2Book.Web.Api.MaintenanceProcessing;
-using WebApi2Book.Web.Api.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using WebApi.Tests.Common.Implementations;
+using Newtonsoft.Json;
+using WebApi.Tests.Common.Bases;
+using WebApi2Book.Data.Entities;
+using WebApi2Book.Web.Api.Models;
 
 namespace WebApi2Book.Web.Api.IntegrationTests
 {
 	[TestClass]
-	public class TasksControllerTest
+	public class TasksControllerTest : BaseLocalHostController
 	{
-		public TasksControllerTest()
-		{
-			_webClientHelper = new WebClientHelper();
-		}
-
-		private const string UriRoot = "http://localhost:61589/api/v1/";
-
-		private WebClientHelper _webClientHelper;
-
 		[TestMethod]
 		public void AddTask()
 		{
 			const string data = "{\"Subject\":\"Fix something important\"}";
-			const string address = UriRoot + "tasks";
-
-			var client = _webClientHelper.CreateWebClient();
+			var client = modClientHelper.CreateWebClient();
 
 			try
 			{
+				string address = modBaseAddress + "tasks";
 				var responseString = client.UploadString(address, HttpMethod.Post.Method, data);
 
 				var jsonResponse = JObject.Parse(responseString);
-				Assert.IsNotNull(jsonResponse.ToObject<TaskCreatedActionResult>());
+				WebApi2Book.Web.Api.Models.Task obj = JsonConvert.DeserializeObject<WebApi2Book.Web.Api.Models.Task>(responseString);
+				Assert.IsNotNull(obj);
+
+				long? id = obj.TaskId;
+				responseString = client.UploadString(address + "/" + id, HttpMethod.Delete.Method, "");
+				responseString = client.DownloadString(address);
+				PagedDataInquiryResponse<WebApi2Book.Web.Api.Models.Task> response__ = 
+					JsonConvert.DeserializeObject<PagedDataInquiryResponse<WebApi2Book.Web.Api.Models.Task>>(responseString);
+				Assert.IsFalse(response__.Items.Any(x => x.TaskId == id));
+
 			}
 			finally
 			{
@@ -61,26 +63,6 @@ namespace WebApi2Book.Web.Api.IntegrationTests
 		//		{
 		//				var statusCode = ((HttpWebResponse) (e.Response)).StatusCode;
 		//				Assert.AreEqual(HttpStatusCode.Unauthorized, statusCode);
-		//		}
-		//		finally
-		//		{
-		//				client.Dispose();
-		//		}
-		//}
-
-		//[Test]
-		//public void GetTasks()
-		//{
-		//		var client = _webClientHelper.CreateWebClient();
-
-		//		try
-		//		{
-		//				const string address = UriRoot + "tasks";
-
-		//				var responseString = client.DownloadString(address);
-
-		//				var jsonResponse = JObject.Parse(responseString);
-		//				Assert.IsNotNull(jsonResponse.ToObject<PagedDataInquiryResponse<Task>>());
 		//		}
 		//		finally
 		//		{

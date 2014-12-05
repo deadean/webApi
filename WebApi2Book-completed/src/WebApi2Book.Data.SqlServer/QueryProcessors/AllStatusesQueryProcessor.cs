@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using NHibernate;
 using WebApi2Book.Data.Entities;
 using WebApi.Data.QueryProcessors;
+using System;
 
 namespace WebApi2Book.Data.SqlServer.QueryProcessors
 {
@@ -25,12 +26,19 @@ namespace WebApi2Book.Data.SqlServer.QueryProcessors
 
 				public Status AddStatus(Status status)
 				{
-					throw new System.NotImplementedException();
+					_session.SaveOrUpdate(status);
+					return status;
 				}
 
 				public bool RemoveStatus(string id)
 				{
-					throw new System.NotImplementedException();
+					var status = _session.Get<Status>(Convert.ToInt64(id));
+					if (status != null)
+					{
+						_session.Delete(status);
+						return true;
+					}
+					return false;
 				}
 		}
 }
