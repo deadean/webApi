@@ -57,7 +57,7 @@ namespace WebApi2Book.Web.Api.Security
             }
 
             ((PagedDataInquiryResponse<Task>) responseObjectContent.Value).Items.ForEach(
-                x => x.SetShouldSerializeAssignees(!maskData));
+                x => x.SetShouldSerializeTaskId(!maskData));
         }
     }
 }

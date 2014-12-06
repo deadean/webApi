@@ -1,7 +1,4 @@
-﻿// TasksController.cs
-// Copyright Jamie Kurtz, Brian Wortman 2014.
-
-using System;
+﻿using System;
 using System.IO;
 using System.Net.Http;
 using System.Web.Http;
@@ -10,7 +7,6 @@ using WebApi.Common.Implementations.Constants;
 using WebApi.Data.QueryProcessors;
 using WebApi.Web.Common.Routing;
 using WebApi.Web.Data.Implementations.Requests;
-using WebApi2Book.Common;
 using WebApi2Book.Common.Logging;
 using WebApi2Book.Web.Api.DependencyBlock;
 using WebApi2Book.Web.Api.InquiryProcessing;
@@ -27,7 +23,7 @@ namespace WebApi2Book.Web.Api.Controllers.V1
     [EnableCors("http://localhost:52976", "*", "*")]
     public class TasksController : ApiController
     {
-        ILogManager log = new LogManagerAdapter();
+        ILogManager _log = new LogManagerAdapter();
         private readonly IAddTaskMaintenanceProcessor _addTaskMaintenanceProcessor;
         private readonly IAllTasksInquiryProcessor _allTasksInquiryProcessor;
         private readonly IDeleteTaskQueryProcessor _deleteTaskQueryProcessor;
