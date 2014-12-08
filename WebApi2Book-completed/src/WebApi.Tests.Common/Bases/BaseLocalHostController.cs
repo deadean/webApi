@@ -2,7 +2,7 @@
 
 namespace WebApi.Tests.Common.Bases
 {
-	public class BaseLocalHostController : BaseUnitTestController
+	public class BaseLocalHostController : BaseUnitTestControllerImpl
 	{
 		public BaseLocalHostController()
 		{
@@ -11,6 +11,7 @@ namespace WebApi.Tests.Common.Bases
 		}
 		protected override void Initialize()
 		{
+			base.Initialize();
 			this.modClient.BaseAddress = new Uri(modBaseAddress);
 		}
 	}

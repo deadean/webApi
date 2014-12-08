@@ -15,9 +15,10 @@ namespace WebApi.Tests.Common.Bases
 		protected HttpClient modClient = new HttpClient();
 		protected WebClientHelper modClientHelper = new WebClientHelper();
 		protected string modBaseAddress;
+		protected string modAddress;
 		private readonly IEmailService modEmailService = EmailService.GetInstance();
 
-		protected abstract void Initialize();
+		protected virtual void Initialize() { }
 		protected void RunTest(Action action)
 		{
 			try

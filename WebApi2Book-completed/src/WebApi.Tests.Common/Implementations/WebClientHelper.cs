@@ -8,19 +8,29 @@ using WebApi.Common.Implementations.Constants;
 
 namespace WebApi.Tests.Common.Implementations
 {
-    public class WebClientHelper
-    {
-        public WebClient CreateWebClient(string username = "bhogg",
-            string contentType = Constants.MediaTypeNames.TextJson)
-        {
-            var webClient = new WebClient();
+	public class WebClientHelper
+	{
+		public WebClient CreateWebClient(string username = "bhogg"
+			, string contentType = Constants.MediaTypeNames.TextJson
+			, string JWT = ""
+			)
+		{
+			var webClient = new WebClient();
 
-            var creds = username + ":" + "ignored";
-            var bcreds = Encoding.ASCII.GetBytes(creds);
-            var base64Creds = Convert.ToBase64String(bcreds);
-            webClient.Headers.Add("Authorization", "Basic " + base64Creds);
-            webClient.Headers.Add("Content-Type", contentType);
-            return webClient;
-        }
-    }
+			if (string.IsNullOrWhiteSpace(JWT))
+			{
+				var creds = username + ":" + "ignored";
+				var bcreds = Encoding.ASCII.GetBytes(creds);
+				var base64Creds = Convert.ToBase64String(bcreds);
+				webClient.Headers.Add("Authorization", "Basic " + base64Creds);
+			}
+			else
+			{
+				webClient.Headers.Add("Authorization", "Bearer " + JWT);
+			}
+
+			webClient.Headers.Add("Content-Type", contentType);
+			return webClient;
+		}
+	}
 }

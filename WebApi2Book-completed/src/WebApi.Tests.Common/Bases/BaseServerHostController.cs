@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace WebApi.Tests.Common.Bases
 {
-	public class BaseServerHostController : BaseUnitTestController
+	public class BaseServerHostController : BaseUnitTestControllerImpl
 	{
 		public BaseServerHostController()
 		{
@@ -17,9 +17,8 @@ namespace WebApi.Tests.Common.Bases
 		}
 		protected override void Initialize()
 		{
+			base.Initialize();
 			this.modClient.BaseAddress = new Uri(modBaseAddress);
 		}
-
-		
 	}
 }

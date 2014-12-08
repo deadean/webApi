@@ -14,11 +14,9 @@ namespace WebApi.Tests.Web.ApiService.Integration
 	[TestClass]
 	public class TasksControllerTest : BaseLocalHostController
 	{
-		private readonly string _address;
-
 		public TasksControllerTest()
 		{
-			_address = modBaseAddress + "api/v1/tasks";
+			modAddress = modBaseAddress + "api/v1/tasks";
 		}
 
 		[TestMethod]
@@ -81,15 +79,15 @@ namespace WebApi.Tests.Web.ApiService.Integration
 			{
 				try
 				{
-					Task obj = CreateNewTask(client);
+					Task obj = CreateNewTask(client, this.modAddress);
 					Assert.IsNotNull(obj);
 
 					var id = obj.TaskId;
 
 					Assert.IsTrue(ActivateTask(client, id));
 
-					DeleteTask(client, id);
-					var tasks = GetAllTasks(client);
+					DeleteTask(client, id, this.modAddress);
+					var tasks = GetAllTasks(client, this.modAddress);
 					Assert.IsFalse(tasks.Any(x => x.TaskId == id));
 				}
 				catch (Exception)
@@ -105,7 +103,7 @@ namespace WebApi.Tests.Web.ApiService.Integration
 			{
 				try
 				{
-					Task obj = CreateNewTask(client);
+					Task obj = CreateNewTask(client, this.modAddress);
 					Assert.IsNotNull(obj);
 
 					var id = obj.TaskId;
@@ -113,8 +111,8 @@ namespace WebApi.Tests.Web.ApiService.Integration
 					Assert.IsTrue(ActivateTask(client, id));
 					Assert.IsTrue(CompleteTask(client, id));
 
-					DeleteTask(client, id);
-					var tasks = GetAllTasks(client);
+					DeleteTask(client, id, this.modAddress);
+					var tasks = GetAllTasks(client, this.modAddress);
 					Assert.IsFalse(tasks.Any(x => x.TaskId == id));
 				}
 				catch (Exception)
@@ -130,7 +128,7 @@ namespace WebApi.Tests.Web.ApiService.Integration
 			{
 				try
 				{
-					Task obj = CreateNewTask(client);
+					Task obj = CreateNewTask(client, this.modAddress);
 					Assert.IsNotNull(obj);
 
 					var id = obj.TaskId;
@@ -139,8 +137,8 @@ namespace WebApi.Tests.Web.ApiService.Integration
 					Assert.IsTrue(CompleteTask(client, id));
 					Assert.IsTrue(ReactivateTask(client, id));
 
-					DeleteTask(client, id);
-					var tasks = GetAllTasks(client);
+					DeleteTask(client, id, this.modAddress);
+					var tasks = GetAllTasks(client, this.modAddress);
 					Assert.IsFalse(tasks.Any(x => x.TaskId == id));
 				}
 				catch (Exception)
@@ -158,7 +156,7 @@ namespace WebApi.Tests.Web.ApiService.Integration
 			{
 				try
 				{
-					Task obj = CreateNewTask(client);
+					Task obj = CreateNewTask(client, this.modAddress);
 					Assert.IsNotNull(obj);
 
 					id = obj.TaskId;
@@ -172,7 +170,7 @@ namespace WebApi.Tests.Web.ApiService.Integration
 			{
 				try
 				{
-					Task obj = GetTask(client, id);
+					Task obj = GetTask(client, id, this.modAddress);
 					Assert.IsNotNull(obj);
 					Assert.IsNull(obj.TaskId);
 				}
@@ -185,8 +183,8 @@ namespace WebApi.Tests.Web.ApiService.Integration
 			{
 				try
 				{
-					DeleteTask(client, id);
-					var tasks = GetAllTasks(client);
+					DeleteTask(client, id, this.modAddress);
+					var tasks = GetAllTasks(client, this.modAddress);
 					Assert.IsFalse(tasks.Any(x => x.TaskId == id));
 				}
 				catch (Exception)
@@ -197,56 +195,56 @@ namespace WebApi.Tests.Web.ApiService.Integration
 
 		private bool ReactivateTask(WebClient client, long? id)
 		{
-			string address = this._address + "/" + id + "/" + "reactivations";
+			string address = this.modAddress + "/" + id + "/" + "reactivations";
 			client.UploadString(address, HttpMethod.Post.Method, "");
 
-			Task task = this.GetTask(client, id);
+			Task task = GetTask(client, id, this.modAddress);
 			return task.Status.Name == "In Progress";
 		}
 
 		private bool CompleteTask(WebClient client, long? id)
 		{
-			string address = this._address + "/" + id + "/" + "completions";
+			string address = this.modAddress + "/" + id + "/" + "completions";
 			client.UploadString(address, HttpMethod.Post.Method, "");
 
-			Task task = this.GetTask(client, id);
+			Task task = GetTask(client, id, this.modAddress);
 			return task.Status.Name == "Completed";
 		}
 
 		private bool ActivateTask(WebClient client, long? id)
 		{
-			string address = this._address + "/" + id + "/" +"activations";
+			string address = this.modAddress + "/" + id + "/" +"activations";
 			client.UploadString(address, HttpMethod.Post.Method, "");
 
-			Task task = this.GetTask(client, id);
+			Task task = GetTask(client, id, this.modAddress);
 			return task.Status.Name == "In Progress";
 		}
 
-		private IEnumerable<Task> GetAllTasks(WebClient client)
+		public static IEnumerable<Task> GetAllTasks(WebClient client, string address)
 		{
-			var responseString = client.DownloadString(_address);
+			var responseString = client.DownloadString(address);
 			var response =
 				JsonConvert.DeserializeObject<PagedDataInquiryResponse<Task>>(responseString);
 			return response.Items;
 		}
 
-		private Task GetTask(WebClient client, long? id)
+		public static Task GetTask(WebClient client, long? id, string address)
 		{
-			var responseString = client.DownloadString(_address+"/"+id);
+			var responseString = client.DownloadString(address+"/"+id);
 			var response = JsonConvert.DeserializeObject<Task>(responseString);
 			return response;
 		}
 
-		private void DeleteTask(WebClient client, long? id)
+		public static void DeleteTask(WebClient client, long? id, string address)
 		{
-			client.UploadString(_address + "/" + id, HttpMethod.Delete.Method, "");
+			client.UploadString(address + "/" + id, HttpMethod.Delete.Method, "");
 		}
 
-		private Task CreateNewTask(WebClient client)
+		public static Task CreateNewTask(WebClient client, string address)
 		{
 			const string data = "{\"Subject\":\"Fix something important\"}";
 			
-			var responseString = client.UploadString(_address, HttpMethod.Post.Method, data);
+			var responseString = client.UploadString(address, HttpMethod.Post.Method, data);
 			var obj = JsonConvert.DeserializeObject<WebApi2Book.Web.Api.Models.Task>(responseString);
 			return obj;
 		}

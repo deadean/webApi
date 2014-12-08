@@ -31,6 +31,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="NinjectService">
+      <HintPath>..\packages\NinjectService\NinjectService.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Net.Http" />
@@ -44,6 +47,7 @@
     <Compile Include="Bases\BaseLocalHostController.cs" />
     <Compile Include="Bases\BaseServerHostController.cs" />
     <Compile Include="Bases\BaseUnitTestController.cs" />
+    <Compile Include="Bases\BaseUnitTestControllerImpl.cs" />
     <Compile Include="Implementations\EmailService.cs" />
     <Compile Include="Implementations\WebClientHelper.cs" />
     <Compile Include="Interfaces\IEmailService.cs" />
@@ -54,6 +58,10 @@
     <ProjectReference Include="..\WebApi.Common\WebApi.Common.csproj">
       <Project>{6f1274b7-d2a6-41d3-9c41-32c97bc08ff3}</Project>
       <Name>WebApi.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebApi.Web.Common\WebApi.Web.Common.csproj">
+      <Project>{856a2758-18fd-4b30-b9b3-fe66adb7e380}</Project>
+      <Name>WebApi.Web.Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\WebApi.Web.Data\WebApi.Web.Data.csproj">
       <Project>{b8f1f5bc-736e-45ec-b2f9-a0aa1d8b77a0}</Project>

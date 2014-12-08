@@ -52,9 +52,8 @@ namespace WebApi2Book.Web.Api.Security
             if (removeSensitiveData)
             {
                 _log.DebugFormat("Applying security data masking for user {0}", _userSession.Username);
+								((Task)responseObjectContent.Value).SetShouldSerializeAssignees(!removeSensitiveData);
             }
-
-            ((Task) responseObjectContent.Value).SetShouldSerializeTaskId(!removeSensitiveData);
         }
     }
 }
