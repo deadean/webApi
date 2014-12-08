@@ -4,6 +4,7 @@
 using System.Collections.Generic;
 using System.Web.Http;
 using WebApi.Web.Common.Routing;
+using WebApi.Web.Data.Implementations.Response;
 using WebApi2Book.Web.Api.InquiryProcessing;
 using WebApi2Book.Web.Api.MaintenanceProcessing;
 using WebApi2Book.Web.Api.Models;
@@ -27,7 +28,7 @@ namespace WebApi2Book.Web.Api.Controllers.V1
         }
 
         [Route("{taskId:long}/users", Name = "GetTaskUsersRoute")]
-        public TaskUsersInquiryResponse GetTaskUsers(long taskId)
+        public TaskUsersResponse GetTaskUsers(long taskId)
         {
             var users = _taskUsersInquiryProcessor.GetTaskUsers(taskId);
             return users;

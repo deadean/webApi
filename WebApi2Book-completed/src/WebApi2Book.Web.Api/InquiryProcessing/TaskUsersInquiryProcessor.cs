@@ -3,6 +3,7 @@
 
 using WebApi.Common.Exceptions;
 using WebApi.Data.QueryProcessors;
+using WebApi.Web.Data.Implementations.Response;
 using WebApi2Book.Common.TypeMapping;
 using WebApi2Book.Web.Api.LinkServices;
 using WebApi2Book.Web.Api.Models;
@@ -23,7 +24,7 @@ namespace WebApi2Book.Web.Api.InquiryProcessing
             _taskUsersLinkService = taskUsersLinkService;
         }
 
-        public TaskUsersInquiryResponse GetTaskUsers(long taskId)
+        public TaskUsersResponse GetTaskUsers(long taskId)
         {
             var taskEntity = _queryProcessor.GetTask(taskId);
             if (taskEntity == null)
@@ -33,7 +34,7 @@ namespace WebApi2Book.Web.Api.InquiryProcessing
 
             var task = _autoMapper.Map<Task>(taskEntity);
 
-            var inquiryResponse = new TaskUsersInquiryResponse {TaskId = taskId, Users = task.Assignees};
+            var inquiryResponse = new TaskUsersResponse {TaskId = taskId, Users = task.Assignees};
 
             _taskUsersLinkService.AddLinks(inquiryResponse);
 

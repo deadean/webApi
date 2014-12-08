@@ -83,6 +83,7 @@
     <Compile Include="Implementations\Requests\TaskRequest.cs" />
     <Compile Include="Implementations\Response\StatuseResponse.cs" />
     <Compile Include="Implementations\Response\StatusResponse.cs" />
+    <Compile Include="Implementations\Response\TaskUsersResponse.cs" />
     <Compile Include="Interfaces\IEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -94,6 +95,10 @@
     <ProjectReference Include="..\WebApi.Common\WebApi.Common.csproj">
       <Project>{6f1274b7-d2a6-41d3-9c41-32c97bc08ff3}</Project>
       <Name>WebApi.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebApi2Book.Web.Api.Models\WebApi2Book.Web.Api.Models.csproj">
+      <Project>{a8b758b6-6b17-4a88-a403-486db03a960a}</Project>
+      <Name>WebApi2Book.Web.Api.Models</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

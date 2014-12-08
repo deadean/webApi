@@ -8,6 +8,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using WebApi.Tests.Common.Bases;
 using WebApi2Book.Web.Api.Models;
+using WebApi.Web.Data.Implementations.Response;
 
 namespace WebApi.Tests.Web.ApiService.Integration
 {
@@ -191,6 +192,60 @@ namespace WebApi.Tests.Web.ApiService.Integration
 				{
 				}
 			}
+		}
+
+		[TestMethod]
+		public void TasksControllerTest_Method5()
+		{
+			long? id = 0;
+
+			using (var client = modClientHelper.CreateWebClient())
+			{
+				try
+				{
+					Task obj = CreateNewTask(client, this.modAddress);
+					Assert.IsNotNull(obj);
+
+					id = obj.TaskId;
+
+					AddUserToTask(taskId:id, userId:1, client:client, prefix: "/users");
+
+					var resp = GetTaskUsers(taskId: id, userId: 1, client: client);
+					Assert.IsNotNull(resp);
+					Assert.IsTrue(resp.Users.Any(x => x.UserId == 1));
+
+					RemoveUserFromTask(taskId: id, userId: 1, client: client, prefix: "/users");
+
+					DeleteTask(client, id, this.modAddress);
+					var tasks = GetAllTasks(client, this.modAddress);
+					Assert.IsFalse(tasks.Any(x => x.TaskId == id));
+				}
+				catch (Exception)
+				{
+				}
+			}
+		}
+
+		private TaskUsersResponse GetTaskUsers(long? taskId, int userId, WebClient client)
+		{
+			var responseString = client.DownloadString(this.modAddress + "/" + taskId+"/users");
+			var response = JsonConvert.DeserializeObject<TaskUsersResponse>(responseString);
+			return response;
+		}
+
+		private TaskUsersResponse AddUserToTask(long? taskId, long? userId, WebClient client, string prefix)
+		{
+			string address = this.modAddress + "/" + taskId + "/" + prefix + "/" + userId;
+			string responseString = client.UploadString(address, HttpMethod.Put.Method, "");
+			var response = JsonConvert.DeserializeObject<TaskUsersResponse>(responseString);
+			return response;
+		}
+
+		private bool RemoveUserFromTask(long? taskId, long? userId, WebClient client, string prefix)
+		{
+			string address = this.modAddress + "/" + taskId + "/" + prefix + "/" + userId;
+			client.UploadString(address, HttpMethod.Delete.Method, "");
+			return true;
 		}
 
 		private bool ReactivateTask(WebClient client, long? id)

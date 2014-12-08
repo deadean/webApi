@@ -1,6 +1,7 @@
 // TaskUsersLinkService.cs
 // Copyright Jamie Kurtz, Brian Wortman 2014.
 
+using WebApi.Web.Data.Implementations.Response;
 using WebApi2Book.Web.Api.Models;
 
 namespace WebApi2Book.Web.Api.LinkServices
@@ -17,7 +18,7 @@ namespace WebApi2Book.Web.Api.LinkServices
             _userLinkService = userLinkService;
         }
 
-        public void AddLinks(TaskUsersInquiryResponse inquiryResponse)
+        public void AddLinks(TaskUsersResponse inquiryResponse)
         {
             var taskDetailLink = _taskLinkService.GetSelfLink(inquiryResponse.TaskId);
             taskDetailLink.Rel = "Task";
