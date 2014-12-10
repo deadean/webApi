@@ -90,7 +90,6 @@ namespace WebApi2Book.Web.Api
 			container.Bind<IUpdateTaskStatusQueryProcessor>().To<UpdateTaskStatusQueryProcessor>().InRequestScope();
 			container.Bind<IAllTasksInquiryProcessor>().To<AllTasksInquiryProcessor>().InRequestScope();
 			container.Bind<IAllTasksQueryProcessor>().To<AllTasksQueryProcessor>().InRequestScope();
-			//container.Bind<IAllTasksQueryProcessor>().To<Blank.Data.SQLite.QueryProcessors.AllTasksQueryProcessor>().InRequestScope();
 			container.Bind<ITaskByIdInquiryProcessor>().To<TaskByIdInquiryProcessor>().InRequestScope();
 			container.Bind<ITaskByIdQueryProcessor>().To<TaskByIdQueryProcessor>().InRequestScope();
 			container.Bind<ITaskLinkService>().To<TaskLinkService>().InRequestScope();

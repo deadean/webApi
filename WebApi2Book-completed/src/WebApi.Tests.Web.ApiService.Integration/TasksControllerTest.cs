@@ -9,6 +9,7 @@ using Newtonsoft.Json.Linq;
 using WebApi.Tests.Common.Bases;
 using WebApi2Book.Web.Api.Models;
 using WebApi.Web.Data.Implementations.Response;
+using WebApi.Common.Implementations.Constants;
 
 namespace WebApi.Tests.Web.ApiService.Integration
 {
@@ -38,7 +39,7 @@ namespace WebApi.Tests.Web.ApiService.Integration
 				var id = obj.TaskId;
 				client.UploadString(address + "/" + id, HttpMethod.Delete.Method, "");
 				responseString = client.DownloadString(address);
-				var response = 
+				var response =
 					JsonConvert.DeserializeObject<PagedDataInquiryResponse<Task>>(responseString);
 				Assert.IsFalse(response.Items.Any(x => x.TaskId == id));
 			}
@@ -75,7 +76,7 @@ namespace WebApi.Tests.Web.ApiService.Integration
 		[TestMethod]
 		public void TasksControllerTest_Method1()
 		{
-			
+
 			using (var client = modClientHelper.CreateWebClient())
 			{
 				try
@@ -167,7 +168,7 @@ namespace WebApi.Tests.Web.ApiService.Integration
 				}
 			}
 
-			using (var client = modClientHelper.CreateWebClient(username:"jdoe"))
+			using (var client = modClientHelper.CreateWebClient(username: "jdoe"))
 			{
 				try
 				{
@@ -208,7 +209,7 @@ namespace WebApi.Tests.Web.ApiService.Integration
 
 					id = obj.TaskId;
 
-					AddUserToTask(taskId:id, userId:1, client:client, prefix: "/users");
+					AddUserToTask(taskId: id, userId: 1, client: client, prefix: "/users");
 
 					var resp = GetTaskUsers(taskId: id, userId: 1, client: client);
 					Assert.IsNotNull(resp);
@@ -226,9 +227,82 @@ namespace WebApi.Tests.Web.ApiService.Integration
 			}
 		}
 
+		[TestMethod]
+		public void TasksControllerTest_Method6()
+		{
+			long? id = 0;
+
+			using (var client = modClientHelper.CreateWebClient())
+			{
+				try
+				{
+					Task obj = CreateNewTask(client, this.modAddress);
+					Assert.IsNotNull(obj);
+
+					id = obj.TaskId;
+
+					const string data = "{\"Subject\":\"Update\"}";
+					Task updatedTask = UpdateTask(taskId: id, client: client, data: data);
+
+					Assert.AreEqual(updatedTask.Subject, "Update");
+
+					DeleteTask(client, id, this.modAddress);
+					var tasks = GetAllTasks(client, this.modAddress);
+					Assert.IsFalse(tasks.Any(x => x.TaskId == id));
+				}
+				catch (Exception)
+				{
+				}
+			}
+		}
+
+		[TestMethod]
+		public void TasksControllerTest_Method7()
+		{
+			long? id = 0;
+
+			using (var client = modClientHelper.CreateWebClient())
+			{
+				try
+				{
+					Task obj = CreateNewTask(client, this.modAddress);
+					Assert.IsNotNull(obj);
+
+					id = obj.TaskId;
+
+					const string data = "{\"Subject\":\"Update\", \"TaskId\":\"qwerty\"}";
+					Task updatedTask = UpdateTask(taskId: id, client: client, data: data);
+
+					Assert.IsTrue(false);
+				}
+				catch (Exception ex)
+				{
+					Assert.IsTrue(true);
+				}
+				finally
+				{
+					if (id!=0)
+					{
+						DeleteTask(client, id, this.modAddress);
+						var tasks = GetAllTasks(client, this.modAddress);
+						Assert.IsFalse(tasks.Any(x => x.TaskId == id));
+					}
+				}
+			}
+		}
+
+		private Task UpdateTask(long? taskId, WebClient client, string data)
+		{
+			client.Headers.Add("Content-Type", Constants.MediaTypeNames.TextJson);
+			string address = this.modAddress + "/" + taskId;
+			string responseString = client.UploadString(address, HttpMethod.Put.Method, data);
+			var response = JsonConvert.DeserializeObject<Task>(responseString);
+			return response;
+		}
+
 		private TaskUsersResponse GetTaskUsers(long? taskId, int userId, WebClient client)
 		{
-			var responseString = client.DownloadString(this.modAddress + "/" + taskId+"/users");
+			var responseString = client.DownloadString(this.modAddress + "/" + taskId + "/users");
 			var response = JsonConvert.DeserializeObject<TaskUsersResponse>(responseString);
 			return response;
 		}
@@ -268,7 +342,7 @@ namespace WebApi.Tests.Web.ApiService.Integration
 
 		private bool ActivateTask(WebClient client, long? id)
 		{
-			string address = this.modAddress + "/" + id + "/" +"activations";
+			string address = this.modAddress + "/" + id + "/" + "activations";
 			client.UploadString(address, HttpMethod.Post.Method, "");
 
 			Task task = GetTask(client, id, this.modAddress);
@@ -285,7 +359,7 @@ namespace WebApi.Tests.Web.ApiService.Integration
 
 		public static Task GetTask(WebClient client, long? id, string address)
 		{
-			var responseString = client.DownloadString(address+"/"+id);
+			var responseString = client.DownloadString(address + "/" + id);
 			var response = JsonConvert.DeserializeObject<Task>(responseString);
 			return response;
 		}
@@ -298,7 +372,7 @@ namespace WebApi.Tests.Web.ApiService.Integration
 		public static Task CreateNewTask(WebClient client, string address)
 		{
 			const string data = "{\"Subject\":\"Fix something important\"}";
-			
+
 			var responseString = client.UploadString(address, HttpMethod.Post.Method, data);
 			var obj = JsonConvert.DeserializeObject<WebApi2Book.Web.Api.Models.Task>(responseString);
 			return obj;
