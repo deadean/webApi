@@ -94,6 +94,7 @@ namespace WebApi.Tests.Web.ApiService.Integration
 				}
 				catch (Exception)
 				{
+					Assert.Fail();
 				}
 			}
 		}
@@ -119,6 +120,7 @@ namespace WebApi.Tests.Web.ApiService.Integration
 				}
 				catch (Exception)
 				{
+					Assert.Fail();
 				}
 			}
 		}
@@ -145,6 +147,7 @@ namespace WebApi.Tests.Web.ApiService.Integration
 				}
 				catch (Exception)
 				{
+					Assert.Fail();
 				}
 			}
 		}
@@ -165,6 +168,7 @@ namespace WebApi.Tests.Web.ApiService.Integration
 				}
 				catch (Exception)
 				{
+					Assert.Fail();
 				}
 			}
 
@@ -174,10 +178,11 @@ namespace WebApi.Tests.Web.ApiService.Integration
 				{
 					Task obj = GetTask(client, id, this.modAddress);
 					Assert.IsNotNull(obj);
-					Assert.IsNull(obj.TaskId);
+					Assert.IsNull(obj.Assignees);
 				}
 				catch (Exception)
 				{
+					Assert.Fail();
 				}
 			}
 
@@ -191,6 +196,7 @@ namespace WebApi.Tests.Web.ApiService.Integration
 				}
 				catch (Exception)
 				{
+					Assert.Fail();
 				}
 			}
 		}
@@ -223,6 +229,7 @@ namespace WebApi.Tests.Web.ApiService.Integration
 				}
 				catch (Exception)
 				{
+					Assert.Fail();
 				}
 			}
 		}
@@ -252,6 +259,7 @@ namespace WebApi.Tests.Web.ApiService.Integration
 				}
 				catch (Exception)
 				{
+					Assert.Fail();
 				}
 			}
 		}
@@ -287,6 +295,86 @@ namespace WebApi.Tests.Web.ApiService.Integration
 						var tasks = GetAllTasks(client, this.modAddress);
 						Assert.IsFalse(tasks.Any(x => x.TaskId == id));
 					}
+				}
+			}
+		}
+
+		[TestMethod]
+		public void TasksControllerTest_Method8()
+		{
+			long? id = 0;
+
+			using (var client = modClientHelper.CreateWebClient())
+			{
+				try
+				{
+					Task obj = CreateNewTask(client, this.modAddress, "Empty Data");
+					Assert.IsTrue(false);
+				}
+				catch (Exception ex)
+				{
+					Assert.IsTrue(true);
+				}
+				finally
+				{
+				}
+			}
+		}
+
+		[TestMethod]
+		public void TasksControllerTest_Method9()
+		{
+			long? id = 0;
+
+			using (var client = modClientHelper.CreateWebClient())
+			{
+				try
+				{
+					Task obj = CreateNewTask(client, this.modAddress);
+					id = obj.TaskId;
+					Assert.IsNotNull(obj);
+
+					var tasks = GetAllTasks(client, this.modAddress);
+					Assert.IsTrue(tasks.All(x => x.Assignees != null));
+
+					DeleteTask(client, id, this.modAddress);
+					tasks = GetAllTasks(client, this.modAddress);
+					Assert.IsFalse(tasks.Any(x => x.TaskId == id));
+				}
+				catch (Exception)
+				{
+					Assert.Fail();
+				}
+			}
+		}
+
+		[TestMethod]
+		public void TasksControllerTest_Method10()
+		{
+			long? id = 0;
+
+			using (var client = modClientHelper.CreateWebClient())
+			{
+				try
+				{
+					var tasks = GetAllTasks(client, this.modAddress+"?pageNumber=2&pageSize=1");
+					Assert.IsTrue(!tasks.Any());
+
+					Task obj = CreateNewTask(client, this.modAddress);
+					id = obj.TaskId;
+					Assert.IsNotNull(obj);
+
+					tasks = GetAllTasks(client, this.modAddress + "?pageNumber=2&pageSize=1");
+					Assert.IsNotNull(tasks);
+					Assert.IsTrue(tasks.Any(x => x.TaskId == id));
+
+					DeleteTask(client, id, this.modAddress);
+					tasks = GetAllTasks(client, this.modAddress);
+					Assert.IsFalse(tasks.Any(x => x.TaskId == id));
+				}
+				catch (Exception)
+				{
+					Assert.Fail();
 				}
 			}
 		}
@@ -369,10 +457,12 @@ namespace WebApi.Tests.Web.ApiService.Integration
 			client.UploadString(address + "/" + id, HttpMethod.Delete.Method, "");
 		}
 
-		public static Task CreateNewTask(WebClient client, string address)
+		public static Task CreateNewTask(WebClient client, string address, string data="{\"Subject\":\"Fix something important\"}")
 		{
-			const string data = "{\"Subject\":\"Fix something important\"}";
-
+			if (!client.Headers.AllKeys.Contains("Content-Type"))
+			{
+				client.Headers.Add("Content-Type", Constants.MediaTypeNames.TextJson);
+			}
 			var responseString = client.UploadString(address, HttpMethod.Post.Method, data);
 			var obj = JsonConvert.DeserializeObject<WebApi2Book.Web.Api.Models.Task>(responseString);
 			return obj;

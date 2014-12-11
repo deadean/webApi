@@ -43,12 +43,11 @@ namespace WebApi2Book.Web.Api
 							WebContainerManager.Get<IBasicSecurityService>()));
 
 			//Smyk A. Using such implementation of the DelegateHandler you could return different
-			//responses for different users roles.
+			//responses for different users roles and returning respnses types too.
 			GlobalConfiguration.Configuration.MessageHandlers.Add(new TaskDataSecurityMessageHandler(logManager,
 					userSession));
-
-			//GlobalConfiguration.Configuration.MessageHandlers.Add(new PagedTaskDataSecurityMessageHandler(logManager,
-			//		userSession));
+			GlobalConfiguration.Configuration.MessageHandlers.Add(new PagedTaskDataSecurityMessageHandler(logManager,
+					userSession));
 
 			var builder = new SecurityTokenBuilder();
 			var reader = new ConfigurationReader();

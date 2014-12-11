@@ -51,11 +51,6 @@ namespace WebApi2Book.Web.Api.Security
         {
             var maskData = !_userSession.IsInRole(Constants.RoleNames.SeniorWorker);
 
-            if (maskData)
-            {
-                _log.DebugFormat("Applying security data masking for user {0}", _userSession.Username);
-            }
-
             ((PagedDataInquiryResponse<Task>) responseObjectContent.Value).Items.ForEach(
                 x => x.SetShouldSerializeAssignees(!maskData));
         }
