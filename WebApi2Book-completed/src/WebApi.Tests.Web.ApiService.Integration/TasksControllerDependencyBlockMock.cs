@@ -7,7 +7,7 @@ using WebApi2Book.Web.Api.DependencyBlock;
 using WebApi2Book.Web.Api.InquiryProcessing;
 using WebApi2Book.Web.Api.MaintenanceProcessing;
 
-namespace WebApi2Book.Web.Api.Tests.Controllers.V1
+namespace WebApi.Tests.Web.ApiService.Integration
 {
     public class TasksControllerDependencyBlockMock : Mock<ITasksControllerDependencyBlock>
     {
