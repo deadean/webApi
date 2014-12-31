@@ -3,34 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
-using System.Xml.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using WebApi.Data.Implementations.Requests;
 using WebApi.Tests.Common.Bases;
-using WebApi2Book.Web.Api.Controllers.V1;
 using WebApi2Book.Web.Api.Models;
 using WebApi.Web.Data.Implementations.Response;
 using WebApi.Common.Implementations.Constants;
-using WebApi2Book.Web.Common.Tests;
 
 namespace WebApi.Tests.Web.ApiService.Integration
 {
 	[TestClass]
 	public class TasksControllerTest : BaseLocalHostController
 	{
-		private TasksControllerDependencyBlockMock _tasksControllerDependencyBlockMock;
-
-		private TasksController _controller;
-
 		public TasksControllerTest()
 		{
 			modAddress = modBaseAddress + "api/v1/tasks";
-
-			_tasksControllerDependencyBlockMock = new TasksControllerDependencyBlockMock();
-
-			_controller = new TasksController(_tasksControllerDependencyBlockMock.Object);
 		}
 
 		[TestMethod]
@@ -391,69 +379,6 @@ namespace WebApi.Tests.Web.ApiService.Integration
 			}
 		}
 
-		[TestMethod]
-		public void TasksControllerTest_Method11()
-		{
-			long? id = 0;
-
-			using (var client = modClientHelper.CreateWebClient())
-			{
-				try
-				{
-					Task obj = CreateNewTask(client, this.modAddress);
-					id = obj.TaskId;
-					Assert.IsNotNull(obj);
-				}
-				catch (Exception)
-				{
-					Assert.Fail();
-				}
-			}
-
-			using (var client = modClientHelper.CreateWebClient(contentType:WebApi.Web.Common.Implementations.Constants.Constants.MediaTypeNames.ApplicationXml))
-			{
-				try
-				{
-					Assert.IsTrue(GetTaskXml(client, id, this.modAddress));
-				}
-				catch (Exception)
-				{
-					Assert.Fail();
-				}
-			}
-
-			using (var client = modClientHelper.CreateWebClient())
-			{
-				try
-				{
-					DeleteTask(client, id, this.modAddress);
-					var tasks = GetAllTasks(client, this.modAddress);
-					Assert.IsFalse(tasks.Any(x => x.TaskId == id));
-				}
-				catch (Exception)
-				{
-					Assert.Fail();
-				}
-			}
-		}
-
-		[TestMethod]
-		public void GetTasks_returns_correct_response()
-		{
-			var requestMessage = HttpRequestMessageFactory.CreateRequestMessage();
-			var request = new PagedDataRequest(1, 25);
-			var response = new PagedDataInquiryResponse<Task>();
-
-			_tasksControllerDependencyBlockMock.PagedDataRequestFactoryMock.Setup(
-					x => x.Create(requestMessage.RequestUri)).Returns(request);
-			_tasksControllerDependencyBlockMock.AllTasksInquiryProcessorMock.Setup(x => x.GetTasks(request))
-					.Returns(response);
-
-			var actualResponse = _controller.GetTasks(requestMessage);
-
-			Assert.AreSame(response, actualResponse);
-		}
-
 		private Task UpdateTask(long? taskId, WebClient client, string data)
 		{
 			client.Headers.Add("Content-Type", Constants.MediaTypeNames.TextJson);
@@ -525,13 +450,6 @@ namespace WebApi.Tests.Web.ApiService.Integration
 			var responseString = client.DownloadString(address + "/" + id);
 			var response = JsonConvert.DeserializeObject<Task>(responseString);
 			return response;
-		}
-
-		public static bool GetTaskXml(WebClient client, long? id, string address)
-		{
-			var responseString = client.DownloadString(address + "/" + id);
-			var xdoc = XDocument.Parse(responseString);
-			return responseString.Contains("TaskId");
 		}
 
 		public static void DeleteTask(WebClient client, long? id, string address)

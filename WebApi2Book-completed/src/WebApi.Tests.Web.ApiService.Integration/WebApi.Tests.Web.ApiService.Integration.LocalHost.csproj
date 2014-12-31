@@ -42,11 +42,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\lib\log4net.2.0.2\lib\net40-full\log4net.dll</HintPath>
     </Reference>
-    <Reference Include="Moq">
-      <HintPath>..\..\lib\Moq.4.2.1409.1722\lib\net40\Moq.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\..\lib\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="NinjectService">
       <HintPath>..\packages\NinjectService\NinjectService.dll</HintPath>
@@ -57,16 +55,6 @@
       <HintPath>..\..\lib\System.IdentityModel.Tokens.Jwt.4.0.0\lib\net45\System.IdentityModel.Tokens.Jwt.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http" />
-    <Reference Include="System.Net.Http.Formatting, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\lib\Microsoft.AspNet.WebApi.Client.5.2.0-rc\lib\net45\System.Net.Http.Formatting.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Http, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\lib\Microsoft.AspNet.WebApi.Core.5.2.0-rc\lib\net45\System.Web.Http.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -83,7 +71,6 @@
   <ItemGroup>
     <Compile Include="StatusesControllerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TasksControllerDependencyBlockMock.cs" />
     <Compile Include="TasksControllerTest.cs" />
     <Compile Include="JsonWebTokenTests.cs" />
   </ItemGroup>
@@ -123,14 +110,6 @@
     <ProjectReference Include="..\WebApi2Book.Web.Api.Models\WebApi2Book.Web.Api.Models.csproj">
       <Project>{a8b758b6-6b17-4a88-a403-486db03a960a}</Project>
       <Name>WebApi2Book.Web.Api.Models</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\WebApi2Book.Web.Api\WebApi2Book.Web.Api.csproj">
-      <Project>{D90661C7-C0E2-40F5-A917-07483FB8C2E8}</Project>
-      <Name>WebApi2Book.Web.Api</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\WebApi2Book.Web.Common.Tests\WebApi2Book.Web.Common.Tests.csproj">
-      <Project>{8F8E295A-A3D4-4B03-ACAC-3060109F3F72}</Project>
-      <Name>WebApi2Book.Web.Common.Tests</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

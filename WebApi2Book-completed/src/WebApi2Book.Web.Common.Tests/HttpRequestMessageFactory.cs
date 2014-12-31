@@ -13,10 +13,10 @@ namespace WebApi2Book.Web.Common.Tests
         {
             method = method ?? HttpMethod.Get;
             var uri = string.IsNullOrWhiteSpace(uriString)
-								? new Uri("http://localhost:61589/api/v1/tasks")
+                ? new Uri("http://localhost:12345/api/whatever")
                 : new Uri(uriString);
             var requestMessage = new HttpRequestMessage(method, uri);
-            //requestMessage.SetConfiguration(new HttpConfiguration());
+            requestMessage.SetConfiguration(new HttpConfiguration());
             return requestMessage;
         }
     }

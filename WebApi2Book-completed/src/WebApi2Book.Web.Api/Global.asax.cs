@@ -20,7 +20,7 @@ namespace WebApi2Book.Web.Api
 		{
 			GlobalConfiguration.Configure(WebApiConfig.Register);
 
-			ConfigureFormatters();
+			//ConfigureFormatters();
 
 			RegisterHandlers();
 

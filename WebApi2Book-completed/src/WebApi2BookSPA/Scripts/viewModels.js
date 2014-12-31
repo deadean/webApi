@@ -13,7 +13,7 @@ var indexViewModel = function() {
             type: 'GET',
             url: taskManagementUrl + '/tasks',
             headers: {
-                Authorization : "Basic " + token
+                Authorization : "Bearer " + token
             },
             contentType: 'application/json;charset=utf8',
             success: self.onRefreshSuccess,
