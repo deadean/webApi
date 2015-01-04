@@ -7,6 +7,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using WebApi.Tests.Common.Bases;
+using WebApi.Web.Common.Interfaces.Security;
 using WebApi2Book.Web.Api.Models;
 using WebApi.Web.Data.Implementations.Response;
 using WebApi.Common.Implementations.Constants;
@@ -379,6 +380,55 @@ namespace WebApi.Tests.Web.ApiService.Integration
 			}
 		}
 
+		[TestMethod]
+		public void TasksControllerTest_Method11()
+		{
+			long? id = 0;
+
+			using (var client = modClientHelper.CreateWebClient())
+			{
+				try
+				{
+					Task obj = CreateNewTask(client, this.modAddress);
+					Assert.IsNotNull(obj);
+
+					id = obj.TaskId;
+				}
+				catch (Exception)
+				{
+					Assert.Fail();
+				}
+			}
+
+			using (var client = modClientHelper.CreateWebClient(contentType: Constants.MediaTypeNames.ApplicationXml,
+				JWT:modNinjectService.GetAll<IJsonSecurityTokenGenerator>().First().GetJWT()))
+			{
+				try
+				{
+					string res = GetAllTasksSOAP(client, this.modBaseAddress + "TeamTaskService.asmx");
+					Assert.IsTrue(res.Contains("Envelope"));
+				}
+				catch (Exception)
+				{
+					Assert.Fail();
+				}
+			}
+
+			using (var client = modClientHelper.CreateWebClient())
+			{
+				try
+				{
+					DeleteTask(client, id, this.modAddress);
+					var tasks = GetAllTasks(client, this.modAddress);
+					Assert.IsFalse(tasks.Any(x => x.TaskId == id));
+				}
+				catch (Exception)
+				{
+					Assert.Fail();
+				}
+			}
+		}
+
 		private Task UpdateTask(long? taskId, WebClient client, string data)
 		{
 			client.Headers.Add("Content-Type", Constants.MediaTypeNames.TextJson);
@@ -443,6 +493,14 @@ namespace WebApi.Tests.Web.ApiService.Integration
 			var response =
 				JsonConvert.DeserializeObject<PagedDataInquiryResponse<Task>>(responseString);
 			return response.Items;
+		}
+
+		public string GetAllTasksSOAP(WebClient client, string address)
+		{
+			var res = client.UploadString(address, HttpMethod.Post.Method
+				, "<s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\"><s:Body> <GetTasks xmlns=\"http://tempuri.org/\" xmlns:a= \"http://schemas.datacontract.org/2004/07/WebApi2Book.Windows.Legacy.Client.TaskServiceReference\" xmlns:i=\"http://www.w3.org/2001/XMLSchema-instance\"/></s:Body></s:Envelope>");
+
+			return res;
 		}
 
 		public static Task GetTask(WebClient client, long? id, string address)
